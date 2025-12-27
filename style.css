@@ -37,13 +37,15 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 }
 
 .home-orbimage{
-    width:75%;
+    width:90%;
 
     transform: translate(-50%, -50%);
     position:absolute;
     left:50%;
     top:50%;
     z-index: 11;
+
+    filter:drop-shadow(3px 3px 2px rgb(0, 0, 0))
 }
 
 .home-orbback{
@@ -54,7 +56,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     position:absolute;
     z-index: 10;
 
-    background-image: url(assets/home/home-roughback.png);
+    
     background-size: 100px;
 }
 
@@ -70,7 +72,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 
     opacity:0%;
 
-    transition: opacity 1s, top 1s, left 1s;
+    transition: opacity 0.5s, top 0.5s, left 0.5s;
 }
 
 .home-orbdeschead{
@@ -102,7 +104,6 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 }
 
 
-
 #home-orb0130{
     top:-200px;
     left:200px;
@@ -114,6 +115,13 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     0% {top:0px; left:0px; opacity:0%}
     100% {top:-200px; left:200px; opacity:100%}
 }
+
+.home-orbcontainer:hover #home-orbdesc0130{
+    opacity:100%;
+    left:-60%;
+    top:130%;
+}
+
 
 #home-orb0300{
     top:0px;
@@ -142,6 +150,12 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 @keyframes home-orbenter0430{
     0% {top:0px; left:0px; opacity:0%}
     100% {top: 200px; left:200px; opacity:100%}
+}
+
+.home-orbcontainer:hover #home-orbdesc0430{
+    opacity:100%;
+    left:-60%;
+    top:-30%;
 }
 
 
@@ -175,6 +189,12 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     100% {top:200px; left:-200px; opacity:100%}
 }
 
+.home-orbcontainer:hover #home-orbdesc0730{
+    opacity:100%;
+    left:160%;
+    top:-40%;
+}
+
 #home-orb0900{
     top:0px;
     left:-300px;
@@ -202,4 +222,10 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 @keyframes home-orbenter1030{
     0% {top:0px; left:0px; opacity:0%}
     100% {top:-200px; left:-200px; opacity:100%}
+}
+
+.home-orbcontainer:hover #home-orbdesc1030{
+    opacity:100%;
+    left:170%;
+    top:140%;
 }
