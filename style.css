@@ -132,3 +132,63 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     0% {left:0px; opacity:0%}
     100% {left:250px; opacity:100%}
 }
+
+#home-orb0430{
+    top:200px;
+    left:200px;
+    animation-name:home-orbenter0430;
+    animation-delay:0.3s;
+}
+
+@keyframes home-orbenter0430{
+    0% {top:200px; left:200px; opacity:0%}
+    100% {top: 200px; left:200px; opacity:100%}
+}
+
+#home-orb0600{
+    top:200px;
+    left:0px;
+    animation-name:home-orbenter0600;
+    animation-delay:0.4s;
+}
+
+@keyframes home-orbenter0600{
+    0% {top:0px; opacity:0%}
+    100% {top:200px; opacity:100%}
+}
+
+#home-orb0730{
+    top:200px;
+    left:-200px;
+    animation-name:home-orbenter0730;
+    animation-delay:0.5s;
+}
+
+@keyframes home-orbenter0730{
+    0% {top:0px; left:0px; opacity:0%}
+    100% {top:200px; left:-200px; opacity:100%}
+}
+
+#home-orb0900{
+    top:0px;
+    left:-250px;
+    animation-name:home-orbenter0900;
+    animation-delay:0.6s;
+}
+
+@keyframes home-orbenter0900{
+    0% {left:0px; opacity:0%}
+    100% {left:-250px; opacity:100%}
+}
+
+#home-orb1030{
+    top:-200px;
+    left:-200px;
+    animation-name:home-orbenter1030;
+    animation-delay:0.7s;
+}
+
+@keyframes home-orbenter1030{
+    0% {top:0px; left:0px; opacity:0%}
+    100% {top:-200px; left:-200px; opacity:100%}
+}
