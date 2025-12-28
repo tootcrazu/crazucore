@@ -7,16 +7,27 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     vertical-align: baseline;
 }
 
+@font-face {
+    font-family: 'molot';
+    src: url('assets/fonts/molot.regular.woff2') format('woff2'),
+         url('assets/fonts/molot.regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 /* ================= HOME ================= */
 
 #home-body{
     background-color:black;
+    background-image:url(assets/home/discordback.png);
+    background-size: 100dvh;
 }
 
 #home-centermarker{
     width:10px;
     height:10px;
-    background-color: white;
 
     position: fixed;
 
@@ -25,8 +36,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 }
 
 .home-orbcontainer{
-    height:100px;
-    width:100px;
+    height:120px;
+    width:120px;
 
     transform: translate(-50%, -50%);
     position: absolute;
@@ -34,6 +45,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     animation-duration:1s;
     animation-iteration-count: 1;
     animation-fill-mode:backwards;
+
+    filter:drop-shadow(3px 3px 2px rgb(0, 0, 0));
 }
 
 .home-orbimage{
@@ -56,8 +69,18 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     position:absolute;
     z-index: 10;
 
-    
     background-size: 100px;
+    
+
+    animation-name: home-orbbacktest;
+    animation-duration:120s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes home-orbbacktest{
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
 }
 
 .home-orbdesc{
@@ -76,6 +99,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 }
 
 .home-orbdeschead{
+    font-family: 'molot';
     color:white;
     font-size:3em;
     font-weight:bold;
@@ -83,10 +107,11 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 
 .home-orbdescsubhead{
     color:white;
-    font-size:1em;
+    font-size:0.9em;
+    font-style: italic;
 }
 
-/* Orb Stuff */
+/* ? ================== Orb Stuff ================== ? */
 
 #home-orb0000{
     top:-250px;
@@ -106,20 +131,20 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 
 #home-orb0130{
     top:-200px;
-    left:200px;
+    left:215px;
     animation-name:home-orbenter0130;
     animation-delay:0.1s;
 }
 
 @keyframes home-orbenter0130{
     0% {top:0px; left:0px; opacity:0%}
-    100% {top:-200px; left:200px; opacity:100%}
+    100% {top:-200px; left:215px; opacity:100%}
 }
 
 .home-orbcontainer:hover #home-orbdesc0130{
     opacity:100%;
-    left:-60%;
-    top:130%;
+    left:-50%;
+    top:140%;
 }
 
 
@@ -141,15 +166,15 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 }
 
 #home-orb0430{
-    top:200px;
-    left:200px;
+    top:195px;
+    left:215px;
     animation-name:home-orbenter0430;
     animation-delay:0.3s;
 }
 
 @keyframes home-orbenter0430{
     0% {top:0px; left:0px; opacity:0%}
-    100% {top: 200px; left:200px; opacity:100%}
+    100% {top: 195px; left:215px; opacity:100%}
 }
 
 .home-orbcontainer:hover #home-orbdesc0430{
@@ -178,15 +203,15 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 
 
 #home-orb0730{
-    top:200px;
-    left:-200px;
+    top:195px;
+    left:-215px;
     animation-name:home-orbenter0730;
     animation-delay:0.5s;
 }
 
 @keyframes home-orbenter0730{
     0% {top:0px; left:0px; opacity:0%}
-    100% {top:200px; left:-200px; opacity:100%}
+    100% {top:195px; left:-215px; opacity:100%}
 }
 
 .home-orbcontainer:hover #home-orbdesc0730{
@@ -214,18 +239,18 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 
 #home-orb1030{
     top:-200px;
-    left:-200px;
+    left:-215px;
     animation-name:home-orbenter1030;
     animation-delay:0.7s;
 }
 
 @keyframes home-orbenter1030{
     0% {top:0px; left:0px; opacity:0%}
-    100% {top:-200px; left:-200px; opacity:100%}
+    100% {top:-200px; left:-215px; opacity:100%}
 }
 
 .home-orbcontainer:hover #home-orbdesc1030{
     opacity:100%;
-    left:170%;
+    left:160%;
     top:140%;
 }
