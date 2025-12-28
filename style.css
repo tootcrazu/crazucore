@@ -46,7 +46,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     animation-iteration-count: 1;
     animation-fill-mode:backwards;
 
-    filter:drop-shadow(3px 3px 2px rgb(0, 0, 0));
+    filter:drop-shadow(6px 6px 2px rgb(0, 0, 0));
 }
 
 .home-orbimage{
@@ -111,7 +111,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     font-style: italic;
 }
 
-/* ? ================== Orb Stuff ================== ? */
+/* ================== Orb Stuff ================== */
 
 #home-orb0000{
     top:-250px;
@@ -253,4 +253,46 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     opacity:100%;
     left:160%;
     top:140%;
+}
+
+
+
+/* ? █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █  */
+
+/* ? █ █ █ █ █ █ █ █  B L O G  █ █ █ █ █ █ █ █  */
+
+/* ? █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █  */
+
+#blog-body{
+    height:100dvh;
+
+    background-color: #00398b;
+    background-image: url(assets/blog/tempback.png);
+}
+
+#blog-main{
+    min-width:790px;
+    width:70dvw;
+    max-width:875px;
+    height:400%;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    background-color: antiquewhite;
+}
+
+#blog-head{
+    width:100%;
+    height:200px;
+
+    position:sticky;
+    top:0;
+
+    background-color: gray;
+}
+
+#blog-entry{
+    height:100px;
+    background-color: green;
 }
