@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crazucore</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.gif">
+    <meta name="description" content="crazucore">
+</head>
+
+<body id="blog-body">
+
+    <main id="blog-main">
+
+        <div id="blog-controls">
+            <a id="bc-sortbutton" onclick="toggleChronoSort()">
+                Swap Sort
+            </a>
+
+            <div id="bc-topicfiltercont">
+                <a id="bc-gamefilter" onclick="toggleGames()" >Hide Games</a>
+                <a id="bc-movietvfilter" onclick="toggleMoviesTV()" >Hide Movies & TV</a>
+                <a id="bc-musicfilter" onclick="toggleMusic()" >Hide Music</a>
+                <a id="bc-ramblefilter" onclick="toggleRambling()" >Hide Ramblings</a>
+            </div>
+
+            <a id="bc-filterreset" onclick="resetFilters()">Reset Filters</a>
+        </div>
+
+        <div id="blog-entrycont">
+            <div id="blog-entry" class="be-games">
+                1 GAMEWS
+            </div>
+
+            <div id="blog-entry" class="be-moviestv">
+                2 MOVIES
+            </div>
+
+            <div id="blog-entry" class="be-music">
+                3 MUSIC
+            </div>
+
+            <div id="blog-entry" class="be-rambling">
+                4 RAMBLING
+            </div>
+        </div>
+
+        
+    </main>
+
+<script>
+    // Hey. If you're looking at this code (and you are) and thinking "wow, why did they do it that way. That looks stupid and so inefficient!" that's because this is (quite literally) my first time writing any javascript from scratch. All things considered it's a miracle it functions at all.
+
+
+    let chronoSort = 0;
+    let hideGames = 0;
+    let hideMoviesTV = 0;
+    let hideMusic = 0;
+    let hideRambling = 0;
+
+    function toggleChronoSort() {
+        if (chronoSort == 0) {
+            document.getElementById("blog-entrycont").style.flexDirection = "column-reverse";
+            chronoSort = 1;}
+        else {document.getElementById("blog-entrycont").style.flexDirection = "column";
+        chronoSort = 0;}
+    }
+
+    // Switches number for button press
+    function toggleGames() {
+        if (hideGames == 0) {hideGames = 1}
+        else {hideGames = 0;}
+        updateAll();
+    }
+
+    function toggleMoviesTV() {
+        if (hideMoviesTV == 0) {hideMoviesTV = 1}
+        else {hideMoviesTV = 0;}
+        updateAll();
+    }
+
+    function toggleMusic() {
+        if (hideMusic == 0) {hideMusic = 1}
+        else {hideMusic = 0;}
+        updateAll();
+    }
+
+    function toggleRambling() {
+        if (hideRambling == 0) {hideRambling = 1}
+        else {hideRambling = 0;}
+        updateAll();
+    }
+
+    // hides or shows all entries depending on their current setting
+    function updateAll() {
+        let gameEntries = document.getElementsByClassName("be-games");
+        
+        if (hideGames == 1){
+            for (let i = 0; i < gameEntries.length; i++) {gameEntries[i].style.display = "none"}
+        }
+        else{
+            for (let i = 0; i < gameEntries.length; i++) {gameEntries[i].style.display = "block"}
+        }
+
+
+        let moviestvEntries = document.getElementsByClassName("be-moviestv");
+        
+        if (hideMoviesTV == 1){
+            for (let i = 0; i < moviestvEntries.length; i++){moviestvEntries[i].style.display = "none"}
+        }
+        else{
+            for (let i = 0; i < moviestvEntries.length; i++) {moviestvEntries[i].style.display = "block"}
+        }
+
+
+        let musicEntries = document.getElementsByClassName("be-music");
+
+        if (hideMusic == 1){
+            for (let i = 0; i < musicEntries.length; i++){musicEntries[i].style.display = "none"}
+        }
+        else{
+            for (let i = 0; i < musicEntries.length; i++) {musicEntries[i].style.display = "block"}
+        }
+
+
+        let ramblingEntries = document.getElementsByClassName("be-rambling");
+
+        if (hideRambling == 1){
+            for (let i = 0; i < ramblingEntries.length; i++){ramblingEntries[i].style.display = "none"}
+        }
+        else{
+            for (let i = 0; i < ramblingEntries.length; i++) {ramblingEntries[i].style.display = "block"}
+        }
+    }
+
+    function resetFilters() {
+        hideGames = 0;
+        hideMoviesTV = 0;
+        hideMusic = 0;
+        hideRambling = 0;
+        updateAll()
+    }
+
+
+    
+</script>
+
+
+</body>
+
+</html>
