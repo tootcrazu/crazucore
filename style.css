@@ -355,15 +355,97 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 }
 
 #blog-controls{
-    width:100%;
-    height:100px;
+    width:auto;
+    height:50px;
     
     top:0;
     position: sticky;
 
-    background-color: gray;
+    z-index: 20;
 
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #c0c0c0;
+    border: ridge;
+    border-color: #c0c0c0;
+    border-width: 5px;
+
+    background-color:rgba(0, 0, 0, 0.7);
 }
+
+#blog-controls a{
+    cursor: pointer;
+    user-select: none;
+
+    border:outset;
+    border-width: 3px;
+    border-radius: 100px;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    height:25px;
+    margin-left:5px;
+
+    padding-left:8px;
+    padding-right:8px;
+}
+
+#blog-controls a:hover{
+    border:inset;
+    border-width: 3px;
+}
+
+#bc-sortbutton{
+    background-color: aqua;
+    border-color: aqua !important;
+}
+
+#bc-gamefilter{
+    background-color: #e6a4ff;
+    border-color: #e6a4ff !important;
+}
+
+#bc-moviestvfilter{
+    background-color: #a4ffd7;
+    border-color: #a4ffd7 !important;
+}
+
+#bc-musicfilter{
+    background-color: #a4ebff;
+    border-color: #a4ebff !important;
+}
+
+#bc-ramblingfilter{
+    background-color: #fff5a4;
+    border-color: #fff5a4 !important;
+}
+
+#bc-filterreset{
+    background-color: #ffa4a4;
+    border-color: #ffa4a4 !important;
+}
+
+
+
+#bc-topicfiltercont a{
+    height:25px;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    border:outset;
+    border-width: 3px;
+    border-radius: 100px;
+}
+
+
+
 
 #blog-entrycont{
     display:flex;
@@ -371,7 +453,94 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 }
 
 #blog-entry{
-    height:100px;
+
+    border: ridge;
+    border-color: #c0c0c0;
+    border-width: 5px;
+
+    color:white;
+}
+
+#be-headercont{
+    width:100%;
+    height:70px;
+}
+
+#be-bannercont{
+    height:100%;
+    position: relative;
+
+    border-bottom: ridge;
+    border-color: #c0c0c0;
+    border-width: 5px;
+}
+
+#be-bannertextcont{
+    width:100%;
+    height:100%;
+    position: absolute;
+
+    z-index: 11;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#be-bannertitle, #be-bannerdesccont{
+    margin-left:10px;
+    margin-right:10px;
+}
+
+#be-bannertitle{
+    font-family: 'molot';
+    font-size:3em;
+
+    filter:drop-shadow(6px 6px 2px rgb(0, 0, 0));
+}
+
+#be-bannerdesccont h2{
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size:1.1em;
+    text-align: right;
+    filter:drop-shadow(2px 2px 2px rgb(0, 0, 0));
+}
+
+#be-bannerback{
+    width:100%;
+    height:100%;
+    background-image: url(assets/blog/banners/unbeatable.gif);
+    background-size: 100%;
+
+    z-index: 10;
+
+    filter:saturate(0.5) brightness(0.5);
+}
+
+#be-body{
+    background-color: black;
+    padding:10px;
+}
+
+#be-bodytext{
+    font-size:1.1em;
+}
+
+#be-footer{
+    display:flex;
+    justify-content: space-between;
+    padding:5px;
+    background-color: black;
+    font-size:1em;
+
+    color: rgb(111, 111, 111);
+}
+
+#be-categories{
+    display:flex;
+    column-gap: 5px;
 }
 
 .be-games{
@@ -389,4 +558,82 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 
 .be-rambling{
     background-color: purple;
+}
+
+
+/* * ========= BBAD!!! ============ */
+/* * ========= BBAD!!! ============ */
+/* * ========= BBAD!!! ============ */
+
+
+#bbad-body{
+    height:100dvh;
+    background-color: yellow;
+}
+
+#bbad-main{
+    min-width:790px;
+    width:70dvw;
+    max-width:875px;
+
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.bbad-entrycont{
+    border:solid #00502e 7px;
+
+    margin-bottom: 40px;
+}
+
+.bbad-entry{
+    background-color: #00502e;
+
+    position: relative;
+
+    border:solid white 7px;
+
+    padding:10px;
+
+    color:rgb(255, 255, 255);
+}
+
+.bbad-entrynumber{
+    position: absolute;
+    top: 10px;
+    right:10px;
+
+    opacity: 50%;
+
+    text-align: right;
+}
+
+.bbad-datestamp{
+    position: absolute;
+    bottom: 10px;
+    right:10px;
+
+    opacity: 50%;
+
+    text-align: right;
+}
+
+
+.bbad-entryheader{
+    font-size:2.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+
+    margin-right:25px;
+    margin-bottom: 10px;
+}
+
+.bbad-maintext{
+    font-size:1.2em;
+    margin-bottom:20px;
+}
+
+.bbad-maintext ul{
+    font-size:1.2em;
+    margin-bottom:20px;
 }

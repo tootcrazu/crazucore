@@ -13,24 +13,50 @@
 
     <main id="blog-main">
 
-        <div id="blog-controls">
-            <a id="bc-sortbutton" onclick="toggleChronoSort()">
-                Swap Sort
-            </a>
+        <beans id="blog-controls">
+            <a id="bc-sortbutton" onclick="toggleChronoSort()">↓ Sort Oldest First</a>
 
-            <div id="bc-topicfiltercont">
-                <a id="bc-gamefilter" onclick="toggleGames()" >Hide Games</a>
-                <a id="bc-movietvfilter" onclick="toggleMoviesTV()" >Hide Movies & TV</a>
-                <a id="bc-musicfilter" onclick="toggleMusic()" >Hide Music</a>
-                <a id="bc-ramblefilter" onclick="toggleRambling()" >Hide Ramblings</a>
-            </div>
+            <a id="bc-gamefilter" onclick="toggleGames()" >Hide Games</a>
+            <a id="bc-moviestvfilter" onclick="toggleMoviesTV()" >Hide Movies & TV</a>
+            <a id="bc-musicfilter" onclick="toggleMusic()" >Hide Music</a>
+            <a id="bc-ramblingfilter" onclick="toggleRambling()" >Hide Rambling</a>
 
-            <a id="bc-filterreset" onclick="resetFilters()">Reset Filters</a>
-        </div>
+            <a id="bc-filterreset" onclick="resetFilters()" title="Reset Filters">Reset</a>
+        </beans>
 
         <div id="blog-entrycont">
             <div id="blog-entry" class="be-games">
-                1 GAMEWS
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">UNBEATABLE</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2025 Video Game</h2>
+                                <h2>D-Cell Games</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        Unbeatable is... Unbeatable is like that restaurant you know that's kind of grimy and definitely falling apart, but the people there are so nice and the food is the best you've ever had. Unbeatable is the friend who's kind of a mess, who never seems to sleep (or even leave their room), but is nevertheless exceedingly wonderful and creative
+                        <br><br>
+                        That's kind of flowery, I know, but that's the best way I can describe this video game. It may not look it at first glance, but having finished it, that's the only thing I can really say. A flawed piece of excellent art whose best quality is it's undeniable humanity. Did I understand what was going on towards the end? Only a little. Did I feel? Did I love the experience? Absolutely. The kind of game you play that makes you want to carve out your own place in the world, to make something undeniably YOU.
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating">10/10 million beat up cops</p>
+
+                    <p id="be-timestamp"> December 26th, 2025 </p>
+                </div>
             </div>
 
             <div id="blog-entry" class="be-moviestv">
@@ -50,7 +76,7 @@
     </main>
 
 <script>
-    // Hey. If you're looking at this code (and you are) and thinking "wow, why did they do it that way. That looks stupid and so inefficient!" that's because this is (quite literally) my first time writing any javascript from scratch. All things considered it's a miracle it functions at all.
+    // Hey. If you're looking at this code (and you are) and thinking "wow, why did they do it that way. That looks so so so stupid and inefficient!" that's because this is (quite literally) my first time writing any javascript from scratch. All things considered it's a miracle it functions at all.
 
 
     let chronoSort = 0;
@@ -62,9 +88,11 @@
     function toggleChronoSort() {
         if (chronoSort == 0) {
             document.getElementById("blog-entrycont").style.flexDirection = "column-reverse";
+            document.getElementById("bc-sortbutton").innerHTML = "↑ Sort Newest First";
             chronoSort = 1;}
         else {document.getElementById("blog-entrycont").style.flexDirection = "column";
-        chronoSort = 0;}
+            document.getElementById("bc-sortbutton").innerHTML = "↓ Sort Oldest First";
+            chronoSort = 0;}
     }
 
     // Switches number for button press
@@ -97,40 +125,56 @@
         let gameEntries = document.getElementsByClassName("be-games");
         
         if (hideGames == 1){
-            for (let i = 0; i < gameEntries.length; i++) {gameEntries[i].style.display = "none"}
+            for (let i = 0; i < gameEntries.length; i++) {gameEntries[i].style.display = "none";
+                document.getElementById("bc-gamefilter").innerHTML = "Show Games";
+            }
         }
         else{
-            for (let i = 0; i < gameEntries.length; i++) {gameEntries[i].style.display = "block"}
+            for (let i = 0; i < gameEntries.length; i++) {gameEntries[i].style.display = "block";
+                document.getElementById("bc-gamefilter").innerHTML = "Hide Games";
+            }
         }
 
 
         let moviestvEntries = document.getElementsByClassName("be-moviestv");
         
         if (hideMoviesTV == 1){
-            for (let i = 0; i < moviestvEntries.length; i++){moviestvEntries[i].style.display = "none"}
+            for (let i = 0; i < moviestvEntries.length; i++){moviestvEntries[i].style.display = "none";
+                document.getElementById("bc-moviestvfilter").innerHTML = "Show Movies & TV";
+            }
         }
         else{
-            for (let i = 0; i < moviestvEntries.length; i++) {moviestvEntries[i].style.display = "block"}
+            for (let i = 0; i < moviestvEntries.length; i++) {moviestvEntries[i].style.display = "block";
+                document.getElementById("bc-moviestvfilter").innerHTML = "Hide Movies & TV";
+            }
         }
 
 
         let musicEntries = document.getElementsByClassName("be-music");
 
         if (hideMusic == 1){
-            for (let i = 0; i < musicEntries.length; i++){musicEntries[i].style.display = "none"}
+            for (let i = 0; i < musicEntries.length; i++){musicEntries[i].style.display = "none";
+                document.getElementById("bc-musicfilter").innerHTML = "Show Music";
+            }
         }
         else{
-            for (let i = 0; i < musicEntries.length; i++) {musicEntries[i].style.display = "block"}
+            for (let i = 0; i < musicEntries.length; i++) {musicEntries[i].style.display = "block";
+                document.getElementById("bc-musicfilter").innerHTML = "Hide Music";
+            }
         }
 
 
         let ramblingEntries = document.getElementsByClassName("be-rambling");
 
         if (hideRambling == 1){
-            for (let i = 0; i < ramblingEntries.length; i++){ramblingEntries[i].style.display = "none"}
+            for (let i = 0; i < ramblingEntries.length; i++){ramblingEntries[i].style.display = "none";
+                document.getElementById("bc-ramblingfilter").innerHTML = "Show Rambling";
+            }
         }
         else{
-            for (let i = 0; i < ramblingEntries.length; i++) {ramblingEntries[i].style.display = "block"}
+            for (let i = 0; i < ramblingEntries.length; i++) {ramblingEntries[i].style.display = "block";
+                document.getElementById("bc-ramblingfilter").innerHTML = "Hide Rambling";
+            }
         }
     }
 
