@@ -598,14 +598,9 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     color:rgb(255, 255, 255);
 }
 
-.bbad-entrynumber{
-    position: absolute;
-    top: 10px;
-    right:10px;
-
+.bbad-episodenumber{
     opacity: 50%;
-
-    text-align: right;
+    font-size:1.2em;
 }
 
 .bbad-datestamp{
@@ -624,7 +619,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
 
-    margin-right:25px;
+
+
     margin-bottom: 10px;
 }
 
@@ -636,4 +632,90 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 .bbad-maintext ul{
     font-size:1.2em;
     margin-bottom:20px;
+}
+
+
+/* & ===== HISTORY ====== */
+/* & ===== HISTORY ====== */
+/* & ===== HISTORY ====== */
+
+
+#history-body{
+    min-height:100dvh;
+    background-image: url(assets/history/spaceback.gif);
+    
+    font-size:1.2em;
+}
+
+#history-main{
+    min-width:790px;
+    width:70dvw;
+    max-width:875px;
+
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:40px;
+}
+
+#history-main div{
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+#history-text1{
+    background-color: #21033B;
+    border-style: inset;
+    border-width: thick;
+    border-color: #200569;
+    height: 100%;
+    color: aquamarine;
+    padding:10px;
+}
+
+#history-text1 a{
+    color: aquamarine;
+}
+
+#history-cont1{
+    margin-bottom:200px !important;
+}
+
+.history-fullimg{
+    width:80%;
+
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:40px;
+    margin-bottom:10px;
+}
+
+#history-textcont2{
+    background-color: white;
+    border: ridge;
+    border-color: #c0c0c0;
+    border-width: 10px;
+    padding:10px;
+}
+
+#history-v2iconcont{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#history-cont2{
+    margin-bottom:200px !important;
+}
+
+
+#history-text3{
+    background-color: #fff5a4;
+    border: ridge;
+    border-color: #fff5a4;
+    border-width: 10px;
+    padding:10px;
+    padding:10px;
+    font-family: 'Brush Script MT', cursive;
 }
