@@ -611,9 +611,15 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     width:90%;
 
     background-color: black;
-    color:greenyellow;
+    
 
     overflow:scroll;
+}
+
+#ccomp-text{
+    color:greenyellow;
+    font-size:1.3em;
+    text-shadow: 0 0 4px greenyellow;
 }
 
 #ccomp-monitorstand{
