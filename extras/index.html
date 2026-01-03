@@ -9,10 +9,45 @@
     <meta name="description" content="crazucore">
 </head>
 
-<body>
+<body id="ext-body">
 
-    <a href="breakingbad.html">Breaking Bad</a>
+    <div id="ext-dressercont">
+
+        <div id="ext-dressertop">
+        </div>
+
+        <div id="ext-drawercont">
+            <div id="ext-drawerback">
+                <div id="ext-drawerinner"></div>
+            </div>
+
+            <a id="ext-drawerhandle"></a>
+        </div>
+        
+
+    </div>
+
+
+    <script>
+        let drawerOpen = false;
+        const drawerObject = document.getElementById("ext-drawercont");
+        const drawerOpenAnim = drawerObject.animate([{transform:"translateY(0px)"}, {transform:"translateY(-1000px)"}], {duration: 3000, fill:"forwards"});
+
+        drawerOpenAnim.pause()
+        
+
+
+
+
+
+
+
+
+    </script>
 
 </body>
 
+
+
+<a href="breakingbad.html">Breaking Bad</a>
 </html>

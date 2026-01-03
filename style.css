@@ -677,6 +677,60 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     background-color: burlywood;
 }
 
+/* todo ====== EXTRAS ============= */
+/* todo ====== EXTRAS ============= */
+/* todo ====== EXTRAS ============= */
+
+#ext-body{
+    height:100dvh;
+    background-color: #c0c0c0;
+}
+
+#ext-dressertop{
+    width:800px;
+    height:300px;
+
+    position:absolute;
+    transform: translate(-50%, -50%);
+    left:50%;
+    z-index:15;
+
+    background-color: #745025;
+}
+
+#ext-drawercont{
+    width:700px;
+    height:650px;
+
+    position:absolute;
+    transform: translate(-50%, -50%);
+    left:50%;
+    bottom:0;
+    z-index:10;
+
+}
+
+#ext-drawerback{
+    width:100%;
+    height:600px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #745025;
+}
+
+#ext-drawerinner{
+    width:95%;
+    height:95%;
+    background-color: #bc884a
+}
+
+#ext-drawerhandle{
+    
+}
+
 
 
 /* * ========= BBAD!!! ============ */
