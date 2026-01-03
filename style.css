@@ -560,9 +560,9 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     background-color: purple;
 }
 
-/* ============= CHANGELOG ============= */
-/* ============= CHANGELOG ============= */
-/* ============= CHANGELOG ============= */
+/* ^ ============= CHANGELOG ============= */
+/* ^ ============= CHANGELOG ============= */
+/* ^ ============= CHANGELOG ============= */
 
 #ccomp-body{
     height:100dvh;
@@ -572,6 +572,12 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     justify-content: center;
     align-items: flex-end;
     flex-direction: row;
+    
+    background-image:url(assets/changelog/changeback.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    filter:drop-shadow(2px 2px 2px rgb(0, 0, 0));
 }
 
 #ccomp-cont{
@@ -596,7 +602,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 
 #ccomp-monitor{
     width:80%;
-    height:500px;
+    height:1000px;
 
     background-color: grey;
     border-radius: 20px;
@@ -611,15 +617,25 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     width:90%;
 
     background-color: black;
-    
 
+    padding-left:10px;
+    
+    display:flex;
+    flex-direction: column-reverse;
     overflow:scroll;
+
+    
 }
 
 #ccomp-text{
     color:greenyellow;
-    font-size:1.3em;
-    text-shadow: 0 0 4px greenyellow;
+    font-size:1.2em;
+    text-shadow: 0 0 4px #adff2f;
+    margin-bottom:10px;
+}
+
+#ccomp-typeind{
+    width:50px;
 }
 
 #ccomp-monitorstand{
@@ -646,7 +662,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 
 #ccomp-tablelegcont{
     width:70%;
-    height:200px;
+    height:100%;
 
     display:flex;
     flex-direction: row;
