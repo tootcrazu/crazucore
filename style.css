@@ -683,11 +683,11 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 
 #ext-body{
     height:100dvh;
-    background-color: #c0c0c0;
+    background-color: #871414;
 }
 
 #ext-dressertop{
-    width:800px;
+    width:1000px;
     height:300px;
 
     position:absolute;
@@ -699,13 +699,13 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 }
 
 #ext-drawercont{
-    width:700px;
+    width:900px;
     height:650px;
 
     position:absolute;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     left:50%;
-    bottom:0;
+    top:-435px;
     z-index:10;
 
 }
@@ -718,18 +718,59 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     justify-content: center;
     align-items: center;
 
-    background-color: #745025;
+    background-color: #5e411f;
 }
 
 #ext-drawerinner{
     width:95%;
     height:95%;
-    background-color: #bc884a
+    background-color: #bc884a;
+
+    box-shadow: inset 2px 2px 20px 10px #131313;
 }
 
 #ext-drawerhandle{
-    
+    display:block;
+    width:40%;
+    height:25px;
+
+    transform: translateX(-50%);
+    margin-left:50%;
+
+    border: 20px solid;
+    border-color:grey;
+
+    border-top: none;
+
+    cursor:pointer;
+
+    transition: border-color 0.5s;
 }
+
+#ext-drawerhandle:hover{
+    border-color:rgb(206, 206, 206);
+}
+
+.ext-draweritem{
+    position:relative;
+    filter:drop-shadow(2px 2px 2px rgb(0, 0, 0));
+    transition: all 1s;
+}
+
+.ext-draweritem:hover{
+    filter:saturate(150%) drop-shadow(2px 2px 2px rgb(0, 0, 0));
+}
+
+#ext-bbad{
+    height:200px;
+
+    bottom: -302px;
+    left: 94px;
+    rotate: -12deg;
+}
+
+
+
 
 
 

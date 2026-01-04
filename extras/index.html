@@ -18,10 +18,19 @@
 
         <div id="ext-drawercont">
             <div id="ext-drawerback">
-                <div id="ext-drawerinner"></div>
+                <div id="ext-drawerinner">
+
+                    <a href="breakingbad.html"><img src="../assets/extras/bbadboxset.jpg" class="ext-draweritem" id="ext-bbad"></a>
+
+
+
+
+
+
+                </div>
             </div>
 
-            <a id="ext-drawerhandle"></a>
+            <a id="ext-drawerhandle" onclick="drawerOpenAnim.reverse()"></a>
         </div>
         
 
@@ -29,25 +38,14 @@
 
 
     <script>
-        let drawerOpen = false;
+        let drawerOpen = true;
         const drawerObject = document.getElementById("ext-drawercont");
-        const drawerOpenAnim = drawerObject.animate([{transform:"translateY(0px)"}, {transform:"translateY(-1000px)"}], {duration: 3000, fill:"forwards"});
-
-        drawerOpenAnim.pause()
-        
-
-
-
-
-
-
-
-
+        const drawerOpenAnim = drawerObject.animate([{transform:"translate(-50%, 0px)"}, {transform:"translate(-50%, 500px)"}], {duration: 500, fill:"forwards"});
+        drawerOpenAnim.reverse();
+        drawerOpenAnim.finish();
     </script>
 
 </body>
 
 
-
-<a href="breakingbad.html">Breaking Bad</a>
 </html>
