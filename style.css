@@ -883,6 +883,15 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     flex-direction: column;
 
     padding-top:100px;
+
+    animation-name:credits-fadein;
+    animation-duration:2s;
+}
+
+
+@keyframes credits-fadein{
+    0%{filter:opacity(0%)}
+    100%{filter:opacity(100%)}
 }
 
 #credits-head {
