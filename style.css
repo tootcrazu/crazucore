@@ -17,6 +17,54 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 }
 
 
+/* =============== FOOTER ============== */
+/* =============== FOOTER ============== */
+/* =============== FOOTER ============== */
+
+footer{
+    position:fixed;
+    width:100%;
+    height:20px;
+
+    bottom:0;
+
+    background-color: #c0c0c0;;
+
+    border-top: ridge;
+    border-color: #c0c0c0;
+    border-width: 5px;
+}
+
+#footer-marq{
+    background-color:black;
+    text-shadow: 0 0 4px;
+
+    width:50%;
+
+    border-left: ridge;
+    border-right: ridge;
+    border-color: #c0c0c0;
+    border-width: 5px;
+}
+
+#footer-link{
+    border-right: ridge;
+    border-color: #c0c0c0;
+    border-width: 5px;
+}
+
+#footer-audio{
+    height:15px;
+
+    margin-left:2dvw;
+
+    box-shadow:none;
+    --media-background:rgba(255, 255, 255, 0);
+    --media-secondary-color:yellow;
+    filter:opacity(50%);
+}
+
+
 /* ================= HOME ================= */
 
 #home-body{
@@ -621,21 +669,29 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     padding-left:10px;
     
     display:flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: flex-end;
     overflow:scroll;
-
-    
 }
 
 #ccomp-text{
-    color:greenyellow;
+    color:yellow;
     font-size:1.2em;
-    text-shadow: 0 0 4px #adff2f;
-    margin-bottom:10px;
+    text-shadow: 0 0 4px yellow;
+    margin-bottom:20px;
 }
 
-#ccomp-typeind{
-    width:50px;
+#ccomp-blinker{
+    animation-name:blinker;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinker{
+    0%{filter:opacity(100%)}
+    1%{filter:opacity(0%)}
+    50%{filter:opacity(0%)}
+    51%{filter:opacity(100%)}
 }
 
 #ccomp-monitorstand{
@@ -856,9 +912,9 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 }
 
 
-/* ======= CREDITS =========== */
-/* ======= CREDITS =========== */
-/* ======= CREDITS =========== */
+/* ! ======= CREDITS =========== */
+/* ! ======= CREDITS =========== */
+/* ! ======= CREDITS =========== */
 
 
 #credits-body{
