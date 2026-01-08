@@ -86,10 +86,32 @@
 
 
     <footer>
+        <marquee id="footer-marq" style="color:rgb(255, 61, 236)">I loooooooooove making websites >:)</marquee>
+
+        <div class="footer-link"><a href="" onclick="window.alert('I cant send you back a page, theres no more website here. I can make a popup though.')">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
+            <source src="../assets/history/crushedgreenroom.mp3" type="audio/mpeg">
+            There should be a song here, but your browser doesn't like music.
+        </audio>
+
+        <div class="footer-link" id="footer-playpausecont">
+            <a id="footer-playpause" onclick="toggleMusic()">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont">
+            <a id="footer-volchanger" onclick="adjustVolume()">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont">
+            <a id="footer-info" onclick="window.alert('The Song Of This Page Is: A really low bitrate version of Welcome to the Green Room from DELTARUNE, copied from my first website.')">?</a>
+        </div>
+
+        <div id="footer-grazuman"></div>
 
         
     </footer>
 
     </body>
-
+<script src="../scripts/footerscript.js"></script>
 </html>

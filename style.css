@@ -33,6 +33,10 @@ footer{
     border-top: ridge;
     border-color: #c0c0c0;
     border-width: 5px;
+
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
 }
 
 #footer-marq{
@@ -47,23 +51,64 @@ footer{
     border-width: 5px;
 }
 
-#footer-link{
+.footer-link{
     border-right: ridge;
     border-color: #c0c0c0;
     border-width: 5px;
+    transition: 0.3s all;
+    
+    font-weight: bold;
+
+    user-select:none;
+}
+
+.footer-link:hover{
+    filter:hue-rotate(100deg);
+}
+
+.footer-link a{
+    margin: 0 5px 0 5px;
 }
 
 #footer-audio{
-    height:15px;
-
-    margin-left:2dvw;
-
-    box-shadow:none;
-    --media-background:rgba(255, 255, 255, 0);
-    --media-secondary-color:yellow;
-    filter:opacity(50%);
+    display:none;
 }
 
+#footer-playpausecont{
+    background-color: #a4ffd7;
+    width:70px;
+    cursor:pointer;
+    text-align:center;
+}
+
+#footer-volchangercont{
+    background-color: #00ffff;
+    cursor:pointer;
+}
+
+#footer-infocont{
+    background-color: #ffa4a4;
+    cursor:pointer;
+}
+
+#footer-grazuman{
+    height:72px;
+    width:100px;
+
+    position:fixed;
+    bottom:23px;
+    right:1px;
+    background-image: url(assets/footer/grazuman.gif);
+    background-size:100px;
+
+    background-repeat:no-repeat;
+
+    filter:invert(100%) opacity(25%);
+}
+
+#footer-grazuman:hover{
+    background-image: url(assets/footer/grazumanw.gif);
+}
 
 /* ================= HOME ================= */
 
@@ -1005,7 +1050,7 @@ footer{
     min-height:100dvh;
     background-image: url(assets/history/spaceback.gif);
     
-    font-size:1.2em;
+    
 }
 
 #history-main{
@@ -1016,6 +1061,8 @@ footer{
     margin-left:auto;
     margin-right:auto;
     margin-top:40px;
+
+    font-size:1.2em;
 }
 
 #history-main div{

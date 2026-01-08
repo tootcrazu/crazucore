@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.gif">
     <meta name="description" content="crazucore">
+    
 </head>
 
 <body id="home-body">
@@ -108,20 +109,29 @@
     <footer>
         <marquee id="footer-marq" style="color:white">No Generative AI was used in the making of this website. It really wasn't that hard. You know, you hear all these people tell you that 'ai is the future', and that it'll be what we're all doing in the future anyway but like.. you can just say no. And like you probably should. It's tough to compare AI to previous technological advancements like the invention of the computer or something, because so many models are quite literally built on stolen art and data. The comparison gets even more muddied when you think about how most other inventions that companies saw as ways to replace human labor (computers, industrial machinery, etc) were very gradual inventions, compared to ai which only took like 2 years to go from fringe to everwhere. Anyway, this is probably too much to fit into one marquee. I bet it makes for a horrible reading experience. The marquee is suposedly going to be retired one day. That'll be sad.</marquee>
 
-        <a href="javascript:alert('I cant send you back a page, theres no more website here. I can make a popup though');" id="footer-link">Go Back to Previous Page</a>
-        <audio id="footer-audio" hidden>
+        <div class="footer-link"><a href="" onclick="window.alert('I cant send you back a page, theres no more website here. I can make a popup though.')">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
             <source src="assets/home/grace-medley.mp3" type="audio/mpeg">
-            Song of the page today is "Grace Medley - One Night in Waitemata Harbor" from the corru.observer fan EP: Acousmatic Recollection Layer.
+            There should be a song here, but your browser doesn't like music.
         </audio>
 
-        <a id="footer-link" onclick="footerAudio.play()">play</a>
-        <a id="footer-link" onclick="footerAudio.pause()">pause</a>
+        <div class="footer-link" id="footer-playpausecont">
+            <a id="footer-playpause" onclick="toggleMusic()">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont">
+            <a id="footer-volchanger" onclick="adjustVolume()">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont">
+            <a id="footer-info" onclick="window.alert('The Song Of This Page Is: Grace Medley - One Night in Waitemata Harbor from the corru.observer fan EP: Acousmatic Recollection Layer.')">?</a>
+        </div>
+
+        <div id="footer-grazuman"></div>
+
+        
     </footer>
-
-    <script>
-        let footerAudio = document.getElementById("footer-audio");
-        footerAudio.volume = 0.5;
-    </script>
 </body>
-
+<script src="scripts/footerscript.js"></script>
 </html>
