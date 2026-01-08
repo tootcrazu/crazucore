@@ -27,6 +27,35 @@
             2023 (and before)
         </a>
     </div>
-</body>
+
+    <footer>
+        <marquee id="footer-marq" style="color:rgb(146, 146, 146)">Don't gotta hang out here for too long. .. ... ... .. .....    .. .. .....    .. .. .....    .. .. .....    .. .. .....    ..      ok i'm really proud of the year selector effect with the hover and color change and stuff.</marquee>
+
+        <div class="footer-link"><a href="../index.html">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
+            <source src="../assets/blog/softcollision.mp3" type="audio/mpeg">
+            There should be a song here, but your browser doesn't like music.
+        </audio>
+
+        <div class="footer-link" id="footer-playpausecont">
+            <a id="footer-playpause" onclick="toggleFooterMusic()">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont">
+            <a id="footer-volchanger" onclick="adjustFooterVolume()">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont">
+            <a id="footer-info" onclick="window.alert('The Song Of This Page Is: Soft Collision by Jake Kaufman, from the soundtrack to Mighty Switch Force 2. I just think its a good song.')">( i )</a>
+        </div>
+
+        <div id="footer-grazuman"></div>
+
+        
+    </footer>
+
+    </body>
+<script src="../scripts/footerscript.js"></script>
 
 </html>

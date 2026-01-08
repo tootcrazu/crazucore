@@ -694,8 +694,9 @@ footer{
 }
 
 #ccomp-monitor{
+    flex-shrink:0;
     width:80%;
-    height:1000px;
+    height:400px;
 
     background-color: grey;
     border-radius: 20px;
@@ -706,7 +707,7 @@ footer{
 }
 
 #ccomp-screen{
-    height:90%;
+    height:360px;
     width:90%;
 
     background-color: black;
@@ -714,16 +715,22 @@ footer{
     padding-left:10px;
     
     display:flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: column-reverse;
+
     overflow:scroll;
+    
+    
 }
 
+
+
 #ccomp-text{
+    
     color:yellow;
     font-size:1.2em;
     text-shadow: 0 0 4px yellow;
     margin-bottom:20px;
+
 }
 
 #ccomp-blinker{
@@ -1008,6 +1015,7 @@ footer{
     font-weight:bold;
 
     text-align: center;
+    margin-top:45px;
     margin-bottom:45px;
 }
 

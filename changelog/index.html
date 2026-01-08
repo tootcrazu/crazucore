@@ -14,29 +14,39 @@
 
         <div id="ccomp-monitor">
             <div id="ccomp-screen">
+                <p id="ccomp-text"> > <bc id="ccomp-blinker">▂</b></p>
+
                 <p id="ccomp-text">
-                > 2026-01-03: Finished the changelog! by this point I've already finished the index, laid out the barebones for the blog, done the history page + one extra.
+                > 2026-01-08: Added the footer to all existing pages (and spent way too long trying to fix a stupid bug here in the changelog)
                 </p>
-                <p id="ccomp-text">
-                > 2026-01-03: Breaking Bad S1E4
-                </p>
-                <p id="ccomp-text">
-                > 2026-01-04: Finished(mostly) the extras page!
-                </p>
-                <p id="ccomp-text">
-                > 2026-01-04: Added two episodes of Breaking Bad
-                </p>
-                <p id="ccomp-text">
-                > 2026-01-05: Completed the Credits Page
-                </p>
-                <p id="ccomp-text">
-                > 2026-01-05: Breaking Bad Season 1 Finale
-                </p>
+
                 <p id="ccomp-text">
                 > 2026-01-08: Made a musical footer to go on all the pages!
                 </p>
 
-                <p id="ccomp-text">> <bc id="ccomp-blinker">▂</b></p>
+                <p id="ccomp-text">
+                > 2026-01-05: Breaking Bad Season 1 Finale
+                </p>
+
+                <p id="ccomp-text">
+                > 2026-01-05: Completed the Credits Page
+                </p>
+
+                <p id="ccomp-text">
+                > 2026-01-04: Added two episodes of Breaking Bad
+                </p>
+
+                <p id="ccomp-text">
+                > 2026-01-04: Finished(mostly) the extras page!
+                </p>
+
+                <p id="ccomp-text">
+                > 2026-01-03: Breaking Bad S1E4
+                </p>
+
+                <p id="ccomp-text">
+                > 2026-01-03: Finished the changelog! by this point I've already finished the index, laid out the barebones for the blog, done the history page + one extra.
+                </p>
             </div>
         </div>
 
@@ -52,6 +62,35 @@
         </div>
 
     </main>
-</body>
+
+    <footer>
+        <marquee id="footer-marq" style="color:yellow">Real life photo of my bedroom from ages ago.</marquee>
+
+        <div class="footer-link"><a href="../index.html">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
+            <source src="../assets/changelog/bathroom.mp3" type="audio/mpeg">
+            There should be a song here, but your browser doesn't like music.
+        </audio>
+
+        <div class="footer-link" id="footer-playpausecont">
+            <a id="footer-playpause" onclick="toggleFooterMusic()">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont">
+            <a id="footer-volchanger" onclick="adjustFooterVolume()">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont">
+            <a id="footer-info" onclick="window.alert('The Song Of This Page Is: bathroom from Hylics. Because the Hylics guy is yellow and this page is also yellow.')">( i )</a>
+        </div>
+
+        <div id="footer-grazuman"></div>
+
+        
+    </footer>
+
+    </body>
+<script src="../scripts/footerscript.js"></script>
 
 </html>

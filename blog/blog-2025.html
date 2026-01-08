@@ -75,6 +75,35 @@
         
     </main>
 
+        <footer>
+        <marquee id="footer-marq" style="color:rgb(255, 61, 236)">2025! A good vintage.</marquee>
+
+        <div class="footer-link"><a href="index.html">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
+            <source src="../assets/blog/leavebrain.mp3" type="audio/mpeg">
+            There should be a song here, but your browser doesn't like music.
+        </audio>
+
+        <div class="footer-link" id="footer-playpausecont">
+            <a id="footer-playpause" onclick="toggleFooterMusic()">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont">
+            <a id="footer-volchanger" onclick="adjustFooterVolume()">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont">
+            <a id="footer-info" onclick="window.alert('The Song Of This Page Is: did u leave ur brain at home, by Chipzel.')">( i )</a>
+        </div>
+
+        <div id="footer-grazuman"></div>
+
+        
+    </footer>
+    
+<script src="../scripts/footerscript.js"></script>
+
 <script>
     // Hey. If you're looking at this code (and you are) and thinking "wow, why did they do it that way. That looks so so so stupid and inefficient!" that's because this is (quite literally) my first time writing any javascript from scratch. All things considered it's a miracle it functions at all.
 

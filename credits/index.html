@@ -23,6 +23,19 @@
 
         </div>
 
+        <div id="credits-entrycont">
+            <h3 id="credits-entrytitle">
+                Music featured in each page's footer:
+            </h3>
+
+            <p id="credits-entrycredit">Credited in each page (click on the i button)</p>
+
+        </div>
+
+
+
+
+
         <h2 id="credits-subhead">'Home' Page</h2>
 
         <div id="credits-entrycont">
@@ -48,9 +61,35 @@
     </main>
 
 
-</body>
+    <footer>
+        <marquee id="footer-marq" style="color:red">Is this basically a carbon copy of the credits from my last site? Yes. Did I code this one from scratch? Also yes. (why did I do it like that?)</marquee>
 
-<!-- Is this basically a carbon copy of the credits from my last site? Yes. Did I code this one from scratch? Also yes. (why did I do that?) -->
+        <div class="footer-link"><a href="../index.html">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
+            <source src="../assets/credits/everynight.mp3" type="audio/mpeg">
+            There should be a song here, but your browser doesn't like music.
+        </audio>
+
+        <div class="footer-link" id="footer-playpausecont">
+            <a id="footer-playpause" onclick="toggleFooterMusic()">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont">
+            <a id="footer-volchanger" onclick="adjustFooterVolume()">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont">
+            <a id="footer-info" onclick="window.alert('The Song Of This Page Is: Every Night by flor. I just think its a credits-y song.')">( i )</a>
+        </div>
+
+        <div id="footer-grazuman"></div>
+
+        
+    </footer>
+
+    </body>
+<script src="../scripts/footerscript.js"></script>
 
 
 </html>
