@@ -112,10 +112,14 @@ footer{
 
 /* ================= HOME ================= */
 
+/* ================= HOME ================= */
+
+/* ================= HOME ================= */
+
 #home-body{
     background-color:black;
-    background-image:url(assets/home/discordback.png);
-    background-size: 100dvh;
+    background-image:url(assets/home/homeback.png);
+    background-size: 100dvw 100dvh;
 }
 
 #home-centermarker{
@@ -791,7 +795,9 @@ footer{
 
 #ext-body{
     height:100dvh;
-    background-color: #871414;
+    background-image: url(assets/extras/extraback.png);
+    background-color: #1e1815;
+    background-size: 100dvw 100dvh;
 }
 
 #ext-dressertop{
