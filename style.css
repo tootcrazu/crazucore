@@ -422,7 +422,7 @@ footer{
 }
 
 #blog-selectbutton:hover{
-    filter:hue-rotate(90deg) saturate(150%);
+    filter: saturate(200%);
     box-shadow: inset 1px 1px 20px 5px #ffffff;
 }
 
@@ -608,12 +608,12 @@ footer{
 #be-bannerback{
     width:100%;
     height:100%;
-    background-image: url(assets/blog/banners/unbeatable.gif);
+    
     background-size: 100%;
 
     z-index: 10;
 
-    filter:saturate(0.5) brightness(0.5);
+    filter:saturate(0.8) brightness(0.8);
 }
 
 #be-body{
@@ -669,7 +669,7 @@ footer{
     justify-content: center;
     align-items: flex-end;
     flex-direction: row;
-    
+    background-color:#3d2e25;
     background-image:url(assets/changelog/changeback.jpg);
     background-repeat: no-repeat;
     background-size:cover;
