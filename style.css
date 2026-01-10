@@ -714,6 +714,31 @@ footer{
     padding:7px;
 }
 
+#links-gothere{
+    width:90px;
+    height:40px;
+
+    color:rgb(128, 128, 128);
+
+    background-color: #636363;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    position:absolute;
+    right:43px;
+    bottom:22px;
+
+    pointer-events: none;
+}
+
+.links-gothereactive{
+    background-color: #7e89ff !important;
+    color:white !important;
+    pointer-events: all !important;
+}
+
 #links-vendor{
     height:200px;
     position:absolute;
@@ -723,6 +748,34 @@ footer{
     z-index:13;
 
     filter:drop-shadow(5px 5px 5px black);
+}
+
+#links-updatefood{
+    height:45px;
+    position:absolute;
+    left:244px;
+    bottom:199px;
+
+    z-index:13;
+
+    filter:drop-shadow(5px 5px 5px black);
+}
+
+#links-updatecameo{
+    height:150px;
+    position:absolute;
+    left:520px;
+    bottom:10px;
+
+    z-index:14;
+    
+    transform:translate(0px, 0px);
+
+    filter:drop-shadow(5px 5px 5px black);
+}
+
+.links-interactable{
+    cursor:pointer;
 }
 
 .links-interactable:hover{
@@ -750,9 +803,42 @@ footer{
     100%{transform:translate(0px, 0px)}
 }
 
+#links-shelf{
+    height:200px;
+    display:flex;
+    flex-direction:column;
 
+    position:absolute;
 
+    filter:drop-shadow(5px 5px 5px black);
+}
 
+#links-shelfitems{
+    display:flex;
+    justify-content: space-around;
+}
+
+#links-shelfitem{
+    height:100px;
+}
+
+#links-shelfbase{
+    height:20px;
+    width:100%;
+    background-color: #bc8139;
+}
+
+#links-shelfsupports{
+    display:flex;
+    justify-content: space-around;
+    
+}
+
+#links-shelfsupport{
+    height:20px;
+    width:10px;
+    background-color: #bc8139;
+}
 
 
 

@@ -14,12 +14,55 @@
     <main id="links-main">
 
         <img id="links-vendor" class="links-interactable" src="../assets/links/crazulink-neutral.png" onclick="dialougeUpdate('this form? pretty ameturish, right? you\'d think it was drawn in paint. as far as having any body at all goes, i suppose it\'s not so bad. at least i have a little bit of shading. (does having a black inner glow filter count as shading?)')">
+
         <div id="links-countertop">
             <div id="links-textbox">
                 <div id="links-textboxast"> *</div>
                 <p id="links-dialouge"></p>
+
+                <a id="links-gotherelink" href="" target="_blank"><div id="links-gothere">Go There</div></a>
             </div>
         </div>
+
+        <img id="links-updatefood" class="links-interactable" src="../assets/links/updatesfood.png" onclick="dialougeUpdate('oh that? that\'s Update\'s food. they should be around here somewhere. (don\'t know why they insist on eating their guac from a pet bowl. like, they don\'t have opposable thumbs, but you can still hold a corn chip with paws, right?)')" onmouseover="updateCatShowHide.reverse()" onmouseleave="updateCatShowHide.reverse()">
+
+        <img id="links-updatecameo" src="../assets/links/update.png">
+
+        <div id="links-shelf" style="width:600px; right:30px; top: 30px;">
+            <div id="links-shelfitems">
+                <img class="links-interactable" id="links-shelfitem" src="../assets/links/bskyicon.png" onclick="dialougeUpdate('oh, this one\'s bluesky! it\'s pretty barren even by his other social media standards, but the handle is crazu.bsky.social if you\'re interested.');goThereUpdate('https://bsky.app/profile/crazu.bsky.social')">
+
+                <img class="links-interactable" id="links-shelfitem" src="../assets/links/webhouseicon.png" onclick="dialougeUpdate('bacon\'s web house! all time classic. please go there, it\'s awesome. very inspiring.');goThereUpdate('https://baconswebhouse.vercel.app')">
+
+                <img class="links-interactable" id="links-shelfitem" src="../assets/links/tumblricon.png" onclick="dialougeUpdate('ahh, tumblr. this is like, *the* social media, though he stil doesn\'t post on there at all. just kind of sits and reblogs funny stuff sometimes. he likes the vibe, i think.'); goThereUpdate('https://www.tumblr.com/tootcrazu')">
+            </div>
+
+            <div id="links-shelfbase"></div>
+
+            <div id="links-shelfsupports">
+                <div id="links-shelfsupport"></div>
+                <div id="links-shelfsupport"></div>
+            </div>
+        </div>
+
+        <div id="links-shelf" style="width:400px; right:30px; top: 230px;">
+            <div id="links-shelfitems">
+                <img class="links-interactable" id="links-shelfitem" src="../assets/links/discordicon.png" onclick="dialougeUpdate('discord. got a feeling this one might be the first of these to go. not based on anything, just.. the vibes are getting weird as far as the platform goes. his discord handle is * tootcrazu *. (side note, what the hell is the discord logo supposed to be? a game controller? binoculars? a pervert looking through a window?)'); goThereUpdate(0)">
+
+                <img class="links-interactable" id="links-shelfitem" src="../assets/links/potionicon.png" onclick="dialougeUpdate('what the hell is that? a potion? you can\'t even drink it, it\'s digital... gotta ask my manager about this...'); goThereUpdate(0)">
+            </div>
+
+            <div id="links-shelfbase"></div>
+
+            <div id="links-shelfsupports">
+                <div id="links-shelfsupport"></div>
+                <div id="links-shelfsupport"></div>
+            </div>
+        </div>
+
+
+
+
     </main>
 
 
@@ -28,7 +71,7 @@
     <footer>
         <marquee id="footer-marq" style="color:rgb(33, 255, 70)">Kind of extra for the amount of links that are here, but it's cool so it stays.</marquee>
 
-        <div class="footer-link"><a href="index.html">Go Back to Previous Page</a></div>
+        <div class="footer-link"><a href="../index.html">Go Back to Previous Page</a></div>
 
         <audio id="footer-audio" hidden loop>
             <source src="../assets/links/depressionshop.mp3" type="audio/mpeg">
@@ -53,14 +96,21 @@
     </footer>
 
 <script>
-    let dialougeBox = document.getElementById("links-dialouge");
+    const dialougeBox = document.getElementById("links-dialouge");
+    const goThereButton = document.getElementById("links-gothere");
+    const goThereLink = document.getElementById("links-gotherelink");
     let indexTracker = 0;
     let currentLine = "";
-    const textSpeed = 20;
+    const textSpeed = 15;
+
+    const updateCat = document.getElementById("links-updatecameo");
+    const updateCatShowHide = updateCat.animate([{transform:"translateY(0px)"}, {transform:"translateY(-175px)"}], {duration: 4000, fill:"forwards"});
+
+    updateCatShowHide.reverse();
+    updateCatShowHide.finish();
     
     
     function dialougeUpdate(newLine){
-        console.log(indexTracker);
 
         if (indexTracker == 0){
             dialougeBox.innerHTML = ("");
@@ -84,7 +134,19 @@
         }
     }
 
-    dialougeUpdate("hey.. there's not much here at the moment, but uh.. take a look i guess?");
+    function goThereUpdate(link){
+        if (link == 0 && goThereButton.classList.length != 0){
+            goThereButton.classList.remove("links-gothereactive");
+        }
+        else{
+            goThereButton.classList.add("links-gothereactive");
+            goThereLink.setAttribute('href', link);
+        }
+    }
+
+
+
+    dialougeUpdate("hey.. there's not much in at the moment, but uh.. take a look i guess?");
 
 </script>
 <script src="../scripts/footerscript.js"></script>
