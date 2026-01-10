@@ -97,6 +97,7 @@
 
 <script>
     const dialougeBox = document.getElementById("links-dialouge");
+    const vendorImage = document.getElementById("links-vendor");
     const goThereButton = document.getElementById("links-gothere");
     const goThereLink = document.getElementById("links-gotherelink");
     let indexTracker = 0;
@@ -104,7 +105,7 @@
     const textSpeed = 15;
 
     const updateCat = document.getElementById("links-updatecameo");
-    const updateCatShowHide = updateCat.animate([{transform:"translateY(0px)"}, {transform:"translateY(-175px)"}], {duration: 4000, fill:"forwards"});
+    const updateCatShowHide = updateCat.animate([{transform:"translateY(0px)"}, {transform:"translateY(-175px)"}], {duration: 8000, fill:"forwards"});
 
     updateCatShowHide.reverse();
     updateCatShowHide.finish();
@@ -122,21 +123,24 @@
     function textAdd(){
         setTimeout(addNewChar, textSpeed);
         function addNewChar(){
-            
+            vendorImage.setAttribute('src', '../assets/links/crazulink-talking.png')
             dialougeBox.innerHTML += currentLine[indexTracker];
             indexTracker += 1;
             if (indexTracker < currentLine.length){
                 setTimeout(addNewChar, textSpeed);
             }
             else {
+                vendorImage.setAttribute('src', '../assets/links/crazulink-neutral.png')
                 indexTracker = 0;
             }
         }
     }
 
     function goThereUpdate(link){
-        if (link == 0 && goThereButton.classList.length != 0){
+        if (link == 0){
+            if (goThereButton.classList.length != 0){
             goThereButton.classList.remove("links-gothereactive");
+            }
         }
         else{
             goThereButton.classList.add("links-gothereactive");
