@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crazucore</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.gif">
+    <meta name="description" content="crazucore">
+</head>
+
+<body id="links-body">
+    
+    <main id="links-main">
+
+        <img id="links-vendor" class="links-interactable" src="../assets/links/crazulink-neutral.png" onclick="dialougeUpdate('this form? pretty ameturish, right? you\'d think it was drawn in paint. as far as having any body at all goes, i suppose it\'s not so bad. at least i have a little bit of shading. (does having a black inner glow filter count as shading?)')">
+        <div id="links-countertop">
+            <div id="links-textbox">
+                <div id="links-textboxast"> *</div>
+                <p id="links-dialouge"></p>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <footer>
+        <marquee id="footer-marq" style="color:rgb(33, 255, 70)">Kind of extra for the amount of links that are here, but it's cool so it stays.</marquee>
+
+        <div class="footer-link"><a href="index.html">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
+            <source src="../assets/links/depressionshop.mp3" type="audio/mpeg">
+            There should be a song here, but your browser doesn't like music.
+        </audio>
+
+        <div class="footer-link" id="footer-playpausecont" onclick="dialougeUpdate('kinda dreary, right? didn\'t choose it, but.. i don\'t mind it.')">
+            <a id="footer-playpause" onclick="toggleFooterMusic()">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont">
+            <a id="footer-volchanger" onclick="adjustFooterVolume()">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont">
+            <a id="footer-info" onclick="window.alert('The Song Of This Page Is: Depression Shop, by Mudeth. From The Binding of Isaac: Antibirth.')">( i )</a>
+        </div>
+
+        <div id="footer-grazuman" class="links-interactable" onclick="dialougeUpdate('fuckin love that guy')"></div>
+
+        
+    </footer>
+
+<script>
+    let dialougeBox = document.getElementById("links-dialouge");
+    let indexTracker = 0;
+    let currentLine = "";
+    const textSpeed = 20;
+    
+    
+    function dialougeUpdate(newLine){
+        console.log(indexTracker);
+
+        if (indexTracker == 0){
+            dialougeBox.innerHTML = ("");
+            currentLine = newLine;
+            textAdd();
+        }
+    }
+
+    function textAdd(){
+        setTimeout(addNewChar, textSpeed);
+        function addNewChar(){
+            
+            dialougeBox.innerHTML += currentLine[indexTracker];
+            indexTracker += 1;
+            if (indexTracker < currentLine.length){
+                setTimeout(addNewChar, textSpeed);
+            }
+            else {
+                indexTracker = 0;
+            }
+        }
+    }
+
+    dialougeUpdate("hey.. there's not much here at the moment, but uh.. take a look i guess?");
+
+</script>
+<script src="../scripts/footerscript.js"></script>
+
+
+</body>
+
+
+
+</html>
