@@ -1338,29 +1338,48 @@ footer{
 /* ========= ABOUT ============ */
 /* ========= ABOUT ============ */
 
+#about-main{
+    width:10px;
+    height:10px;
 
+    position: fixed;
+
+    top:calc(50dvh - 5px);
+    left:calc(50dvw - 5px);
+
+    background-color: #00ffff;
+}
 
 #about-body{
     background-color: brown;
+    height:100dvh;
+    background-image:url(assets/about/wood-back.png);
 }
 
 .about-idcard{
     display:grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 100px, auto;
 
     width:400px;
     height:250px;
     background-color: aquamarine;
+    background-image: url(assets/about/id-back.png);
+
+    font-family: Arial, Helvetica, sans-serif;
 
     border-radius: 25px;
 
-    font-family: 'Courier New', Courier, monospace;
+    filter:drop-shadow(5px 5px 5px black);
 }
 
 .about-idimage{
     padding-left:20px;
     padding-top:20px;
+
+    height:125px;
+
+    filter:opacity(90%);
 }
 
 .about-idcardtopr{
@@ -1369,9 +1388,144 @@ footer{
     grid-template-columns: 1fr 1fr;
 
     margin-top: 20px;
-    margin-left:10px;
+    margin-left:20px;
+    margin-right: 20px;
 }
 
 .about-identryname{
     font-weight: bold;
+}
+
+.about-idcardbottom{
+    grid-column-start:1;
+    grid-column-end:3;
+
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: rgb(111, 111, 111, 0.5);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.about-idsignature{
+    height: 60px;
+}
+
+.about-idspacefiller{
+    text-align:justify;
+    font-weight:bold;
+    font-size:1.3em;
+}
+
+
+
+
+
+#about-document{
+    height: 900px;
+    width: 700px;
+
+    background-color:white;
+    font-family: 'Courier New', Courier, monospace;
+
+    filter:drop-shadow(5px 5px 5px black);
+
+    position:absolute;
+
+    bottom:-560px;
+    right:-386px;
+    rotate:1deg;
+
+    z-index: 14;
+
+    
+}
+
+#about-doctop{
+    display:grid;
+    grid-template-columns: 4fr 1fr;
+    height:100px;
+
+}
+
+#about-docheadercont{
+    margin-top:30px;
+    margin-left:10px;
+}
+
+#about-docheader{
+    display:flex;
+    justify-content: space-between;
+}
+
+#about-docheadtext{
+    font-size:1.1em;
+    font-weight:bold;
+
+    background-image: url(assets/about/textcliptest.png);
+    background-clip:text;
+    background-size: 50px;
+    color:transparent;
+}
+
+#about-docseal{
+    height:100px;
+
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#about-docmain{
+    padding-left:20px;
+    padding-right:30px;
+
+    background-image: url(assets/about/textcliptest.png);
+    background-clip:text;
+    color:transparent;
+    background-size: 50px;
+}
+
+#about-docmainhead{
+    font-size:1.2em;
+    font-weight:bold;
+    
+}
+
+#about-docmaintext{
+    font-size:1.1em;
+}
+
+#about-docsubhead{
+    font-size:1.1em;
+    font-weight: bold;
+}
+
+#about-crazucard{
+    position:absolute;
+
+    bottom: 129px;
+    right: 76px;
+    rotate: -15deg;
+    z-index: 15;
+}
+
+#about-otheronecard{
+    position:absolute;
+
+    bottom: -376px;
+    right: -65px;
+    rotate: 2deg;
+
+    z-index: 15;
+}
+
+#about-updatecard{
+    position: absolute;
+  bottom: -383px;
+  right: -363px;
+  rotate: -7deg;
+
+    z-index: 16;
 }
