@@ -657,6 +657,85 @@ footer{
     background-color: purple;
 }
 
+/*?  ======= MUSIC  ============ */
+/*?  ======= MUSIC  ============ */
+/*?  ======= MUSIC  ============ */
+
+#music-body{
+    background-color: #6caa93;
+    background-image: url(assets/music/glassback.jpg);
+}
+
+#music-main{
+    display:grid;
+    grid-template-columns: 200px 800px;
+    grid-template-rows: 130px auto;
+    width:1000px;
+    height:100dvh;
+
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#music-banner{
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    width:100%;
+}
+
+#music-nav{
+    background-color: #7fa898;
+
+    display:flex;
+    flex-direction:column;
+
+    row-gap: 15px;
+
+    padding:15px;
+}
+
+#music-nav hr{
+    width:90%;
+    height:5px;
+    background-color: #6caa93;
+}
+
+.music-navlink{
+    font-size:2em;
+}
+
+#music-content{
+    background-color: #c3ece6;
+
+    padding:10px;
+}
+
+.music-subhead{
+    font-size: 2.5em;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.music-maintext{
+    font-size:1.1em;
+}
+
+#music-gifparty{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    margin-left:20px;
+}
+
+#music-gifparty img{
+    width: 200px;
+}
+
+
+
 /* * ======= LINKS ======== */
 /* * ======= LINKS ======== */
 /* * ======= LINKS ======== */
