@@ -671,7 +671,7 @@ footer{
     grid-template-columns: 200px 800px;
     grid-template-rows: 130px auto;
     width:1000px;
-    height:100dvh;
+   
 
     margin-left:auto;
     margin-right:auto;
@@ -734,6 +734,72 @@ footer{
     width: 200px;
 }
 
+.music-list{
+    list-style-position: inside;
+    font-size:1.1em;
+}
+
+.music-list li{
+    margin-bottom: 10px;
+}
+
+.music-compcont{
+    display:grid;
+    grid-template-columns:auto 220px;
+
+    padding-bottom: 40px;
+}
+
+.music-comptable{
+    width:210px;
+    border-top:5px double rgb(255, 255, 255);
+    border-left:5px double rgb(255, 255, 255);
+    border-right:5px double rgb(255, 255, 255);
+    color:white;
+    background-color: #000000;
+
+}
+
+.music-tabheader{
+    font-size:1.3em;
+
+    text-align: center;
+    padding-bottom:2px;
+    border-bottom:5px double white;
+
+}
+
+.music-tabimage{
+    width:100%;
+    border-bottom:5px double white;
+}
+
+.music-tabtext{
+    width:100%;
+    height:30px;
+    display:flex;
+    flex-direction:row;
+    border-bottom:5px double white;
+}
+
+.music-tabtextl, .music-tabtextr{
+    width:50%;
+    font-size:1.1em;
+
+    display:flex;
+    align-items: center;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.music-tabtextl{
+    justify-content: flex-end;
+    border-right:5px double white;
+}
+
+.music-screenshot{
+    width:200px;
+}
 
 
 /* * ======= LINKS ======== */

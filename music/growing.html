@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crazucore</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.gif">
+    <meta name="description" content="crazucore">
+    
+</head>
+
+<body id="music-body">
+
+        <main id="music-main">
+            <img src="../assets/music/librarybanner.gif" id="music-banner">
+
+            <nav id="music-nav">
+                <a class="music-navlink" href="index.html">Music</a>
+                <hr>
+                <a class="music-navlink" href="growing.html">Growing a Library</a>
+                <hr>
+                <a class="music-navlink" href="listening.html">Listening Methods</a>
+                <hr>
+                <a class="music-navlink" href="mixcds.html">Mix CDs</a>
+            </nav>
+                
+            <div id="music-content">
+                <h2 class="music-subhead">How To Grow Your Library (When You Don't Use a Streaming Service)</h2>
+                <br>
+                <p class="music-maintext">
+                    I love not using a streaming service to listen to music! It means I don't have to rely on a company to dictate what's available to listen to, and I can build my own little collection of songs that really feel like me.
+                </p>
+                <br><br>
+                <p class="music-maintext">
+                    There are a couple very important drawbacks to doing it this way, though. Firstly, if you want to listen to a song or album, you have to know it exists first. Having a reccomendation algorithim for music discovery is one of the main freatures of a lot of streaming platforms, and it's something that's hard to replace if you want to ditch them.
+                </p>
+                <br>
+                <h2 class="music-subhead">Discovery</h2>
+                <br>
+                <p class="music-maintext">
+                    So how do you discover music if the only songs in your collection are ones you already know of? I've found a couple methods that work for me.
+                </p>
+                <br>
+                <ol class="music-list">
+                    <li>Utilize your friends. If they have an overlap in music taste with you (or even if they don't), asking for reccomendations will always be a good way to hear new music.</li>
+                    <li>Explore whole albums / artists! Sounds kind of dumb, but so many albums or songs I love, I've found by taking one song I knew from somewhere and deciding to give the full album a shot.</li>
+                    <li>Play Games / Watch Movies! Also kind of a no-brainer. Games, movies, tv etc all have music in them and often times that'll hit you just right.</li>
+                    <li>Finally... Radio! It still exists! And it's even more accessable thanks to the Internet! If you can find a station or two that you like (and doesn't run ads), then listening will be sure to give you new ideas. Some stations I listen to sometimes are <a href="https://listen.streamon.fm/brianfmcc" target="_blank">Brian FM</a> A local rock(?) station that I like & doesn't run many ads, and <a href="https://radio.cock.institute/" target="_blank">KWSX Radio</a>, an electronic web radio I found on tumblr (that has awesome web design).</li>
+                </ol>
+
+                <br>
+                <h2 class="music-subhead">Bulding The Thing</h2>
+                <br>
+                <p class="music-maintext">
+                    So, now that you've picked out your songs, how do you get them as MP3 or FLAC files into your library? I've picked up many a method for this as well.
+                </p>
+
+                <ol class="music-list">
+                    <li>Buying albums whole on Bandcamp. Probably the 'best' way to get music you're looking for, if it's available there. You get to support the artist waaay more than a streaming service will, and you'll be getting the best quality (and quality options) by default. But if it's not on Bandcamp...</li>
+                    <li>Try Soulseek. A music downloading service that lets you pick and download from generous other parties across the internet. The music you're looking for is very probably on here (barring something very local or niche).</li>
+                    <li>If all else fails, pull out the old favorite: Youtube to MP3 converter website. Quality isn't the best sometimes, and it can take a lot of time if you don't want to invest in learning a more streamlined command line tool like yt-dlp, but it works.</li>
+                    <li>Honorable Mention: you can totally rip CDs! If you have a CD drive available to you, at least. A lot of my initial music library came from ripping my Dad's CD collection for things I was interested in.</li>
+                </ol>
+
+                <br>
+                <p class="music-maintext">
+                    There's an additional step here that can take as much effort as you want it to: Tagging the files so that they show with correct album art & information. I find MP3TAG for windows to be my strongest warrior in this regard. It's very easy to use, and very rewarding to master (I've got a button to press that automatically names the music files in an album according to a pre-set naming scheme, and then moves it to my music folder in a correctly named folder. So satisfying.)
+                </p>
+                <br>
+                <p class="music-maintext">
+                    (side note, if you want to discuss any of this, <i>please</i> don't hesitate to reach out to me. I will happily talk about this for hours.)
+                </p>
+                <br>
+                <br>
+                <br>
+            </div>
+
+        </main>
+
+
+<footer>
+        <marquee id="footer-marq" style="color:rgb(8, 255, 226)">Like one of those kits where you make crystals</marquee>
+
+        <div class="footer-link"><a href="../index.html">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
+            <source src="../assets/music/anywhereelse.mp3" type="audio/mpeg">
+            There should be a song here, but your browser doesn't like music.
+        </audio>
+
+        <div class="footer-link" id="footer-playpausecont">
+            <a id="footer-playpause" onclick="toggleFooterMusic()">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont">
+            <a id="footer-volchanger" onclick="adjustFooterVolume()">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont">
+            <a id="footer-info" onclick="window.alert('The Song Of This Page Is: Anywhere Else by Slowwves')">( i )</a>
+        </div>
+
+        <div id="footer-grazuman"></div>
+
+        
+    </footer>
+
+</body>
+<script src="../scripts/footerscript.js"></script>
