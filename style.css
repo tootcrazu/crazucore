@@ -570,6 +570,8 @@ footer{
     border-bottom: ridge;
     border-color: #c0c0c0;
     border-width: 5px;
+
+    
 }
 
 #be-bannertextcont{
@@ -594,7 +596,8 @@ footer{
     font-family: 'molot';
     font-size:3em;
 
-    filter:drop-shadow(6px 6px 2px rgb(0, 0, 0));
+    filter:drop-shadow(6px 6px 2px rgb(0, 0, 0)) opacity(70%);
+
 }
 
 #be-bannerdesccont h2{
@@ -672,7 +675,7 @@ footer{
     grid-template-rows: 130px auto;
     width:1000px;
    
-
+    min-height:100dvh;
     margin-left:auto;
     margin-right:auto;
 }
@@ -800,6 +803,104 @@ footer{
 .music-screenshot{
     width:200px;
 }
+
+
+.music-mixCont{
+    width:calc(100% - 40px);
+
+    border:ridge;
+    border-color: #dddddd;
+    border-width: 10px;
+    background-color: #dddddd;
+
+    padding:10px;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+.music-mixTitle{
+    font-size:2em;
+    font-weight:bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+
+    padding:10px;
+    padding-bottom:20px;
+}
+
+.music-mixCoverTracks{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:center;
+
+    margin-bottom:30px;
+}
+
+.music-mixCover{
+    width:90%;
+    padding-left:15px;
+}
+
+.music-mixTrackList{
+    padding-left:10px;
+}
+
+.music-mixTrackDiscTitle{
+    font-weight: bold;
+    font-size:1.2em;
+    padding-bottom: 5px;
+}
+
+.music-mixTrackList ul{
+    list-style-position: inline;
+    list-style-type: square;
+    font-size:1.1em;
+}
+
+.music-mixTrackDivider{
+    height:3px;
+    margin-right: 40px;
+    margin-top:10px;
+}
+
+.music-mixDesc{
+    margin-bottom: 10px;
+}
+
+.music-mixParaph{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.music-mixParaphItem{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+
+    margin:10px;
+}
+
+.music-mixParaphItem img{
+    width:300px;
+}
+
+.music-mixParaphItem p{
+    font-weight:bold;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* * ======= LINKS ======== */
@@ -997,7 +1098,7 @@ footer{
 
 #ccomp-body{
     height:100dvh;
-
+    
     display: flex;
 
     justify-content: center;
