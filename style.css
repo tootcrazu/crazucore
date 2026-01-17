@@ -117,6 +117,8 @@ footer{
 /* ================= HOME ================= */
 
 #home-body{
+    height:100dvh;
+    width:100dvw;
     background-color:black;
     background-image:url(assets/home/homeback.png);
     background-size: 100dvw 100dvh;
@@ -169,13 +171,13 @@ footer{
     background-size: 100px;
     
 
-    animation-name: home-orbbacktest;
+    animation-name: home-orbback;
     animation-duration:120s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
-@keyframes home-orbbacktest{
+@keyframes home-orbback{
     0% {transform:rotate(0deg);}
     100% {transform:rotate(360deg);}
 }
@@ -352,6 +354,144 @@ footer{
     top:140%;
 }
 
+#homem-body{
+    display:none;
+}
+
+#homem-topbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+
+    font-size:1.4em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    filter:drop-shadow(0px 2px 10px rgb(0, 0, 0, 0.5));
+    
+}  
+
+#homem-main{
+    display:flex;
+    flex-direction: column-reverse;
+
+    overflow:scroll;
+}
+
+#homem-spacer{
+    height:20px;
+    flex-shrink: 0;
+}
+
+#homem-decaspacer{
+    height:300px;
+    flex-shrink: 0;
+}
+
+#homem-textfrom{
+    border:20px solid transparent;
+    border-image:url(assets/home/textborderfrom.png) 40 round;
+
+    width:70%;
+}
+
+#homem-textto{
+    border:20px solid transparent;
+    border-image:url(assets/home/textborderto.png) 40 round;
+
+    width:70%;
+    margin-left:calc(30% - 40px)
+}
+
+#homem-textext{
+    color:white;
+    font-size:0.9em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#homem-textfrom #homem-textext{
+    background-color: #c840e1;
+}
+
+#homem-textto #homem-textext{
+    background-color: #e1c840;
+}
+
+#homem-bottombar{
+    background-color:rgb(210, 210, 210);
+
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#homem-pluscont{
+    position:relative;
+}
+
+#homem-plusplus{
+    z-index: 11;
+    position:absolute;
+
+    font-size:2em;
+    font-weight:bolder;
+    color:#c840e1;
+
+    top: -19px;
+    left: -2px;
+}
+
+#homem-plusback{
+    position:absolute;
+    z-index: 10;
+    border:2px solid #c840e1;
+    border-radius: 100px;
+
+    height:25px;
+    width:25px;
+
+    top: -13px;
+    left: -8px;
+}
+
+#homem-message{
+    height:80%;
+    width:80%;
+    border-radius: 100px;
+    background-color: white;
+
+    color:lightgray;
+    font-style:italic;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 🪤🪤SMALL MODE🪤🪤 */
+/* 🪤🪤SMALL MODE🪤🪤 */
+/* 🪤🪤SMALL MODE🪤🪤 */
+
+
+@media screen and (max-width: 800px) {
+    #home-body{
+        display:none;
+    }
+
+    #homem-body{
+        width:100%;
+        height:100dvh;
+        display:grid;
+        grid-template-rows: 45px auto 40px;
+
+    }
+}
+
+
 
 
 /* ? █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █ █  */
@@ -435,20 +575,20 @@ footer{
     height:100dvh;
 
     background-color: #00398b;
-    background-image: url(assets/blog/tempback.png);
+    background-image: url(assets/blog/blogback.png);
 }
 
 #blog-main{
     min-width:790px;
     width:70dvw;
     max-width:875px;
-    height:400%;
+    min-height:100%;
 
     margin-left:auto;
     margin-right:auto;
     margin-top:30px;
 
-    background-color: antiquewhite;
+    background-color: rgb(0, 0, 0);
 }
 
 #blog-controls{
@@ -470,7 +610,7 @@ footer{
     border-color: #c0c0c0;
     border-width: 5px;
 
-    background-color:rgba(0, 0, 0, 0.7);
+    background-color:rgba(0, 0, 0, 0.5);
 }
 
 #blog-controls a{
@@ -556,11 +696,13 @@ footer{
     border-width: 5px;
 
     color:white;
+
+    margin-bottom:10px;
 }
 
 #be-headercont{
     width:100%;
-    height:70px;
+    height:140px;
 }
 
 #be-bannercont{
@@ -594,9 +736,9 @@ footer{
 
 #be-bannertitle{
     font-family: 'molot';
-    font-size:3em;
+    font-size:2.5em;
 
-    filter:drop-shadow(6px 6px 2px rgb(0, 0, 0)) opacity(70%);
+    filter:drop-shadow(6px 6px 2px rgb(0, 0, 0));
 
 }
 
@@ -643,22 +785,37 @@ footer{
     column-gap: 5px;
 }
 
-.be-games{
-    background-color:magenta;
+#be-blogscreenshot{
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
     display:block;
 }
 
-.be-moviestv{
-    background-color:red;
+#blog-bottomspinnercont{
+    width:100%;
+    height:300px;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
 }
 
-.be-music{
-    background-color: lightblue;
+#blog-bottomspinner{
+    width:10%;
+
+    animation-name: home-orbback;
+    animation-duration:30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    filter:opacity(70%);
 }
 
-.be-rambling{
-    background-color: purple;
-}
+
+
+
 
 /*?  ======= MUSIC  ============ */
 /*?  ======= MUSIC  ============ */
