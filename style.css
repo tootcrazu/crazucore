@@ -1,3 +1,15 @@
+/* 
+
+- accessibility pass
+- history improvement?
+- beta test with bailey?
+- typo pass
+- rest of blog entries
+
+*/
+
+
+
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
     /* Cancel out some differences between browser defaults */
     margin: 0px;
@@ -1262,7 +1274,7 @@ footer{
     align-items: flex-end;
     flex-direction: row;
     background-color:#3d2e25;
-    background-image:url(assets/changelog/changeback.jpg);
+    background-image:url(assets/changelog/changeback.gif);
     background-repeat: no-repeat;
     background-size:cover;
 

@@ -1,7 +1,0 @@
-- image quality pass
-- accessibility pass
-- history improvement?
-- mobile homepage
-- beta test with bailey?
-- typo pass
-- rest of blog entries
