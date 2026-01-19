@@ -38,6 +38,7 @@ footer{
     width:100%;
     height:20px;
 
+    z-index: 99;
     bottom:0;
 
     background-color: #c0c0c0;;
@@ -600,7 +601,7 @@ footer{
     margin-right:auto;
     margin-top:30px;
 
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.5);
 }
 
 #blog-controls{
@@ -773,9 +774,13 @@ footer{
     filter:saturate(0.8) brightness(0.8);
 }
 
-#be-body{
+#be-body, #be-bodydouble{
     background-color: black;
-    padding:10px;
+    padding:12px;
+}
+
+#be-bodydouble{
+    margin-top:150px;
 }
 
 #be-bodytext{
@@ -797,7 +802,7 @@ footer{
     column-gap: 5px;
 }
 
-#be-blogscreenshot{
+#be-screenshot{
     width:60%;
     margin-left:auto;
     margin-right:auto;
@@ -825,6 +830,12 @@ footer{
     filter:opacity(70%);
 }
 
+#IMAGE_DELTAPORTAL{
+    height:200px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
 
 
 
