@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crazucore</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicons/blog.gif">
+    <meta name="description" content="crazucore">
+</head>
+
+<body id="blog-body" style="background-image: url(../assets/blog/blogback2024.png);">
+
+    <main id="blog-main">
+
+        <beans id="blog-controls">
+            <a id="bc-sortbutton" onclick="toggleChronoSort()">↓ Sort Oldest First</a>
+
+            <a id="bc-gamefilter" onclick="toggleGames()" >Hide Games</a>
+            <a id="bc-moviestvfilter" onclick="toggleMoviesTV()" >Hide Movies & TV</a>
+            <a id="bc-musicfilter" onclick="toggleMusic()" >Hide Music</a>
+            <a id="bc-ramblingfilter" onclick="toggleRambling()" >Hide Rambling</a>
+
+            <a id="bc-filterreset" onclick="resetFilters()" title="Reset Filters">Reset</a>
+        </beans>
+
+        
+        <div id="blog-entrycont">
+
+            <!-- Dome Keeper -->
+            <div id="blog-entry" class="be-games">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Dome Keeper</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2022 Video Game</h2>
+                                <h2>Bippinbits</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/domekeeper.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        It took hearing an twitch chatter critisize Northernlion about unoptimal strip mining techniques for me to pick this game up. I hadn't heard much about it before and I wasn't even watching the live stream the comment came from, but for some reason that piqued my interest enough to pick the game up. I've only had the game for 7 days and I have somehow amassed 16 hours of playtime. Oops.
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> December 22nd </p>
+                </div>
+            </div>
+
+            <!-- Em Essex -->
+            <div id="blog-entry" class="be-music">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Whole Buncha Music</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>???? Discography</h2>
+                                <h2>Em Essex</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/emessex.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        Not to end the year without something new and exciting, a passing mention on a livestream led me to Em Essex. In no time at all, I had purchased their entire discography, and have been listening through albums as a backlog since. In honesty, the art attatched to each albums has been just as much a treat as the actual music. <br>
+                        <p style="color:grey">Also, I had to change how I process all of my mp3 files to accomodate for all of the special characters in song / artist names, which was quite fun.</p>
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> December </p>
+                </div>
+            </div>
+
+            <!-- Manners -->
+            <div id="blog-entry" class="be-music">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Manners</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2009 Album</h2>
+                                <h2>Passion Pit</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/manners.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        This album is super cool! Like a few albums I now listen to on the regular, I got it because I recognise one song from it (Sleepyhead, from LittleBigPlanet), but the whole album is great! (To be completely honest, I don't even like Sleepyhead that much, the other songs are way better.) Favorite Song: Folds In Your Hands. <br>
+                        <p style="color:grey">Side note, in looking up this album to see if there was a bandcamp to link, I discovered that a remastered version of the album released a couple months ago!</p> fun.</p>
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> ???? </p>
+                </div>
+            </div>
+
+            <!-- Byte Ballads -->
+            <div id="blog-entry" class="be-music">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Byte Ballads</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2024 Album</h2>
+                                <h2>Louie Zong</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/byteballads.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        Louie Zong is awesome, and an extremely talented musician, but none of his albums have grabbed me before like Byte Ballads did. It's slow and a little melancholy, but plesant to listen to and uplifting at the same time. Favorite track is NOW LOADING... for sure.
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> November 2024 </p>
+                </div>
+            </div>
+
+            <!-- Webfishing -->
+            <div id="blog-entry" class="be-games">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Webfishing</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2024 Video Game</h2>
+                                <h2>Lamedeveloper</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/webfishing.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        <a href="https://www.tumblr.com/strudel-fatpaws/759709751773921280/gonna-start-sorting-my-steam-library-like-this" target="blank">Webfishing, like Windowkill</a>, is also a platonic ideal of a video game. It has everything you could ever want, including, but not limited to:
+                            <ul id="be-list">
+                                <li>Great character Customization</li>
+                                <li>A great visual asthetic</li>
+                                <li>Gay Furries</li>
+                                <li>Multiplayer that's designed to be just hanging out chill style</li>
+                                <li>Easter Eggs that feed back into the multiplayer, showing new people around is a great experience</li>
+                                <li>also Gay Furries</li>
+                            </ul>
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> October 27th </p>
+                </div>
+            </div>
+
+            <!-- 2mello -->
+            <div id="blog-entry" class="be-music">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Memories and Sounds of Tokyo-To</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2018, 2021 Albums</h2>
+                                <h2>2-Mello</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/2mellotokyoto.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        On the Subject of 2 Mello, I Took longer than I should've to jump to these albums after enjoying Bomb Rush so much. I can confirm, this album (and it's sequel, Sounds of Tokyo-To Future) similarly rock your socks. Favorite Tracks: 24 Hour Party People, Ba-da-Ba, BREAK DOWN BREAK UP, LUV 2 LUV.
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> October 2024 </p>
+                </div>
+            </div>
+
+            <!-- siivagunner -->
+            <div id="blog-entry" class="be-music">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">King for Another Day Tournament</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2019 Muiscal Tournament</h2>
+                                <h2>SIlvagunner</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/kingforanotherday.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        What a fool I have been for ignoring the King for Another Day soundtrack for so long. I haven't even really sat down and listened to the whole thing in full yet, just jumped around to things I recognise. Lots to love from Off the Hook (ft. Paruko), Daft Punk (ft. Pharrell), Law & Disorder, and especially Mariya Takeuchi and DJ Professor K. There's even a 2Mello song in there! And it's Splatoon!
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> October 2024 </p>
+                </div>
+            </div>
+
+            <!-- Alive 2007 -->
+            <div id="blog-entry" class="be-music">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Alive 2007</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2007 Album</h2>
+                                <h2>Daft Punk</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/alive2007.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        Alive 2007 turned me around on live albums. I used to think that people cheering in the background would be a deal breaker, but it ended up being the opposite. Might help that I heard Around the World / Harder Better Faster Stronger first in Beat Saber, where a cheering crowd really adds to the atmosphere.
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> ???? </p>
+                </div>
+            </div>
+
+            <!-- Splat3 Grand Fest -->
+            <div id="blog-entry" class="be-games">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Splatoon 3: Grand Fest</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2024 Video Game Event</h2>
+                                <h2>Nintendo</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/splat3grandfest.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        Grand Fest! I was never a regular Splatoon player (and I'm still not very good), but my love for the story and music carried me far enough to get me to at least try and get good. To fight for Team Present, may they rest in piece. 
+                            <br>
+                        The whole event was also very cool to experience! The whole outdoor music festival theme was a great idea pulled off perfectly, and seeing all the little guys and hearing all the songs was super cool. Speaking of the music, it was a big part of why I got into Splatoon in the first place, so seeing the songs being 'performed' 'live' was cool! I can't pick a favorite song...
+                        <br>
+                        (2026 note from when I'm copy pasing all the stuff in, looking through all my screenshots to find a banner made me very nostalgic... Shame I'm not really into nintendo stuff anymore, Splatoon is so cool.).
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> September 13th </p>
+                </div>
+            </div>
+
+            <!-- unbeatablewhitelabel -->
+            <div id="blog-entry" class="be-games">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">UNBEATABLE [white label]</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2021 Video Game</h2>
+                                <h2>D-Cell Games</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/unbeatablewhitelabel.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        Speaking of rhythm games with awesome soundtracks, UNBEATABLE! The fact that this game has collabs in Rhythm Doctor <i>and</i> No Straight Roads should've clued me in to the fact that this would be a great game, but I didn't think much of it until checking out the game for myself. Suffice to say, I love it, presentation is top notch, and the songs are even topper notch. (Proper Rhythm is my favorite). And this isn't even the full game!
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> August 2024 </p>
+                </div>
+            </div>
+
+            <!-- Bomb Rush -->
+            <div id="blog-entry" class="be-games">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Bomb Rush Cyberfunk</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2023 Video Game</h2>
+                                <h2>Team Reptile</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/bombrush.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        I finally played Bomb Rush Cyberfunk! I've been a fan of the soundtrack almost since release, so it was great to play the game and see that it's style and steeze managed to match it's music.
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> July </p>
+                </div>
+            </div>
+
+            <!-- Side Order -->
+            <div id="blog-entry" class="be-games">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Splatoon 3: Side Order</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2024 Video Game DLC</h2>
+                                <h2>Nintendo</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/splat3sideorder.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        I had the pleasure of rounding off my playthroughs of all of Splatoon's story modes without being spoiled on Side Order, and... It might be my favorite one? Or at least tied with Octo Expansion. I know it's a little divisive, I'd imagine some people are less fond of the rougelike gameplay, but I'm already a rougelike lover, so I enjoyed it. It has all the little neat touches that every Splatoon game has, and they finally added new enemies for what is pretty much the first time in the series (Not counting new Octo enemy variants). And it has Off the Hook in it, so.. A+ for that.
+                        <br>
+                        I really like the music we got in Side Order! Admittedly, the 'level themes' (i.e. the songs that play while you're fighting non-boss floors) aren't exactly replayable bangers like previous story levels, but everything else is top notch. The lobby themes are really cool, and Short Order and the Ebb & Flow music really pump up their respective fights. Marina Agitando has got to be my favorite track of the bunch.
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> 'Middle of 2024' </p>
+                </div>
+            </div>
+
+            <!-- Windowkill rhythm doctor -->
+            <div id="blog-entry" class="be-games">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Rhythm Doctor</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2021 Video Game (early access)</h2>
+                                <h2>7th Beat Games</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/rhythmdoctor.png);"></div>
+
+                    </div>
+
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Windowkill</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2024 Video Game</h2>
+                                <h2>torcado</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/windowkill.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-bodydouble">
+                    <p id="be-bodytext">
+                        I had always assumed I wasn't very good at rhythm games, though this may be because my main data points were Geometry Dash (not a very good rhythm game) and Space Channel 5: Part 2 (Notoriously Buggy). That said, I had a great time with Rhythm Doctor. The music is great, the levels are extremely creative, and it has cool collab levels too! My favorite song has to be the Fire & Ice tutorial though.
+                        <br>
+                        <br>
+                        Windowkill is kind of like the platonic ideal of a game for me. It's got a cool gimick that is very well utilized, the visual design is super clean, and the soundtrack is rad. And it's cheap! Buy it!
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> April </p>
+                </div>
+            </div>
+
+            <!-- Digital Nightmare -->
+            <div id="blog-entry" class="be-music">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Digital Nightmare</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2024 Album</h2>
+                                <h2>TWRP</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/digitalnightmare.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                        I'm a TWRP Lover. I've been a TWRP lover for a long time (Together Through Time, my beloved). Digital Nightmare hits all the right notes for me. It has banger upbeat jam in Online. It has slower, more contemplative but still banger song in Human Touch. It also has a song about HTML. 10/10.
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> March 23rd </p>
+                </div>
+            </div>
+
+            <!-- balatro -->
+            <div id="blog-entry" class="be-games">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">Balatro</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2024 Video Game</h2>
+                                <h2>Localthunk</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/balatro.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                       I'm a sucker for a clean, well designed card rougelike and Balatro is that to a tee. Everything about it is perfectly tuned, with just enough detail put into just the right areas to make it shine. I am <i>also</i> a sucker for watching youtube videos of people playing well designed card rougelikes in an optimal way, and that exists in spades for this game, so it's a self perpetuating loop really.
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> 'Early 2024' </p>
+                </div>
+            </div>
+
+            <!-- Layton -->
+            <div id="blog-entry" class="be-games">
+                <div id="be-headercont">
+                    <div id="be-bannercont">
+
+                        <div id="be-bannertextcont">
+                            <h1 id="be-bannertitle">All Six Professor Layton Game</h1>
+                            <div id="be-bannerdesccont">
+                                <h2>2007 - 2013 Video Games</h2>
+                                <h2>Level-5</h2>
+                            </div>
+                        </div>
+
+                        <div id="be-bannerback" style="background-image: url(../assets/blog/banners/everylayton.png);"></div>
+
+                    </div>
+                </div>
+
+                <div id="be-body">
+                    <p id="be-bodytext">
+                       This year, for the first time, I played through every Layton game from Curious Village to Azran Legacy. It was a ride. I am all for the wild and nonsense plot twists, and the puzzles were fun too! I can honestly say I had a great time playing them, and I'm super excited to play Professor Layton Vs Pheonix Wright (Ostensibly the reason I started playing the layton games in the first place), and New World of Steam! Unwound Future has to be my favorite of the series, since I think it pulls the end-of-game insane reveals off the best. In order from favorite to least, it probably goes: Unwound Future, Spectre's Call, Miracle Mask, Pandora's Box, Curious Village, Azran Legacy.
+                    </p>
+                </div>
+
+
+
+                <div id="be-footer">
+                    <p id="be-rating"></p>
+
+                    <p id="be-timestamp"> Like, the whole year </p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div id="blog-bottomspinnercont">
+            <img src="../assets/blog/bottomspinner.png" id="blog-bottomspinner" alt="A spinning spiral. You've reached the end of the blog.">
+        </div>
+
+        
+    </main>
+
+        <footer>
+        <marquee id="footer-marq" style="color:rgb(255, 61, 236)">We're getting so far back now, I think I was a different person then.</marquee>
+
+        <div class="footer-link"><a href="index.html">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
+            <source src="../assets/blog/leavebrain.mp3" type="audio/mpeg">
+            There should be a song here, but your browser doesn't like music.
+        </audio>
+
+        <div class="footer-link" id="footer-playpausecont">
+            <a id="footer-playpause" onclick="toggleFooterMusic()">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont">
+            <a id="footer-volchanger" onclick="adjustFooterVolume()">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont">
+            <a id="footer-info" onclick="window.alert('The Song Of This Page Is: did u leave ur brain at home, by Chipzel.')">( i )</a>
+        </div>
+
+        <div id="footer-grazuman"></div>
+
+        
+    </footer>
+    
+<script src="../scripts/footerscript.js"></script>
+
+<script src="../scripts/blogscript.js"></script>
+
+
+</body>
+
+</html>
