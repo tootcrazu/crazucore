@@ -1,0 +1,126 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>crazu place</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+        <script src="./musicPlayer.js"></script>
+        <meta name="description" content="A place for crazu">
+    </head>
+
+    <body>
+
+        <header>
+            <img src="assets/crazubannersparkle.gif" alt="Sparkly pink banner with'toot crazu' written on it, along with a smiling face icon">
+            <marquee behaviour="scroll" direction="left" class="header-text">"Nostalgia for an era I was never really a part of? I can do that!"</marquee>
+        </header>
+
+        <nav>
+            <div id="navContainer">
+                <h2>Navigation!</h2>
+                <hr>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="favs2024.html">My Favorite Stuff (2024)</a></p>
+                <p><a href="favs2023.html">My Favorite Stuff (2023 and before)</a></p>
+                <p><a href="servers.html">Minecraft Server</a></p>
+                <p><a href="dungeon/evil.html">Evil Dungeon</a></p>
+                <p><a href="abtmusic.html">About Music</a></p>
+                <p><a href="credits.html">Credits</a></p>
+            </div>
+        
+        
+        <div id="musicPlayer"> 
+            <div id="trackNameCont">
+                <marquee id="trackName" class="player-title">
+                    Press Play to Begin!
+                </marquee>
+            </div>
+
+            <div id="trackProgressCont">
+
+                <div id="progSliderCont">
+                    <input type="range" value="0" class="slider" id="progressSlider">
+                </div>
+
+                <div id="trackTimeCont">
+                    <span id="trackProgress">00:00</span> <span id="trackTotalLength">00:00</span>
+                </div>
+
+            </div>
+
+            <audio controls id="trackAudio">
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <div id="buttonCont">
+                <button class='trackBtn' onclick="previous()">
+                    <img src="assets/player/trackBackArr.png" alt="Previous track">
+                </button>
+
+                <button class='trackBtn' id="pauseToggle" onclick="togglePause()">
+                    <div><img class='playButt' src='assets/player/trackPlayButt.png' alt="Play"> <img class='pauseButt'src='assets/player/trackPauseButt.png' alt="Pause"></div>
+                </button>
+
+                <button class='trackBtn' onclick="next()">
+                    <img src="assets/player/trackFwdArr.png" alt="Skip to next track">
+                </button>
+
+            </div>
+
+
+            <div id="volSliderCont">
+                <input type="range" min="0" step="0.01" max="1" value="0" class="slider" id="volSlider">
+            </div>
+        </div>
+        
+    </nav>
+
+
+
+    <main>
+        <h1>About Music</h1>
+
+        <p>So I collect and maintain a custom library of mp3/flac files! It mostly came from a desire to distance from paid subscription services, especially when any piece of music could pretty much disappear at any given time. Plus, it allows me to add anything I can get my hands on, which is great when you want to listen to, for example, pretty much any song from a Nintendo game without going to youtube. </p> <br>
+        
+        <p>It's actually been quite fun, and something I'd reccomend anyone give a shot if they have the time, the will, and the energy. Meticulously tagging mp3 files and getting them to display properly on different mp3 playing software can be a meticulous task, but it's one that brings me great joy.</p>
+        <br>
+        <p>If you're interested in what my favorite albums, songs, etc are from my collection, Check them out under the "My Favorites" page!</p>
+        <br>
+        <hr>
+        
+        <p>Someday, I'd like to have a radio of sorts on this website, for easy listening and such. The music player to the right is a sort of prototype of this. Though I'd have to bug Micky P to code in the features that I want to make it fully functional as a radio, and even then It probably woudln't be a perfect solution. Maybe I'll try to learn Java one day!</p>
+
+    </main>
+
+    <div id="contacts">
+        <p class="contact-text">Design by toot crazu</p>
+        <a target="_blank" href="https://www.tumblr.com/tootcrazu"><img src="assets/tumblrlogo.png"></a>
+        <img src="assets/Discordlogo.png" title="I'm tootcrazu on Discord!">
+    </div>
+
+
+    <footer>
+        <img class="footer-img" src="assets/scoutgif.gif" alt="The Scout from Deep Rock Galactic">
+        <img class="footer-img" src="assets/lampjam.gif" alt="Ray, the lamp from Ghost Trick, bouncing up and down jovially">
+        <img class="footer-img" src="assets/edgegif.gif" alt="Miles Edgeworth, from Ace Attorney, rotating in a standing position">
+        <img class="footer-img" src="assets/voiletcrazu.gif" alt="The smiling face icon, made to look like the sun reflecting on water">
+        <img class="footer-img" src="assets/jono.gif" alt="A buch of random 3d models rotating. Trust me, you're not missing out on much here.">
+        <img class="footer-img" src="assets/cloverdance.gif" alt="Clover, the small cowboy child from Undertale Yellow, waving their hands in a rythmic dance">
+        <img class="footer-img" src="assets/spamton.gif" alt="Spamton from Deltarune doing an odd dance">
+        <img class="footer-img" src="assets/fnafwmangle.gif" alt="Mangle from FNAF world bouncing happily in an idle stance">
+        
+    </footer>
+
+
+
+</body>
+
+
+
+
+
+    </html>

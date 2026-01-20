@@ -1,0 +1,66 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html{
+    background-color:black;
+    background-image:url(bricks3.gif);
+    background-size: 30%;
+    width:100%;
+}
+
+body{
+    display:grid;
+    grid-template-columns: auto 0.6fr auto;
+    width:100%;
+}
+
+main{
+    grid-column-start:2;
+    grid-column-end: 3;
+    background-color: black;
+    background-image:url(bricks2.gif);
+    background-size: 40%;
+    height:100%;
+}
+
+#sidebarL, #sidebarR{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+#sidebarL{
+    align-items:flex-end;
+}
+
+#sidebarL img, #sidebarR img{
+    width:50px;
+}
+
+#evilheader{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#bottimages{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    bottom: 0;
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-end;
+}
+
+#conftext{
+    color:rgb(83, 0, 0);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align:center;
+    font-size:7em;
+}

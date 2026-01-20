@@ -1,0 +1,76 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html{
+    background-color:black;
+}
+
+body{
+    min-height:100vh;
+}
+
+#brick-wall{
+    padding:0px;
+    height:100vh;
+    display:grid;
+    grid-template-rows: 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr 4fr;
+}
+
+.brick, .briok{
+    padding:0px;
+    height:100%;
+    border:outset;
+    border-width:5px;
+    background-color:darkgrey;
+    border-color:lightgrey;
+}
+
+.brick:hover, .briok:hover{
+    cursor:grab;
+    border:inset;
+    border-width:5px;
+    border-color:lightgrey;
+}
+
+.briok:hover{
+    cursor:grabbing;
+}
+
+.row1{
+    padding-bottom: 10px;
+    display:grid;
+    grid-template-columns: 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr;
+}
+
+.row2{
+    padding-bottom: 10px;
+    display:grid;
+    grid-template-columns: 2.5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 5fr 2.5fr;
+}
+
+.escape{
+    background-color:darkviolet;
+    border-color:darkviolet;
+}
+
+.escape:hover{
+    border-color:darkviolet;
+}
+
+.brick p{
+    display:none;
+    text-align:center;
+    color:rgb(66, 66, 66);
+    font-size:0.7em;
+}
+
+.brick:hover ~ .brick p{
+    display:flex;
+    overflow:hidden;
+}

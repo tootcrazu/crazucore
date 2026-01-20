@@ -1,0 +1,701 @@
+/*=== Font Declaration ===*/
+
+@font-face {
+    font-family: 'dosvga';
+    src: url('assets/fonts/dosvga.woff2') format('woff2'),
+         url('assets/fonts/dosvga.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*=== Cancelling Defaults ===*/
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    /* Cancel out some differences between browser defaults */
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/*=== Main Page, Background & Window Elements ===*/
+
+html{
+    height:100vh;
+    width:100vw;
+}
+
+body{
+    background-color:#0d2547;
+    background-image:url(assets/spacebg.gif);
+    min-height: 100%;
+    background-size: auto 100dvh;
+    background-repeat:repeat-x;
+    overflow-x: hidden;
+}
+
+#bodyscroll{
+    background-color:#0d2547;
+    background-image:url(assets/spagebgscroll.gif);
+    background-size: auto 100dvh;
+    background-repeat:repeat;
+    overflow-x: hidden; 
+}
+
+.titlebar{
+    background-color: blue;
+    display:flex;
+    flex-direction:row;
+    border-bottom:solid;
+    border-color:grey;
+    align-items:center;
+    padding:5px;
+    justify-content:space-between;
+}
+
+.titlebaricontext{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+.titlebaricontext p{
+    color:white;
+    font-size:1.2em;
+    font-family: dosvga;
+}
+
+.titlebaricon{
+    height:25px;
+    padding-right:10px;
+}
+
+.titlebarbuttons{
+    display:flex;
+    flex-direction:row;
+    height:25px;
+}
+
+.titlebarclose{
+    height:25px;
+    padding-left:3px;
+}
+
+.window{
+    border:ridge;
+    border-color: #c0c0c0;
+    border-width: 5px;
+    background-color:#c0c0c0;
+}
+
+.whitepage{
+    background-color:white;
+    border:inset;
+    flex-grow:2;
+    margin:5px;
+    padding:5px;
+}
+
+.blackpage{
+    background-color:black;
+    border:inset;
+    flex-grow:2;
+    margin:5px;
+    padding:5px;
+
+    color:white;
+}
+
+/* RADIO BUTTON SELECTOR STYLING */
+
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+    position: absolute;
+    right: 0;
+    opacity: 0.01;
+}
+
+
+.rad-selector{
+    border:outset;
+    border-color: #a7a7a7;
+    border-width:5px;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.rad-selector:hover{
+    border:inset;
+    border-color: #a7a7a7;
+
+    border-width:4px;
+}
+#radspace{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows:50px 50px 50px auto;
+}
+
+#radspace .whitepage, #radspace .blackpage{
+    grid-column-start:2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+#rad-opt-1-label{
+    grid-row-start:2;
+}
+#rad-opt-2-label{
+    grid-row-start:3;
+}
+
+
+#input-0, #input-1, #input-2{
+    display:none;
+}
+#rad-opt-0:checked ~ #input-0{
+    display:block;
+}
+#rad-opt-0:checked ~ #input-none{
+    display:none;
+}
+#rad-opt-1:checked ~ #input-1{
+    display:block;
+}
+#rad-opt-1:checked ~ #input-none{
+    display:none;
+}
+#rad-opt-2:checked ~ #input-2{
+    display:block;
+}
+#rad-opt-2:checked ~ #input-none{
+    display:none;
+}
+
+
+
+/*=== Styling Nav and Buttons ===*/
+
+nav .titlebar{
+    grid-column-start:1;
+    grid-column-end:7;
+}
+
+nav{
+    width:100%;
+    height:20%;
+}
+
+#navtitle{
+    grid-column-start:1;
+    grid-column-end:4;
+}
+
+.navbutton{
+    position:absolute;
+    background-color:#1d1d1d;
+    background-size:30px;
+    background-repeat:no-repeat;
+    background-position:10% 50%;
+    align-items:center;
+    border:outset;
+    border-color: #1d1d1d;
+    height:40px;
+    width:130px;
+    border-width:5px;
+    padding: 5px;
+
+    display:flex;
+    flex-direction:row-reverse;
+    align-items:center;
+}
+.navbutton:hover{
+    border:inset;
+    border-width:5px;
+    border-color:#1f1f1f;
+}
+.navbutton p{
+    color:rgb(161, 161, 161);
+    font-size:1.1em;
+    font-family:serif;
+    padding-right:10px;
+    text-decoration: none;
+}
+
+#navbuttonabt{
+    background-image:url("assets/nav/abtme.png");}
+#navbuttonabt:hover{
+    background-image:url("assets/nav/abtmehover.png");}
+#navbuttonsocials{
+    background-image:url("assets/nav/socials.png");}
+#navbuttonsocials:hover{
+    background-image:url("assets/nav/socialshover.png");}
+#navbuttonfriends{
+    background-image:url("assets/nav/friends.png");}
+#navbuttonfriends:hover{
+    background-image:url("assets/nav/friendshover.png");}
+#navbuttonipod{
+    background-image:url("assets/nav/ipod.png");}
+#navbuttonipod:hover{
+    background-image:url("assets/nav/ipodhover.png");}
+#navbuttongames{
+    background-image:url("assets/nav/games.png");}
+#navbuttongames:hover{
+    background-image:url("assets/nav/gameshover.png");}
+#navbuttonmusic{
+    background-image:url("assets/nav/music.png");}
+#navbuttonmusic:hover{
+    background-image:url("assets/nav/musichover.png");}
+#navbuttonoldsite{
+    background-image:url("assets/nav/oldsite.png");}
+#navbuttonoldsite:hover{
+    background-image:url("assets/nav/oldsitehover.png");}
+#navbuttoncraft{
+    background-image:url("assets/nav/craft.png");}
+#navbuttoncraft:hover{
+    background-image:url("assets/nav/crafthover.png");}
+#navbuttondrinks{
+        background-image:url("assets/nav/drinks.png");}
+#navbuttondrinks:hover{
+    background-image:url("assets/nav/drinkshover.png");}
+    #navbuttonchangelog{
+        background-image:url("assets/nav/changelog.png");}
+    #navbuttonchangelog:hover{
+        background-image:url("assets/nav/changeloghover.png");}
+#navbuttoncredits{
+    background-image:url("assets/nav/credits.png");}
+#navbuttoncredits:hover{
+    background-image:url("assets/nav/creditshover.png");}
+
+nav a{
+    text-decoration:none;
+}
+
+#creditsbutton{
+    grid-column-start:4;
+}
+
+#changelogbutton{
+    grid-column-start:2;
+}
+
+
+
+#junkback{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+}
+
+#junkfront{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    pointer-events:none;
+}
+
+/* INDEX */
+
+#indexnav{
+    position: absolute;
+    top:10%;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+    max-width:1010px;
+    height:610px;
+}
+
+/* ABOUTME */
+
+#aboutme{
+    position: absolute;
+    top:25%;
+    left: 0;
+    right: 0;
+    background-color:#c0c0c0;
+    margin: auto;
+    width:500px;
+    height:200px;
+    display:flex;
+    flex-direction:column;
+}
+
+/* FRIENDS */
+
+#friends{
+    position: absolute;
+    top:25%;
+    left: 0;
+    right: 0;
+    background-color:#c0c0c0;
+    margin: auto;
+    width:500px;
+    height:300px;
+    display:flex;
+    flex-direction:column;
+}
+#friends #whitepage{
+    height:1px;
+    padding-bottom:10px;
+}
+#friendcont{
+    flex-grow:3;
+    background-color:#c0c0c0;
+
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.frienditem{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    
+    width:150px;
+    height:150px;
+
+    text-align:center;
+    border:inset;
+}
+.frienditem img{
+    height:90px;
+    width:90px;
+    padding:10px;
+}
+/* SOCIALS */
+
+#socials{
+    position: absolute;
+    top:25%;
+    left: 0;
+    right: 0;
+    background-color:#c0c0c0;
+    margin: auto;
+    width:500px;
+    height:200px;
+    display:flex;
+    flex-direction:column;
+}
+#socialslist{
+    list-style-position: inside;
+}
+
+/* IPOD */
+
+#ipod{
+    position: absolute;
+    top:10%;
+    left: 0;
+    right: 0;
+    background-color:#c0c0c0;
+    margin: auto;
+    width:700px;
+
+    display:flex;
+    flex-direction:column;}
+#ipodimageL{
+    float:left;
+    margin-right:10px;
+    height:150px;}
+.ipodtext{
+    margin:10px;
+    text-align:justify;}
+#ipodimageR{
+    float:right;
+    margin-left:10px;
+    height:150px;}
+
+/* GAMES & MUSIC */
+
+.fav-h2{
+    font-weight:bold;
+    font-size:5em;
+    text-align:center;
+}
+
+.fav-title{
+    font-size: 2.2em;
+    font-style:italic;
+}
+
+.fav-time{
+    color:grey;
+    text-align:right;
+}
+
+.fav-item{
+    display:flex;
+    flex-direction:row;
+    font-size:1.1em;
+    align-items:center;
+    padding:5px;
+}
+
+.fav-text{
+    padding-right:10px;
+    flex-grow:2;
+}
+
+.fav-image{
+    border:groove;
+    border-width: 5px;
+    height:150px;
+    margin:5px;
+}
+
+.fav-titles{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.fav-divider{
+    border-top: 5px dotted grey;
+    border-bottom:none;
+}
+
+.fav-text ul{
+    list-style-position: inside;
+}
+
+#fav-honourmens{
+    display:flex;
+    justify-content: space-between;
+}
+
+#fav-honourmens h2{
+    font-size:1.4em;
+    font-style:italic;
+    color:grey;
+}
+
+#fav-easteregg{
+float:right;
+height:100px;
+}
+
+.fav-link{
+    color:rgb(227, 192, 255);
+}
+
+/* GAMES */
+
+#games{
+    position: absolute;
+    top:10%;
+    left: 0;
+    right: 0;
+    background-color:#c0c0c0;
+    margin: auto;
+    width:1000px;
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* MUSIC */
+
+#music{
+    position: absolute;
+    top:10%;
+    left: 0;
+    right: 0;
+    background-color:#c0c0c0;
+    margin: auto;
+    max-width:1000px;
+
+    display:flex;
+    flex-direction:column;
+}
+
+#mus-image-r{
+    float:right;
+    margin-right:10px;
+    margin-left:10px;
+    height:150px;
+}
+
+#mus-r{
+    display:flex;
+}
+
+/* OLD SITE */
+
+#oldsite{
+    position: absolute;
+    top:15%;
+    left: 0;
+    right: 0;
+    background-color:#c0c0c0;
+    margin: auto;
+    width:500px;
+    height:400px;
+    display:flex;
+    flex-direction:column;
+}
+
+#oldsite .whitepage{
+    height:60px;
+}
+
+#oldsiteportalcont{
+    flex-grow:4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#oldsiteportalimg{
+    width:240px;
+}
+
+/* MINECRAFT */
+
+#minecraft{
+    position: absolute;
+    top:10%;
+    left: 0;
+    right: 0;
+    background-color:#c0c0c0;
+    margin: auto;
+    width:800px;
+
+    display:flex;
+    flex-direction:column;}
+
+#craftexplainer{
+    display:flex;
+    flex-direction:row;
+    column-gap:10px;
+}
+
+.server-divider{
+    display:flex;
+    font-size:1.4em;
+}
+.server-divider hr{
+    height:3px;
+    background-color:black;
+    flex-grow:2;
+}
+.server-imgcont{
+    display:flex;
+    justify-content:space-around;
+}
+.server-imgcont img{
+    width:49.5%;
+    border:solid;
+    border-color:white;
+}
+
+#craftlist{
+    list-style-position: inside;
+    
+}
+
+#craftterms{
+    position: absolute;
+    top:25%;
+    left: 0;
+    right: 0;
+    background-color:#c0c0c0;
+    margin: auto;
+    width:500px;
+    height:250px;
+    display:flex;
+    flex-direction:column;
+}
+
+/* DRINKS */
+
+#drinks{
+    position: absolute;
+    top:10%;
+    left: 0;
+    right: 0;
+    background-color:#c0c0c0;
+    margin: auto;
+    width:800px;
+
+    display:flex;
+    flex-direction:column;}
+
+#drinkslist{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    row-gap:5px;
+}
+
+.drinktier{
+    display:flex;
+    flex-direction:row;
+}
+
+.drinktierlabel{
+    width:75px;
+    height:75px;
+    font-size:2em;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.drinktiercontents{
+    flex-grow:2;
+}
+
+.drinkitem, .drinkitemextra{
+    height:75px;
+    box-sizing:border-box;
+}
+
+.drinkitemextra{
+    border:2px solid;
+    border-color:lightgreen;
+}
+
+/* CHANGELOG */
+
+#changelog{
+    position: absolute;
+    top:20%;
+    left: 0;
+    right: 0;
+    background-color:#c0c0c0;
+    margin: auto;
+    width:800px;
+
+    display:flex;
+    flex-direction:column;}
+
+#changeloglist{
+    list-style-position: inside;
+    }
+
+/* CREDITS */
+
+#credits{
+    position: absolute;
+    top:25%;
+    left: 0;
+    right: 0;
+    background-color:#c0c0c0;
+    margin: auto;
+    width:700px;
+    display:flex;
+    flex-direction:column;
+}
+#creditslist{
+    list-style-position:inside;
+}
+

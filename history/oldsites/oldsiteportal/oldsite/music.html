@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crazu space</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.gif">
+    <meta name="description" content="A space for crazu">
+</head>
+
+<body id="bodyscroll">
+    <div id="music" class="window">
+        <div class="titlebar">
+            <div class="titlebaricontext">
+                <img class="titlebaricon" src="assets/nav/music.png"alt="a collection of few pixels, arranged in the shape of a piece of paper with a triangle on it, as a reference to how mp3 music files appear in windows">
+                <p>C:/users/crazu/music</p>
+            </div>
+                <div class="titlebarbuttons">
+                    <img class="titlebarminmax" src="assets/titlebar/minandmaxbutton.png" alt="a 'minimise' and 'maximise' button, that you would usually find on the title bar of a window in an operating system">
+                    <a href="index.html"><img class="titlebarclose" src="assets/titlebar/closebutton.png" alt="a 'close' button that you would usually find on the title bar of a window in an operating system"></a>
+                </div>
+        </div>
+
+        <div id="radspace">
+            <input type="radio" name="input-radio" id="rad-opt-0">
+            <label for="rad-opt-0" class="rad-selector" id="rad-opt-0-label">Older Music</label>
+
+            <input type="radio" name="input-radio" id="rad-opt-1">
+            <label for="rad-opt-1" class="rad-selector" id="rad-opt-1-label">Music from 2024</label>
+
+            <input type="radio" name="input-radio" id="rad-opt-2">
+            <label for="rad-opt-2" class="rad-selector" id="rad-opt-2-label">Music from 2025</label>
+
+            <div class="whitepage" id="input-none">
+                <h2 class="fav-title">Misadventures in MP3s</h2>
+
+                <div id="mus-r">
+                    <p>I have what I would generously call an MP3 collection! I started in early 2023 to replace Spotify, so I could listen to songs from more games, expand my tastes, and customize to my liking. It's not so big, just 27,129 tracks making up 833 albums, taking up a total of 143 GB. At time of writing at least.
+                        <br><br>
+                    Keeping all the songs tagged, sorted, and synced between devices is more fun than you might think, and I've developed a set of guidelines for how the files and mp3 tags are formatted. I've still yet to figure out genre though. (Seriously, genre is all well and good with normal music mostly, but when it comes to game OST, it all goes ot the window. How do you deliniate between a Super Mario 3d World and, say, a Binding of Isaac? And how do you seperate those from an Ace Attorney? All very different sounding music.)</p>
+
+                    <img id="mus-image-r" src="assets/music/libraryimage.png" alt="A square grid of album covers, including some Splatoon soundtracks, Sonic the Hedgehog soundtracks, and others.">
+
+                </div>
+                <br>
+                <p>To explore some music I like, click the buttons to the left! I've sorted it by rough year (though I can't really place anything before year of writing, so anything before 2024 is grouped together), and I've also tried to link places to purchase / listen to albums where possible.</p>
+            </div>
+
+            <div id="input-1" class="blackpage">
+                <h2 class="fav-h2">2024</h2>
+                <hr style="background-color:white; height:5px;">
+
+                <div class="fav-item">
+                    <img src="assets/music/diginightmare.jpg" class="fav-image" style="border-color:blue;" alt="Album cover for Digital Nightmare, featuring and astract blue and red room, with a white orb peeking from behind a curtain. There are wires trailing from the orb to the foreground.">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://twrp.bandcamp.com/album/digital-nightmare" target="blank">Digital Nightmare - TWRP</a></h3>
+                            <h3 class="fav-time">March 23rd 2024</h3>
+                        </div>
+                        <p>I'm a TWRP Lover. I've been a TWRP lover for a long time (Together Through Time, my beloved). Digital Nightmare hits all the right notes for me. It has banger upbeat jam in Online. It has slower, more contemplative but still banger song in Human Touch. It also has a song about HTML. 10/10.</p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="assets/music/nintendomusic.jpg" target="blank">Splatoon 3: Side Order</a></h3>
+                            <h3 class="fav-time">Mid 2024</h3>
+                        </div>
+                        <p>I'll save the gushing about Splat 3's base soundtrack for when I write the bit on it seperately, but I really like what we got in Side Order! Admittedly, the 'level themes' (i.e. the songs that play while you're fighting non-boss floors) aren't exactly replayable bangers like previous story levels, but everything else is top notch. The lobby themes are really cool, and Short Order and the Ebb & Flow music really pump up their respective fights. Marina Agitando has got to be my favorite track of the bunch.</p>
+                    </div>
+
+                    <img src="assets/games/splat3sideordergame.jpg" class="fav-image" style="border-color:cornsilk;" alt="logo for Splatoon 3's side order DLC, featuring an inkling character with pale tentacle hair wearing a pale bodysuit in a pale abstract landscape.">
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/games/splat3grandfestgame.jpg" class="fav-image" style="border-color:purple;" alt="logo for Splatoon 3's Grand Festival, featuring characters Callie, Marie, Pearl, Shiver, Frye, and Big Man in generic poses.">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="assets/music/nintendomusic.jpg" target="blank">Splatoon 3: Grand Fest</a></h3>
+                            <h3 class="fav-time">September 2024</h3>
+                        </div>
+                        <p>Would you look at that! Side order and Grand Fest back to back, same as the games list! That sure made it easy to copy paste over!
+                            <br>
+                        For real, Grand Fest was super awesome from a music standpoint. Since music was a big part of why I got into Splatoon in the first place, seeing them being 'performed' 'live' was cool! I can't pick a favorite song...
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title">Alive 2007 - Daft Punk</h3>
+
+                        </div>
+                        <p>Alive 2007 turned me around on live albums. I used to think that people cheering in the background would be a deal breaker, but it ended up being the opposite. Might help that I heard Around the World / Harder Better Faster Stronger first in Beat Saber, where a cheering crowd really adds to the atmosphere.</p>
+                    </div>
+
+                    <img src="assets/music/alive2007.jpg" class="fav-image" style="border-color:red;" alt="Album cover for Alive 2007. It's kind of difficult to describe. There's lines, I guess? The word Alive is written on it?">
+                </div>
+
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/music/kfad.jpg" class="fav-image" style="border-color:grey;" alt="logo for part 1 of SIlvagunner's King for Another Day Tournament, featurning the words 'First Strike' surrounded by many icons of the tournament's various contestants.">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://siivagunner.fandom.com/wiki/FIRST_STRIKE_~_SiIvaGunner:_King_for_Another_Day_Tournament_Original_Soundtrack_VOL._1" target="blank">SIlvagunner: King for Another Day Tournament</a></h3>
+                            <h3 class="fav-time">October 2024</h3>
+                        </div>
+                        <p>What a fool I have been for ignoring the King for Another Day soundtrack for so long. I haven't even really sat down and listened to the whole thing in full yet, just jumped around to things I recognise. Lots to love from Off the Hook (ft. Paruko), Daft Punk (ft. Pharrell), Law & Disorder, and especially Mariya Takeuchi and DJ Professor K. There's even a 2Mello song in there! And it's Splatoon!
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://2mellomakes.bandcamp.com/album/memories-of-tokyo-to" target="blank">Memories of Tokyo-To - 2 Mello</a></h3>
+                            <h3 class="fav-time">October 2024</h3>
+
+                        </div>
+                        <p>On the Subject of 2 Mello, I Took longer than I should've to jump to these albums after enjoying Bomb Rush so much. I can confirm, this album (and it's sequel, Sounds of Tokyo-To Future) similarly rock your socks. Favorite Tracks: 24 Hour Party People, Ba-da-Ba, BREAK DOWN BREAK UP, LUV 2 LUV.
+                        </p>
+                    </div>
+
+                    <img src="assets/music/memoriesoftokyoto.jpg" class="fav-image" style="border-color:lime;" alt="Album cover for Memories of Tokyo-To, featuring '2 Mello' in large grafiti styled letters in the center, with an anime styled girl drawn in outline listening to music in the backgorund.">
+                </div>
+
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/music/byteballads.jpg" class="fav-image" style="border-color:orange;" alt="Album art for Byte Ballads, featuring a side profile of a girls head as she sings. She is drawn with sparce glowing orange lines, on a circuit board background to give an electronic appearance.">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://louiezong.bandcamp.com/album/byte-ballads" target="blank">Byte Ballads - Louie Zong</a></h3>
+                            <h3 class="fav-time">November 2024</h3>
+                        </div>
+                        <p>Louie Zong is awesome, and an extremely talented musician, but none of his albums have grabbed me before like Byte Ballads did. It's slow and a little sad, but plesant to listen to and uplifting at the same time. Favorite track is NOW LOADING... for sure.
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title">Manners - Passion Pit</h3>
+
+                        </div>
+                        <p>This album is super cool! Like a few albums I now listen to on the regular, I got it because I recognise one song from it (Sleepyhead, from LittleBigPlanet), but the whole album is great! (To be completely honest, I don't even like Sleepyhead that much, the other songs are way better.) Favorite Song: Folds In Your Hands. <br>
+                        <p style="color:grey">Side note, in looking up this album to see if there was a bandcamp to link, I discovered that a remastered version of the album released a couple months ago!</p>
+                        </p>
+                    </div>
+
+                    <img src="assets/music/manners.jpg" class="fav-image" style="border-color:#005f4b;" alt="Album cover Manners, a dirty blueish green surface. The words 'PASSION PIT MANNERS' are printed small in the top center">
+                </div>
+
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/music/emessex.gif" class="fav-image" style="border-color:lime;" alt="Image fades through many different cover arts, featuring vibrantly colorful landscapes and anthropamorphic characters.">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://lapfox.bandcamp.com/" target="blank">Em Essex - entire discography?</a></h3>
+                            <h3 class="fav-time">December 2024</h3>
+                        </div>
+                        <p>Not to end the year without something new and exciting, a passing mention on a livestream led me to Em Essex. In no time at all, I had purchased their entire discography, and have been listening through albums as a backlog since. In honesty, the art attatched to each albums has been just as much a treat as the actual music. <br>
+                        <p style="color:grey">Also, I had to change how I process all of my mp3 files to accomodate for all of the special characters in song / artist names, which was quite fun.</p>
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="fav-divider">
+
+                <div id="fav-honourmens">
+                    <div>
+                        <h2>Honourable Mentions</h2>
+                        <p>Windowkill OST - Keestak, These Nuts - Ninja Sex Party, Hentai Jazz Deluxe - Mabisyo, Forever II - kazahana, Pushing Dasies - Julie, UNDERTALE Yellow OST</p>
+                    </div>
+                    <img id="fav-easteregg" src="assets/music/flowboy.gif" alt="Small cutout of a anthropomorphic black cat with one red eye, wearing a lab coat">
+                </div>
+
+                
+            </div>
+            
+            <div id="input-0" class="blackpage">
+                
+                <h2 class="fav-h2">Older Music</h2>
+                <hr style="background-color:white; height:5px;">
+                <p>This might be a little long, since I'll just be writing about any music I started liking before 2024.</p>
+
+
+                <div class="fav-item">
+                    <img src="assets/music/apollojustice.jpg" class="fav-image" style="border-color:red;" alt="Album cover for the Apollo Justice: Ace Attorney Soundtrack, featuring it's anime-styled lawyers pointing in variois directions">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title">Apollo Justice: Ace Attorney</h3>
+                            
+                        </div>
+                        <p>Consider this a spot for the soundtracks for every game in the Ace Attorney series. I'd say Apollo Justice might be the series' best, though that could switch out to AA3 or AAI2, depending on the day you ask. The actual game has a little too much underwear talk for my liking though.</p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://asianhideout.carrd.co/" target="blank">Asian Hideout</a></h3>
+                            <h3 class="fav-time">(Artist)</h3>
+                        </div>
+                        <p>This group only has about a handful of songs to their name at the moment, but I love them. Sugar Rush and ERROR 403: paradise x paradigm specifically. Sometimes you need a hyper energetic pop tune to inject straight into your veins. </p>
+                    </div>
+
+                    <img src="assets/music/asianhideout.gif" class="fav-image" style="border-color:White;" alt="Image rotates between the covers of 'Sugar Rush' and 'ERROR 403: paradise x paradigm' by Asian Hideout. Both covers feature anime styled women.">
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/music/antibirth.jpg" class="fav-image" style="border-color:rgb(53, 27, 3);" alt="Album cover for TBOI: Antibirth. Featuring the titular small child, isaac, drawn in white outline looking small and scared in the center, looking up at a sword hanging above his head.">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://mudeth.bandcamp.com/album/antibirth-ost" target="blank">The Binding of Isaac: Antibirth</a></h3>
+                        </div>
+                        <p>I've put many, many hours into The Binding of Isaac, but the music never did much for me. The Antibirth mod OST, however, is amazing, dialing up the atmosphere and intensity by a lot. On the subject of Isaac mod OSTs, shoutout to the weird and wonderful <a class="fav-link" href="https://mistajub.bandcamp.com/album/excelsior" target="blank">Excelsior</a>.
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://store.steampowered.com/app/2537200/Bomb_Rush_Cyberfunk_Soundtrack/" target="blank">Bomb Rush Cyberfunk</a></h3>
+
+                        </div>
+                        <p>What can I say about Bomb Rush Cyberfunk that has not already been said. If you have had the misfortune of not having anyone in your life beg you to play this game yet, or at the very least listen to it's soundtrack, let me be that person for you. The funk is off the charts.</p>
+                    </div>
+
+                    <img src="assets/music/bombrush.jpg" class="fav-image" style="border-color:greenyellow;" alt="Album cover for Bomb Rush Cybefunk. It's a little abstract, but consists of a pattern of three blue volcanoes with faces, gritting their teeth as they erupt a mushroom cloud of smoke. This is in no way related to the game or it's music.">
+                </div>
+
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/music/crash4.jpg" class="fav-image" style="border-color:orangered;" alt="Album art for Crash Bandicoot 4: It's about time, featuring the titular orange furry cartoon creature, tounge lolling out, grinding on some sort of purple energy rail">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title">Crash Bandicoot</h3>
+                            <h3 class="fav-time">(Series)</h3>
+                        </div>
+                        <p>As a long time fan of the Crash series, I'm also in love with it's music. I chose Crash 4 for the image because I think that might be some of the series' stronger work, but all of the PS1 games (and their 2010s remasters) are great, and the Titans duology, while not stellar games, have some music that I think deserves recognition. (Turf's Up from CotT, Pressureless Preamble and Ratcicle Kingdom from C:MoM are personal favorites.)
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://chipzelmusic.bandcamp.com/music" target="blank">Dicey Dungeons - Chipzel</a></h3>
+
+                        </div>
+                        <p>When I first played Dicey Dungeons in 2019, it's soundtrack quickly became one of my favorites of all time. Then it got more episodes, with more music. This game has some of my favorite music in any game. With special shoutouts to the halloween combat themes, and every song from the Reunion episode. Chipzel does not miss.
+                        </p>
+                    </div>
+
+                    <img src="assets/music/diceydungeons.gif" class="fav-image" style="border-color:red;" alt="Image flips between the album covers for Dicey Dungeons and it's expansions, featuring dice with cartoon style faces and limbs">
+                </div>
+
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/music/deltarune12.jpg" class="fav-image" style="border-color:white;" alt="Album art for the Deltarune CH 1 & 2 ost. Luckily this one is easy to describe, the image is all black, with text reading 'deltarune Chapter 1 & 2'.">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://tobyfox.bandcamp.com/music" target="blank">Deltarune Chapters 1 & 2 - Toby Fox</a></h3>
+                        </div>
+                        <p>What can I say that has not already been said. It's so good that I'd still consider it a masterpeice even though it has a siren alarm remix of Napstablook's theme, and like 7 songs dedicated to an extended Homestar Runner reference (the only thing I know about Homestar Runner is that Strongbad is in Poker Night at the Inventory). Wait, this is supposed to be about Deltarune... My favorite track is Smart Race.
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://foreigngnomes.bandcamp.com/album/everhood-game-soundtrack" target="blank">Everhood</a></h3>
+
+                        </div>
+                        <p>I still don't understand Everhood. It's got some kind of Buddhism themes going, and is about eternal life, kind of? I also don't understand how to <i>play</i> Everhood. It's rhythm-but-not-quite battle system doesn't mesh well with my brain, and I end up floundering a lot. What I do understand is that Everhood has an <i><b>amazing</b></i> soundtrack. Seriously, I still get emotional when listening to Farewell Battle & Farewell Loop. Kind of sad that the Eternity Edition Tracks haven't been released anywhere. 
+                        </p>
+                    </div>
+
+                    <img src="assets/music/everhood.gif" class="fav-image" style="border-color:red;" alt="Image flips between the album covers for the three discs of the Everhood Soundtrack">
+                </div>
+
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/music/ghosttrick.jpg" class="fav-image" style="border-color:green;" alt="Album art for the Ghost Trick OST, featuring a simplistic flat city skyline, and a girl in the forground sitting on a couch next to a cat, reading. A dog sits at her feet.">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title">Ghost Trick: Phantom Detective</h3>
+                        </div>
+                        <p>
+                            I still kind of can't believe they re-released Ghost Trick last year. I also can't believe how hard the soundtrack goes. Seriously, there are zero bad tracks here. Listen to one now (Might be a little loud):
+                        </p>
+                        
+                        <audio controls>
+                            <source src="assets/music/ghosttricktheme.mp3" type="audio/mpeg">
+                          The main Ghost Trick theme is supposed to be here, but your browser can't see it for some reason. <a target="_blank" href="https://www.youtube.com/watch?v=QpY_MGEodn8">Here's a link to it on youtube.</a>
+                          </audio>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://virt.bandcamp.com/music" target="blank">Mighty Switch Force 1 & 2</a></h3>
+
+                        </div>
+                        <p>I'm very glad I was introduced to the soundtracks for these two games. I've never seen gameplay of either, and to be honest I don't know if I'll ever seek it out. To me, Mighty Switch Force is two albums of very good high energy electronic jams.
+                        </p>
+                    </div>
+
+                    <img src="assets/music/mightyswitchforce.gif" class="fav-image" style="border-color:blue;" alt="Image flips between the album covers for the two mighty switch force games, both showing half of a cartoon character's face, one in blue, the other in red">
+                </div>
+
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/music/mercurialworld.jpg" class="fav-image" style="border-color:palevioletred;" alt="Album art for Mercurial World, an abstract mix of soft pinks and blues, with shifting water and flower imagery">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://magdalenabay.bandcamp.com/album/mercurial-world" target="blank">Mercurial World - Magdalena Bay</a></h3>
+                        </div>
+                        <p>
+                            Finally, an actual album! I like this one. The more soft poppy tone and vocals are a musical niche that I hadn't fufilled yet, or since to that matter, but I'm glad I was reccomended this album. I'd list my favorite tracks, but I just looked at the song list to try and I'd basically just be naming all of them. My favorite song is the whole album.
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://machinegirl.bandcamp.com/album/neon-white-ost-1-the-wicked-heart" target="blank">Neon White - Machine Girl</a></h3>
+
+                        </div>
+                        <p>Oh Boy. I don't remember how I was introduced to Neon White, but I don't know how I could live without. I'll save the gushing about the gameplay for when I write the segment on that, but the music is just as good, if not better. If this is just the beginning of becoming Machine Girl pilled, I will die happy. <br><sup>Side note, I looked it up, Machine Girl is neither Machine nor Girl. this is screwed up</sup>
+                        </p>
+                    </div>
+
+                    <img src="assets/music/neonwhite.jpg" class="fav-image" style="border-color:purple;" alt="Album cover for Neon White, featuring a girl in a purple skirt and hoodie wearing a rabbit mask, looking down at you, aiming a gun.">
+                </div>
+
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/music/nostraightroads.jpg" class="fav-image" style="border-color:turquoise;" alt="Album art for the No Straight Roads soundtrack, featuring it's two leads, drummer Zuke and Guitarist Mayday">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://bossbattlerecords.bandcamp.com/album/no-straight-roads-original-game-soundtrack" target="blank">No Straight Roads</a></h3>
+                        </div>
+                        <p>
+                            This. Game. Rules. Well, actually the game is kind of a mess, but the soundtrack is definitely rad. I love a good boss fight, I love a good music game, and I love a good music boss fight, and this is basically all musical boss fights. My favorite track is 'vs. SAYU', though 'The Revolution Comes Around' Is a solid second.
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title">Sonic CD</h3>
+
+                        </div>
+                        <p>I've never beaten a Sonic game (Unless you count either of the All Stars Racing games). Despite this, I have to appreciate the consistent quality of music in games almost the whole franchise wide. There's a lot of evolutions from your original Genesis trilogy, to your CD (my personal favorite), to your guitary Heroes, and all the way up to the modern House / Electronic stylings of Fronteirs.
+                        </p>
+                    </div>
+
+                    <img src="assets/music/soniccd.jpg" class="fav-image" style="border-color:blue;" alt="Album cover for the Sonic CD soundtrack, featuring Sonic facing off against his robotic doppelgänger, Metal Sonic.">
+                </div>
+
+                <hr class="fav-divider">
+
+                
+                <div class="fav-item">
+                    <img src="assets/music/splatoon3.jpg" class="fav-image" style="border-color:yellow;" alt="Album art for the Splatoon 3 Soundtrack, featuring some yellow and blue squid goop, being invaded by some fuzzy hair goop">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title">Splatoon 3</h3>
+                        </div>
+                        <p>
+                            This might be the most listened-to soundtrack in my entire collection. If mp3 files could wear out, my copies of Till Depth Do Us Part, I'm Octavio (F34RME Remix), All of the Alterna level themes, Anarchy Rainbow, and especially the Calamari Inkantation 3MIX would be ground to digital dust. (It was listening to a YT rip of Till Depth Do Us Part (or 'Splatfest Battle 2, as it was called then') on loop that practically got me into the series in the first place.)
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://twrp.bandcamp.com/album/together-through-time" target="blank">Together Through Time - TWRP</a></h3>
+
+                        </div>
+                        <p title="'lort' is a typo but I'm leaving it in">Though it's close, Together Through Time is my favorite TWRP album. Which, I swear, is not just the nostalgia talking, since this album came out... let me check here... Six years ago! good lort. Favorite track: Starlight Brigade
+                        </p>
+                    </div>
+
+                    <img src="assets/music/togetherthroughtime.jpg" class="fav-image" style="border-color:blue;" alt="Album cover for Together Through Time, featuring a veiw of a bright sunny beach out the window of a spaceship">
+                </div>
+
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/music/undertale.jpg" class="fav-image" style="border-color:white;" alt="Album art for the Undertale Soundrack, the word UNDERTALE in bold white letters in the center, and the word Soundtrack below it. the rest is solid black.">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://twrp.bandcamp.com/album/together-through-time" target="blank">UNDERTALE</a></h3>
+                        </div>
+                        <p>
+                            I couldn't leave Undertale out of my list. To be honest, the soundtrack has kind of worn out into my ears, due to overlistening and overexposure. Like eating your favorite food over and over again, It still tastes the same, but you're kind of... used to it? But if you leave it for a while and come back, then it still hits just like it did before. Favorite tracks: Here We Are, Waterfall, Battle Against A True Hero, Hopes And Dreams.
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://underveil.unisphere.tv/" target="blank">UNDERVEIL</a></h3>
+
+                        </div>
+                        <p>To be honest, I don't remember how I came across these many years ago, but I did, and I'm glad I did because these are super cool. A collection of four Undertale remix albums by various artists, with songs in all manner of different styles. Ever wanted to hear Hopes and Dreams in Ska? Spider Dance and Bonetrousle in Dubstep? Or a beautiful rendition of Heartache composed by Itoki Hana, who would later go on to work with Toby Fox on The Greatest Living Show? All that and more, in Underveil.
+                        </p>
+                    </div>
+
+                    <img src="assets/music/underveil.gif" class="fav-image" style="border-color:lightskyblue;" alt="GIF switches between the album arts for the four Underveil albums. All are fairly abstract shapes with 'Underveil' written on them.">
+                </div>
+
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/music/worlds.jpg" class="fav-image" style="border-color:rgb(192, 115, 255);" alt="Album cover for Worlds, featuring a purple hand floating in a blue sky, with a black cube in it's palm.">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title"><a class="fav-link" href="https://twrp.bandcamp.com/album/together-through-time" target="blank">Worlds - Porter Robinson</a></h3>
+                        </div>
+                        <p>
+                            I'm not enough in the loop to know what other people think about this album. Is it good? Bad? Overplayed? Does it come with a stigma? No idea. What I do know is that I heard Goodbye To a World in an Undertale MV in like 2016, listened to the full album a couple years later and liked it a lot. Looking back, I guess I kind of answered my own question there...
+                        </p>
+                    </div>
+                </div>
+                
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title">Yes - Pet Shop Boys</h3>
+
+                        </div>
+                        <p>I've been a fan of the early Pet Shop Boys for a while, on my father's side. I don't have much to say about it, other than that It's good music (And that they had wacky early computer graphics music videos). Nice! Favorite track: More Than A Dream
+                        </p>
+                    </div>
+
+                    <img src="assets/music/yes.jpg" class="fav-image" style="border-color:greenyellow;" alt="Album cover for Yes, a multicolored checkmark on a white background.">
+                </div>
+
+                <hr class="fav-divider">
+
+                <div id="fav-honourmens">
+                    <div>
+                        <h2>Honourable Mentions</h2>
+                        <p>And The Flying Boombox - No More Kings, ARMS (OST), Celeste (OST)<sup>you don't need me to tell you Celeste has good music</sup>, Crypt (and Chipped) of the Necrodancer (OST), Ember - Kubbi, Holocure (OST), Oneshot (OST), Pac Man Championship Edition CE (OST), SharaX (Artist), Tetris 99, Tetris Effect and Tetris CDI, World of Goo (OST), </p>
+                    </div>
+                    <img id="fav-easteregg" src="assets/music/hellyeah.gif" alt="Animation of a person in a yellow bodysuit and blue suspenders wearing a mascot head, dancing. It is very sped up.">
+                </div>
+
+                
+            </div>
+
+            <div id="input-2" class="blackpage">
+                <h2 class="fav-h2">2025</h2>
+                <hr style="background-color:white; height:5px;">
+
+                <div class="fav-item">
+                    <img src="assets/music/crackerisland.jpg" class="fav-image" style="border-color:skyblue;" alt="Album cover for Cracker Island, featuring the four animated members of the band, in front of a purple barn like building.">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title">Cracker Island - Gorillaz</h3>
+                            <h3 class="fav-time">Jan 20th 2025</h3>
+                        </div>
+                        <p>Some time last year, I heard the title track, Cracker Island, playing over the speakers in a music store. I really liked what I heard, but didn't have any way to find out what song it was, so I just frantically googled what I thought the lyrics were until I gave up and forgot about it.<br>
+                        Fast forward to this week, where a friend plays it in their car, and I feel like the guy from rattatoulie having a flashback. suffice to say, listening to the entire album has shown me that I have made a mistake by not listening to any modern Gorillaz.</p>
+                        <p style="color:grey">Favorite Tracks: Cracker Island & New Gold</p>
+                        </p>
+                    </div>
+                </div>  
+
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title">Gameshow - Two Door Cinema Club</h3>
+                            <h3 class="fav-time">Tourist History, also</h3>
+
+                        </div>
+                        <p>Been on a pop-guitar kick recently, spurred on by hearing 'Every Night' by flor on the intro to a Snapcube stream. That led me to a playlist which contained Lavender, which got me hooked on this whole album! Which is a no brainer really, since I already enjoyed Tourist history so much, after picking up the whole album from memes that use Undercover Martyn.<br>
+                        </p>
+                    </div>
+
+                    <img src="assets/music/gameshow.jpg" class="fav-image" style="border-color:rgb(1, 225, 241);" alt="Album cover for Gameshow, showing three colored bars in light blue, dark blue and purple, with a crystal/glassy texture.">
+                </div>
+
+                <hr class="fav-divider">
+
+                <div class="fav-item">
+                    <img src="assets/music/bigdumbidiot.jpg" class="fav-image" style="border-color:#faf16e;" alt="Album cover for tom Cardy's 'big dumb idiot', depicting a side profile cross section of his head, with screaming pilots inside">
+                    <div class="fav-text">
+                        <div class="fav-titles">
+                            <h3 class="fav-title">Big Dumb Idiot - Tom Cardy</h3>
+                            <h3 class="fav-time">(And his other two albums)</h3>
+                        </div>
+                        <p>Exploring artists you like is always good! Explored a handful of his songs when Beautiful Mind came out in (*checks notes*).. 2023, and again when he showed up in TWRP's Digital Nightmare last year. Finally got my hands on all his albums, all great stuff! The line "Wikipedia of the Vatican" has been bouncing around in my mind for days. (also the pope just died??? coincidence??)</p>
+                        <p style="color:grey">Favorite Tracks: Your Love is Not Enough (I'd Like Some Cool Shit Too) & Party Dog</p>
+                        </p>
+                    </div>
+                </div> 
+
+                <hr class="fav-divider">
+
+                <div id="fav-honourmens">
+                    <div>
+                        <h2>Honourable Mentions</h2>
+                        <p>Enchanted Instruments and Whispers - Windows96</p>
+                    </div>
+                    <img id="fav-easteregg" src="assets/music/dontask.gif" alt="Small animated gif of a girl made of slime, seductively swinging her body from side to side." style="height:70px">
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>

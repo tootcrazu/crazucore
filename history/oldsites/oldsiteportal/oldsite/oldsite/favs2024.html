@@ -1,0 +1,524 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>crazu place</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+        <script src="./musicPlayer.js"></script>
+        <meta name="description" content="A place for crazu">
+    </head>
+    <body>
+        <header>
+            <img src="assets/crazubannersparkle.gif" alt="Sparkly pink banner with'toot crazu' written on it, along with a smiling face icon">
+            <marquee behaviour="scroll" direction="left" class="header-text">"Nostalgia for an era I was never really a part of? I can do that!"</marquee>
+        </header>
+
+
+    <nav>
+        <div id="navContainer">
+            <h2>Navigation!</h2>
+            <hr>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="favs2024.html">My Favorite Stuff (2024)</a></p>
+            <p><a href="favs2023.html">My Favorite Stuff (2023 and before)</a></p>
+            <p><a href="servers.html">Minecraft Server</a></p>
+            <p><a href="dungeon/evil.html">Evil Dungeon</a></p>
+            <p><a href="abtmusic.html">About Music</a></p>
+            <p><a href="credits.html">Credits</a></p>
+        </div>
+        
+        
+        <div id="musicPlayer">
+            
+            <div id="trackNameCont">
+                <marquee id="trackName" class="player-title">
+                    Press Play to Begin!
+                </marquee>
+            </div>
+
+            <div id="trackProgressCont">
+
+                <div id="progSliderCont">
+                    <input type="range" value="0" class="slider" id="progressSlider">
+                </div>
+
+                <div id="trackTimeCont">
+                    <span id="trackProgress">00:00</span> <span id="trackTotalLength">00:00</span>
+                </div>
+
+            </div>
+
+            <audio controls id="trackAudio">
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <div id="buttonCont">
+                <button class='trackBtn' onclick="previous()">
+                    <img src="assets/player/trackBackArr.png" alt="Previous track">
+                </button>
+
+                <button class='trackBtn' id="pauseToggle" onclick="togglePause()">
+                    <div><img class='playButt' src='assets/player/trackPlayButt.png' alt="Play"> <img class='pauseButt'src='assets/player/trackPauseButt.png' alt="Pause"></div>
+                </button>
+
+                <button class='trackBtn' onclick="next()">
+                    <img src="assets/player/trackFwdArr.png" alt="Skip to next track">
+                </button>
+
+            </div>
+
+
+            <div id="volSliderCont">
+                <input type="range" min="0" step="0.01" max="1" value="0" class="slider" id="volSlider">
+            </div>
+            
+        </div>
+        
+    </nav>
+
+
+
+    <main>
+        <h1>My Favorite Things 2024 Edition</h1>
+
+        <div id="fav-explainer">
+            <br>
+            <p class="fav-desc">This list is pretty for everything I like between roughly the end of 2023 to whenever I decide to cut it to make the next page.</p> <br><br>
+        </div>
+
+    <div id="favorites">  
+            <input type="radio" name="fav-radio" id="Games">
+            <label for="Games" class="fav-selector">Games</label>
+            <input type="radio" name="fav-radio" id="Albums">
+            <label for="Albums" class="fav-selector">Albums</label>
+            <input type="radio" name="fav-radio" id="GameOST">
+            <label for="GameOST" class="fav-selector">Game OST</label>
+            <input type="radio" name="fav-radio" id="Comp-Albums">
+            <label for="Comp-Albums" class="fav-selector" style="display:none">Compilation Albums</label>
+            <input type="radio" name="fav-radio" id="Design-Styles">
+            <label for="Design-Styles" class="fav-selector" style="display:none">Design Styles</label>
+
+        
+
+        <div id="fav-games">
+            <h2 class="fav-header">Games:</h2>
+
+            <!--Cobalt Core-->
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Cobalt Core</h3>
+
+                    <p class="fav-desc">My goodness, Cobalt Core. I didn't expect much when I picked this game up for whatever reason, but you could probably track my enjoyment of it on a logarithmic scale. I know this list is ostensibly for 2024, but Cobalt Core is definitley my favorite game of 2023. It doesn't have insane complexity to the level of similar rougelikes like Slay the Spire, but it makes up for that with a cute story and fun characters, and having a more solid 'ending' of sorts.</p>
+
+                    <p class="fav-highlight">Highlight: Playing the final card in the [REDACTED] sequence.</p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/cobaltcore.jpg" alt="Icon for Cobalt Core">
+                <hr>
+            </div>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/splat2game.jpg" alt="Icon for Splatoon 2">
+
+                <div class="fav-text">
+                    <h3>Splatoon 1, Splatoon 2, Splatoon 2: Octo Expansion</h3>
+
+                    <p class="fav-desc">Decided to start playing through the story modes for all of the Splatoon games recently, and I've been having fun! The character writing really picks up after splatoon 2, and it really finds footing around Octo Expansion. as of writing, I haven't finished Splatoon 3's hero mode, or started side order, so I'm intrigued.</p>
+
+                    <p class="fav-highlight">Highlight: When Pearl says she's bored of breaking all the boxes in Octo expansion</p>
+                </div>
+                <hr>
+            </div>
+
+            <!--Undertale Yellow-->
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Undertale Yellow</h3>
+
+                    <p class="fav-desc">I technically played this in 2023, but I didn't decide to update this list until now so I'll add it here. This game is great. It's not without flaws for sure but, in my opinion, it does a stellar job at being an Undertale side story of sorts. Great characters, great music, I love it.</p>
+
+                    <p class="fav-highlight">Highlight: Neutral Route Boss</p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/UTYgame.jpg" alt="Icon for Undertale Yellow">
+                <hr>
+            </div>
+
+            <!--Windowkill-->
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/windowkill.jpg" alt="Icon for Windowkill">
+
+                <div class="fav-text">
+                    <h3>Windowkill</h3>
+
+                    <p class="fav-desc">I kind of picked this game up on a whim after watching someone play it for all of 2 minutes, and instantly falling in love with it's concept and it's soundtrack. And... It might be the platonic ideal of a video game? It's got a great hook, snappy sound effects, a great soundtrack, and it's pretty cheap too! Basically, buy and play windowkill.
+                    </p>
+
+                    <p class="fav-highlight">Highlight: Any time you're listening to the song "Windowbreaker"</p>
+                </div>
+                <hr>
+            </div>
+
+            <!--Balatro-->
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Balatro</h3>
+
+                    <p class="fav-desc">Anyone who is in the orbit of indie and/or rougelike games may have seen this coming, but I played Balatro this year and loved it. Perfect rougelike balance of familiar themes and rougelike deckbuilding. 10/10.</p>
+
+                    <p class="fav-highlight">Highlight: Getting a huge combo and hearing the sound effects increase in tone</p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/balatrogame.jpg" alt="Icon for Balatro">
+                <hr>
+            </div>
+
+            <!--Rhythm Doctor-->
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/rhythmdoc.jpg" alt="Icon for Rhythm Doctor" style="margin-top:25%">
+
+                <div class="fav-text">
+                    <h3>Rhythm Doctor</h3>
+
+                    <p class="fav-desc">Ok, so I don't consider myself good at rhythm games. The genre is compelling, since I am one to enjoy a great soundtrack, and especially one to enjoy syncing actions to music, but I've always been bad at them. Or rather, unwilling (or unable) to dedicate the amount of time and practice needed to get good at them. Rhythm Doctor lets me pass by not getting all too difficult, while never losing that great rhythm-y feel you get when slamming the spacebar to the beat. Couple that with some amazing songs and some really innovative levels, and you've got yourself a winner.
+                    </p>
+
+                    <p class="fav-highlight">Highlight: OK, so my highlight of this game is actually the addional Muse Dash bonus levels. Because I liked them so much, I looked up the source material and it looked like someting I would absolutely not enjoy. Which is a shame, I love those songs and the characters, in animated pixel form, were quite endearing.</p>
+                </div>
+                <hr>
+            </div>
+
+            <!--Bomb Rush Cyberfunk-->
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Bomb Rush Cyberfunk</h3>
+
+                    <p class="fav-desc">This makes me think I should put dates on these entries, because since writing the entry for the BRC soundtrack, I have beaten the game! And it's incredible. Learning & mastering the movement is super satisfying, the world and asthetics are amazing, and the soundtrack is perfect.</p>
+
+                    <p class="fav-highlight">Highlight: <a href="toot.crazu.co.nz/assets/bombrush.jpg">This screenshot.</a></p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/brcgame.jpg" alt="Icon for Balatro">
+                <hr>
+            </div>
+
+            <!--Rhythm Doctor-->
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/unbeatabledemo.jpg" alt="Icon for Unbeatable: White Label">
+
+                <div class="fav-text">
+                    <h3>Unbeatable: [White Label]</h3>
+
+                    <p class="fav-desc"> This game has shown up in both Rhythm Doctor and No Straight Roads, and I should've taken that as a sign that I should play it regardless of my preconcieved notions of how good I would be at muse dash style two lane rhythm gameplay. That said, I can hold my own in this demo, and the songs are <i>great</i>.
+                    </p>
+
+                    <p class="fav-highlight">Highlight: Proper Rhythm</p>
+                </div>
+                <hr>
+            </div>
+
+            <!--Splatoon 3: Side Order-->
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Splatoon 3: Side Order</h3>
+
+                    <p class="fav-desc">This was the last Splatoon story mode I had in my list before beng caught up, and the first one I got to play blind (aside from a couple trailers, at least) and I had a blast! It was a really nice mixup of the typical splatoon gameplay / formula, and I'm glad they chose to make completely new enemies instead of re-using the octos for the 5th time.</p>
+
+                    <p class="fav-highlight">Highlight: Pearl Drone</a></p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/brcgame.jpg" alt="Icon for Balatro">
+                <hr>
+            </div>
+
+            <div class="honorable-mentions">
+                <h3>Honorable Mentions:</h3>
+                <p class="fav-highlight">Paper Mario: The Thousand Year Door</p>
+            </div>
+
+        </div>
+
+        <div id="fav-albums">
+            <h2 class="fav-header">Albums:</h2>
+
+            <!--Digital Nightmare-->
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/diginightmare.jpg" alt="Album cover for TWRP's Digital Nightmare" title="See you online :)">
+
+                <div class="fav-text">
+                    <h3>Digital Nightmare - TWRP</h3>
+
+                    <p class="fav-desc">I always look forward to new TWRP album drops, and Digital Nightmare was no exception. as of writing, I've been listening a lot over the past few days, and I'm loving every second of it. Another shoutout to Friends of the Blues, which also came out recently.</p>
+
+                    <p class="fav-highlight">Highlight: Online & A Human's Touch</p>
+                </div>
+                <hr>
+            </div>
+
+            <!--These Nuts-->
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>These Nuts - Ninja Sex Party</h3>
+
+                    <p class="fav-desc">I'll admit I've been less excited for new NSP in recent years, but I've gotta admit These Nuts really did it for me. There was a lot of variety in the presentation of These Nuts, and my experience with These Nuts was rich with texture and nuance. These Nuts kept me coming back for more.</p>
+
+                    <p class="fav-highlight">Highlight: Sports Anthem</p>
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/thesenuts.jpg" alt="Album cover for These Nuts by Ninja Sex Party">
+                <hr>
+            </div>
+
+            <!--FOREVER II-->
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/foreverII.jpg" alt="Album cover for Kazahana's FOREVER II">
+
+                <div class="fav-text">
+                    <h3>FOREVER II - Kazahana</h3>
+
+                    <p class="fav-desc">For a little while, I dipped my toe into the world of atmospheric drum and bass music for this first time this year, and I think it was safe to say that I'd been missing out thus far. I picked up a couple albums off of bandcamp and picked some more from a couple youtube compilations and have been having a great time.</p>
+                </div>
+                <hr>
+            </div>
+
+            <!--Alive 2007-->
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Alive 2007 - Daft Punk</h3>
+
+                    <p class="fav-desc">I didn't think I could like live albums. After all, who wants some randoms cheering over your nice music? Suffice to say, I was completely wrong. It may have helped that the first time I heard a song from this album (Around the World/Harder Better Faster Stronger) was while playing it's Beat Saber level, where having a crowd cheering in the back is a great enhancement to the experience.</p>
+
+                    <p class="fav-highlight">Highlight: Human After All / Together / One More Time (Reprise) / Music Sounds Better With You (Stardust) <sup>(Yes that's all one song)<sup>No the superscript isn't part of it</sup></sup></p>
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/alive2007.jpg" alt="Album cover for Alive 2007 by Daft Punk">
+                <hr>
+            </div>
+
+            <div class="honorable-mentions" display="none">
+                <h3>Honorable Song Mentions:</h3>
+                <p class="fav-highlight">Rattlesnake (King Gizzard and the Lizard Wizard), Face to Face (Daft Punk)</p>
+            </div>
+
+        </div>
+        
+        <div id="fav-gameost">
+        <h2 class="fav-header">Game OSTs:</h2>
+
+        <p>A lot of this game OST section is gonna be a mirror match for my favorite games, but I like games that have good music, and I like the music for good games.</p>
+            <br><br>
+
+        <!--Undertale Yellow-->
+        <div class="fav-containerL">
+            <img class="lalign-img" src="assets/favs/UTYost.jpg" alt="Icon for Undertale Yellow's Soundtrack">
+            
+            <div class="fav-text">
+                <h3>Undertale Yellow</h3>
+                
+                <p class="fav-desc">It feels like near tradition for any Undertale-related project to come out of the box with good music, and UTY is no exception. All you favorite Undertale music tropes are here, the banging boss themes, the reused leitmotifs (positive), and the soundfonts taken from older games. Even if you're not interested in playing the game, the soundtrack is worth listening to if you like Undertale's music.
+                </p>
+                
+                <p class="fav-highlight">Highlight: That awesome guitar bit in specimen:clay that only plays once</p>
+            </div>
+            <hr>
+        </div>
+        
+        <!--Cobalt Core-->
+        <div class="fav-containerR">
+            <div class="fav-text">
+                <h3>Cobalt Core</h3>
+                
+                <p class="fav-desc">Much like my love for the game itself, my love for the soundtrack also grew exponentially the more I listened to it. It's now one of my all time favorite game soundtracks for sure, and makes me really want to go back and listen to all of Aaron Cherof's other work.</p>
+                
+                <p class="fav-highlight">Highlight: Polytrope</p>
+                
+            </div>
+            
+            <img class="ralign-img" src="assets/favs/cobaltcore.jpg" alt="Icon for Cobalt Core">
+            <hr>
+        </div>
+        
+        <!--Bomb Rush CyberFunk-->
+        <div class="fav-containerL">
+            <img class="lalign-img" src="assets/favs/brcmusic.jpg" alt="Icon for Bomb Rush Cyberfunk's Soundtrack">
+            
+            <div class="fav-text">
+                <h3>Bomb Rush Cyberfunk</h3>
+                
+                <p class="fav-desc">To be honest, I'm quite surprised that I didn't make an entry for BRC last year. I didn't play the game, mind (and still haven't beaten it to this day), but it's soundtrack works just as well as a standalone album. and it is a truly great collection of songs. Drawing inspiration from it's spiritual predecessor - Jet Set Radio.
+                </p>
+                
+                <p class="fav-highlight">Highlights: All three Hideki songs, Wanna Kno, and Precious Thing</p>
+            </div>
+            <hr>
+        </div>
+
+        <!--Katamari-->
+        <div class="fav-containerR">
+
+            <div class="fav-text">
+                <h3>Katamari Damacy / We Love Katamari</h3>
+
+                <p class="fav-desc">I've never played these games before, but this music is fantastic. Though I will forever associate Katamari on the Rocks with Kingdom Hearts III for... <a href="https://www.youtube.com/watch?v=vD6QpjzQ1UQ&t=3325s">Reasons..</a></p>
+            </div>
+
+            <img class="ralign-img" src="assets/favs/welovekatamari.jpg" alt="Album cover for We Love Katamari">
+            <hr>
+        </div>
+
+
+
+        <div class="honorable-mentions">
+            <h3>Honorable Mentions:</h3>
+            <p class="fav-highlight">Windowkill, Balatro, Tetris for the Phillips CDI (yes, really), Arms, TS! Underswap, Bomb-Sniffing Pomeranian and the Muse Dash songs from Rhythm Doctor</p>
+        </div>
+
+        </div>
+        
+        <div id="fav-compalbums">
+            <h2 class="fav-header">Compilation Albums:</h2>
+
+            <p>I wanted to keep these seperate, since they don't exactly feel like soundtracks or regular albums, per se.</p>
+            <br><br>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/LBPK.jpg" alt="Icon for Little Big Planet Karting">
+
+                <div class="fav-text">
+                    <h3>Little Big Planet: Karting</h3>
+
+                    <p class="fav-desc">This may seem like an odd choice, but the LitteBigPlanet games were quite formative to my early gaming experience, as too was it's music. I chose Karting especially, since I really ended up liking a lot more of the tracks here than I expected upon revist.</p>
+
+                    <p class="fav-highlight">Highlight: Fresh</p>
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Just Shapes and Beats</h3>
+
+                    <p class="fav-desc">This had to show up <i>somewhere</i> in this list, since these songs have occupied and fuelled a part of my music taste ever since I saw snippets of that one boss fight compilation video on youtube. They've also served as somewhat of a gateway drug to Monstercat and other adjacent songs, so there's that.</p>
+
+                    <p class="fav-highlight">Highlight: New Game</p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/JSAB.jpg" alt="Icon for Just Shapes and Beats">
+                <hr>
+            </div>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/pressstart.jpg" alt="Icon for Ninety9Lives Album 99: Press Start">
+
+                <div class="fav-text">
+                    <h3>Album 99: Press Start</h3>
+
+                    <p class="fav-desc">Back in the high school days, I was a fan of Ninety9Lives, after they were spearheaded by <i title="intentionally not naming here">some minecraft youtube guy</i>. Thusly I have a lot of nostalgia for early 99L, pretty much everything up to Album 89. The nostalgia really hits storngest with this album, and Ascend in particular really gut punches me back...</p>
+
+                    <p class="fav-highlight">Highlights: Ascend, Into the Night</p>
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Mouth Moods</h3>
+
+                    <p class="fav-desc">Is this the right place to put this album? I don't even know how to place it. But this album, and the other three Mouth albums, are a real treat to listen to if you haven't before. As someone who isn't very well musically rounded, I heard a lot of songs in these albums for the first time, which made it odd to hear the originals...</p>
+
+                    <p class="fav-highlight">Highlight: Wallspin</p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/mouthmoods.jpg" alt="Icon for Mouth Moods">
+                <hr>
+            </div>
+
+        </div>
+        
+        <div id="fav-designstyles">
+            <h2 class="fav-header">AHA! You FOOL! You've Fallen Into My Trap!!</h2>
+            <p class="fav-text">This isn't a list of my favorite design styles at all!! This is an appreciation zone for the one design style to rule them all, the apex asthetic, and that is:</p> <br>
+
+            <div class="fav-design-cont" id="fav-design-headimage">
+                <img src="assets/favs/fruti-aero/fruti-aero-header.jpg" alt="This is a visal design style, so it's kind of hard to describe. Imagine how a swimming pool feels mixed with how a sunny tropical reef would feel, and slap a bunch of fish and water splashes on the image haphazardly.">
+                <p class="fav-design-imgdesc">Image sourced from Asthetics Wiki</p>
+            </div>
+            
+            <br>
+            <p class="fav-text">Frutiger Aero and it's asthetical cousin, the Y2K asthetic, are personal fascinations/nostalgia objects of mine. No wonder, given F.A. being particularly present when I was growing up. Something about the abstract areas, show-offy High Definitions, and illogical futuristic spaces tickle my brain.</p><br>
+
+            <h2><u>Frutiger Aero to tickle your brain:</u></h2>
+            <br>
+
+            <div class="fav-design-cont">
+                <div>
+                    <img src="assets/favs/fruti-aero/fruti-misc.jpg" style="height:200px">
+                    <img src="assets/favs/fruti-aero/fruit-aero.webp" style="height:200px">
+                </div>
+                <p class="fav-design-imgdesc">Images sourced from fruitigeraero.tumblr.com</p>
+            </div>
+
+            <div class="fav-design-cont">
+                <div>
+                    <img src="assets/favs/fruti-aero/fruti-imac.jpg" style="height:200px">
+                    <img src="assets/favs/fruti-aero/fruti-idog.jpg" style="height:200px">
+                </div>
+                <p class="fav-design-imgdesc">We had these growing up!! love that transparent plastic look</p>
+            </div>
+
+            <div class="fav-design-cont">
+                <div>
+                    <img src="assets/favs/fruti-aero/fruti-metro.jpg" style="width:100%">
+                </div>
+                <p class="fav-design-imgdesc">This is from a branch style called "Frutiger Metro", and I mean wow. Love it.
+                    <br>
+                    Sourced from fruitiermetrostation.tumblr.com
+                </p>
+            </div>
+
+        </div>
+
+        
+    </div>
+    </main>
+
+    <div id="contacts">
+        <p class="contact-text">Design by toot crazu</p>
+        <a target="_blank" href="https://www.tumblr.com/tootcrazu"><img src="assets/tumblrlogo.png"></a>
+        <img src="assets/Discordlogo.png" title="I'm tootcrazu on Discord!">
+    </div>
+
+
+    <footer>
+        <img class="footer-img" src="assets/scoutgif.gif" alt="The Scout from Deep Rock Galactic">
+        <img class="footer-img" src="assets/lampjam.gif" alt="Ray, the lamp from Ghost Trick, bouncing up and down jovially">
+        <img class="footer-img" src="assets/edgegif.gif" alt="Miles Edgeworth, from Ace Attorney, rotating in a standing position">
+        <img class="footer-img" src="assets/voiletcrazu.gif" alt="The smiling face icon, made to look like the sun reflecting on water">
+        <img class="footer-img" src="assets/jono.gif" alt="A buch of random 3d models rotating. Trust me, you're not missing out on much here.">
+        <img class="footer-img" src="assets/cloverdance.gif" alt="Clover, the small cowboy child from Undertale Yellow, waving their hands in a rythmic dance">
+        <img class="footer-img" src="assets/spamton.gif" alt="Spamton from Deltarune doing an odd dance">
+        <img class="footer-img" src="assets/fnafwmangle.gif" alt="Mangle from FNAF world bouncing happily in an idle stance">
+    </footer>
+
+</body>
+
+</html>

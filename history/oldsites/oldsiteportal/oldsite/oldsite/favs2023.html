@@ -1,0 +1,663 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>crazu place</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+        <script src="./musicPlayer.js"></script>
+        <meta name="description" content="A place for crazu">
+    </head>
+    <body>
+        <header>
+            <img src="assets/crazubannersparkle.gif" alt="Sparkly pink banner with'toot crazu' written on it, along with a smiling face icon">
+            <marquee behaviour="scroll" direction="left" class="header-text">"Nostalgia for an era I was never really a part of? I can do that!"</marquee>
+        </header>
+
+
+    <nav>
+        <div id="navContainer">
+            <h2>Navigation!</h2>
+            <hr>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="favs2024.html">My Favorite Stuff (2024)</a></p>
+            <p><a href="favs2023.html">My Favorite Stuff (2023 and before)</a></p>
+            <p><a href="servers.html">Minecraft Server</a></p>
+            <p><a href="dungeon/evil.html">Evil Dungeon</a></p>
+            <p><a href="abtmusic.html">About Music</a></p>
+            <p><a href="credits.html">Credits</a></p>
+        </div>
+        
+        
+        <div id="musicPlayer">
+            
+            <div id="trackNameCont">
+                <marquee id="trackName" class="player-title">
+                    Press Play to Begin!
+                </marquee>
+            </div>
+
+            <div id="trackProgressCont">
+
+                <div id="progSliderCont">
+                    <input type="range" value="0" class="slider" id="progressSlider">
+                </div>
+
+                <div id="trackTimeCont">
+                    <span id="trackProgress">00:00</span> <span id="trackTotalLength">00:00</span>
+                </div>
+
+            </div>
+
+            <audio controls id="trackAudio">
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <div id="buttonCont">
+                <button class='trackBtn' onclick="previous()">
+                    <img src="assets/player/trackBackArr.png" alt="Previous track">
+                </button>
+
+                <button class='trackBtn' id="pauseToggle" onclick="togglePause()">
+                    <div><img class='playButt' src='assets/player/trackPlayButt.png' alt="Play"> <img class='pauseButt'src='assets/player/trackPauseButt.png' alt="Pause"></div>
+                </button>
+
+                <button class='trackBtn' onclick="next()">
+                    <img src="assets/player/trackFwdArr.png" alt="Skip to next track">
+                </button>
+
+            </div>
+
+
+            <div id="volSliderCont">
+                <input type="range" min="0" step="0.01" max="1" value="0" class="slider" id="volSlider">
+            </div>
+            
+        </div>
+        
+    </nav>
+
+
+
+    <main>
+        <h1>My Favorite Things 2023 Edition</h1>
+
+    <div id="favorites">  
+            <input type="radio" name="fav-radio" id="Games">
+            <label for="Games" class="fav-selector">Games</label>
+            <input type="radio" name="fav-radio" id="Albums">
+            <label for="Albums" class="fav-selector">Albums</label>
+            <input type="radio" name="fav-radio" id="GameOST">
+            <label for="GameOST" class="fav-selector">Game OST</label>
+            <input type="radio" name="fav-radio" id="Comp-Albums">
+            <label for="Comp-Albums" class="fav-selector">Compilation Albums</label>
+            <input type="radio" name="fav-radio" id="Design-Styles">
+            <label for="Design-Styles" class="fav-selector">Design Styles</label>
+
+        <div id="fav-explainer">
+            <br>
+            <p class="fav-desc">This is a list of things I like! I wrote all this in mid 2023 when I made this site, so things may have changed since. I'll try to update future pages when I play and enjoy more things! Go ahead and click some buttons and explore.</p>
+        </div>
+
+        <div id="fav-games">
+            <h2 class="fav-header">Games:</h2>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/GhostTrickGame.jpg" alt="Icon for Ghost Trick: Phantom Detective">
+
+                <div class="fav-text">
+                    <h3>Ghost Trick: Phantom Detective</h3>
+
+                    <p class="fav-desc">If you know anyone who has played Ghost Trick, then you have probably heard them reccomend that you play it, while also telling you as little about the game as possible. There is a reason for this. This game is best experienced blind and is more than worth it for any fan of well-written, silly stories with great plot twists.</p>
+
+                    <p class="fav-highlight">Highlight: Chapter 16</p>
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Undertale &amp; Deltarune</h3>
+
+                    <p class="fav-desc">I'd find it quite hard to encapsulate what these games mean to me, and for this reason I had to group them together. After all, there isn't any other piece of media that I have so obsessively consumed nearly every detail of, through years of watching cut content videos, fan theories, and listneing to song remixes.</p>
+
+                    <p class="fav-highlight">Highlight: The Spamton Sweepstakes</p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/UTDRGame.jpg" alt="Icon for Undertale, and Deltarune Chapters 1 and 2">
+                <hr>
+            </div>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/slaythespire.jpg" alt="Icon for Slay the Spire">
+
+                <div class="fav-text">
+                    <h3>Slay the Spire</h3>
+
+                    <p class="fav-desc">If you combine my time in the mobile version and my time playing... offline versions of this game, then it may be the game I've spent the second-most amount of time playing (If you don't count the time I left TF2 open while on holiday). That being said, I'm also still very bad at it, since I tend to play based on muscle memory more than rational thought at this point, which is <i>not</i> good for this kind of game.</p>
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>The Binding of Isaac: Rebirth (+DLC)</h3>
+
+                    <p class="fav-desc">After writing the description for Slay the Spire, I found out I was totally wrong about playtime; considering my hours in TBOI's Switch version sit at about 815, which reaches 1000 once you add the Steam version. Something about this game plugs directly into how my brain is wired, and yet I still can't get a positive win streak...</p>
+
+                    <p class="fav-highlight">Highlight: Dogma / The Beast</p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/isaac-repentance.jpg" alt="Icon for The Binding of Isaac: Repentance">
+                <hr>
+            </div>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/AJAA.jpg" alt="Nintendo DS Box Art for Apollo Justice, Ace Attorney">
+
+                <div class="fav-text">
+                    <h3>Apollo Justice: Ace Attorney</h3>
+
+                    <p class="fav-desc">I had to choose at least one representative of the AA series here, since it's one of my major brainrots, so I chose this one because I like it's vibes the most. If you asked me which games were the best in the series, I'd say the original trilogy (which everyone says), The Great AA Chronichles, and probably the Investigations 2 Fan Translation.</p>
+
+                    <p class="fav-highlight">Highlight: Turnabout Trump</p>
+
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Minecraft</h3>
+
+                    <p class="fav-desc">I'm almost glad that there isn't a way to track time spend playing Minecraft. At this point, I've pretty much got the base rules memorised, played and abanonded hundreds of different worlds, and installed countless mods. If I had to put a number on how many hours I've played since I first got an account for christmas in 2013, I would put in in the upper 2000's. And I wouldn't trade away a second of it.</p>
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/minecraft.jpg" alt="An image of a landscape in Minecraft">
+                <hr>
+            </div>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/bloons.jpg" alt="Icon for bloons TD6">
+
+                <div class="fav-text">
+                    <h3>Bloons TD6</h3>
+
+                    <p class="fav-desc">I have a complicated relationship with this game. Despite having a nostalgic history with the series going back to Bloons TD3, an admiration for it's kiwi developers, and this somehow being my second most played game on steam, I don't really... like it that much? Sure it's mostly well designed, pretty fun, and has some solid replay value to boot, but I don't feel as strong of a connetion to this as I do other games.</p>
+
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>OneShot</h3>
+
+                    <p class="fav-desc">I finally got around to playing this game only this year, and I can honestly say it was one of my favorite video game experiences ever. I can't imagine what it must've been like to play before the soltice update... Either way, a fantastic experience that really kept me thinking. I will keep the leftover *spoiler*s in my computer forever.</p>
+
+                    <p class="fav-highlight">Highlight: When *spoiler* walks off of the *spoiler*</p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/OneShot.jpg" alt="Icon of Niko from OneShot">
+                <hr>
+            </div>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/fnaf.jpg" alt="Icon for FNAF World" title="also the fnaf world designs are good fight me">
+
+                <div class="fav-text">
+                    <h3>Five Nights at Freddies (Series)</h3>
+
+                    <p class="fav-desc">This is an odd choice (especially since I haven't played any games in the series), since most of it's content... isn't that well constrcuted? Something about it's insane, obscure-for-the-purpose-of-obscurity story compells me. Almost to the point that it makes me want to try and piece it together myself, and you <i>know</i> that would be a bad idea.</p>
+
+                    <p class="fav-highlight">Highlight: Henry's Speech in FFPS</p>
+
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Neon White</h3>
+
+                    <p class="fav-desc">It took me a while to pick this game up, but when I did, it was absolutely worth it. It's soundtrack is amazing, the levels/environments are beautiful, the characters are... not much better than they need to be to make the rest of it work, but that doesn't put the game at a detriment at all. It's an anime parkour game, what more do you want?</p>
+
+                    <p class="fav-highlight">Highlight: The opening levels</p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/neonwhiteGame.jpg" alt="Logo for Neon White">
+                <hr>
+            </div>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/JSAB.jpg" alt="logo for Just Shapes and Beats">
+
+                <div class="fav-text">
+                    <h3>Just Shapes and Beats</h3>
+
+                    <p class="fav-desc">This game gets a shout from me not just for it's banging soundtrack collection which has occupied my ears for many a time, but also for it's wonderful use of dialouge-free storytelling. It's simple, it's charming, it tells a little story, and it's got some great songs to jam to!</p>
+
+                    <p class="fav-highlight">Highlight: Close to Me</p>
+
+                </div>
+                <hr>
+            </div>
+
+            <div class="honorable-mentions">
+                <h3>Honorable Mentions:</h3>
+                <p class="fav-highlight">Team Fortress 2, Everhood, Inscryption, The Forgotten City, Overwatch but in 2017 when it was good, Portal and Portal 2, Psychonauts and Psychonauts 2, Battleblock Theater, Castle Crashers, Pit People, Dicey Dungeons, FTL: Faster Than Light, Plants vs Zombies, Deep Rock Galactic, Loop Hero, World of Goo and Little Inferno, Sonic and All Stars Racing Transformed, Garry's Mod, Hades, Monster Train, Super Mario Oddysey, Shovel Knight, No Straight Roads, Cuphead, Every Crash Bandicoot game except for the party ones, and Pokemon Shield.</p>
+            </div>
+
+        </div>
+
+        <div id="fav-albums">
+            <h2 class="fav-header">Albums:</h2>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/TogetherTime.jpg" alt="Album cover for TWRP's Together Through Time" title="She Remix on my Tupperware till I Party">
+
+                <div class="fav-text">
+                    <h3>Together Through Time - TWRP</h3>
+
+                    <p class="fav-desc">I adore this album, it's been a classic for me pretty much since it's release in 2018. It's wonderfully whimsical but still has a couple hard bangers in there to pump it up, namely Phantom Racer and Starlight Bridagade. I love TWRP a whole lot, but this has to be my favorite album of theirs.</p>
+
+                    <p class="fav-highlight">Highlight: Starlight Brigade</p>
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Yes - Pet Shop Boys</h3>
+
+                    <p class="fav-desc">My love of the hits of Pet Shop Boys was essentially passed down to me from my dad, and their wacky music videos make up some of my earliest memories. (looking at you, Go West, Can You Forgive Her, and Yesterday When I Was Mad). Out of all of their albums, I think this contains most of my favorite songs.</p>
+
+                    <p class="fav-highlight">Highlight: Beautiful People</p>
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/yespetshop.jpg" alt="Album cover for 'Yes' by Pet Shop Boys">
+                <hr>
+            </div>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/sandinexposure.jpg" alt="Album covers for Sandcastle Kingdoms and Together Through Time by NateWantsToBattle">
+
+                <div class="fav-text">
+                    <h3>Sandcastle Kingdoms &amp; Paid in Exposure - NateWantsToBattle</h3>
+
+                    <p class="fav-desc">These two albums take up a similar space in my brain, so I merged them. Most of NWTB's other music doesn't really fit in my wheelhouse, but these two albums really clicked with me. I enjoy their almost personal tone, and I hope he makes more in the future.</p>
+
+                    <p class="fav-highlight">Highlight: Dream Alone</p>
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Mercurial World - Magdenila Bay</h3>
+
+                    <p class="fav-desc">I'm an older sibling, and anybody else who is also an older sibling knows that it's a deathy sin to acknolwedge that you like something your younger sibling also likes, let alone something they introduced to you. On an unrelated note, I love this album.</p>
+
+                    <p class="fav-highlight">Highlight: You Lose!</p>
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/mercworldcover.jpg" alt="Album art for Mercurial World by Magdelina Bay">
+                <hr>
+            </div>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/runwiththe.jpg" alt="Album cover for Run with the Hunted by Skyhill">
+
+                <div class="fav-text">
+                    <h3>Run with the Hunted - Skyhill</h3>
+
+                    <p class="fav-desc">I discovered this album by virtue of being a Game Grumps fan at one point in the past, and have always enjoyed putting it on whenever the particular mood strikes me. I don't have much more to say about it, so I'd like to mention now that it's annoying that the cover looks off centre.</p>
+
+                    <p class="fav-highlight">Highlight: Only One</p>
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Ember - Kubbi</h3>
+
+                    <p class="fav-desc">This is one of those albums I just kinda vibe with. you know? you put it on and you're like... yeah, this vibes. it has those vibes to it.</p>
+
+                    <p class="fav-highlight">Highlight: has good vibes</p>
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/ember.jpg" alt="Album art for Ember by Kubbi">
+                <hr>
+            </div>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/worlds.jpg" alt="Album cover for Worlds by Porter Robinson">
+
+                <div class="fav-text">
+                    <h3>Worlds - Porter Robinson</h3>
+
+                    <p class="fav-desc">Given how divorced I am from... other people, I'm not sure what the popular consensus is on this album. Is it... Overplayed? Overrated? Obscure? I'm not sure how people feel. But seperate from the wider opinion of the populus (which is how I feel most things should be enjoyed, especially when it comes to terms like "normie" and "overrated"), I enjoy this album.</p>
+
+                    <p class="fav-highlight">Highlight: Years of War</p>
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Chiptune Memories - she</h3>
+
+                    <p class="fav-desc">On the topic of albums I'm not sure how people feel about, Chiptune Memories. I came across this album by chance on a Spotify reccomendation, and it's slowly wormed it's way into becoming a staple, for good reason. Aspire is another favorite she album of mine.</p>
+
+                    <p class="fav-highlight">Highlight: Artificial Love</p>
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/chiptunememories.jpg" alt="Album art for Chiptune Memories by she">
+                <hr>
+            </div>
+
+            <div class="honorable-mentions">
+                <h3>Honorable Mentions:</h3>
+                <p class="fav-highlight">And The Flying Boombox by No More Kings, Woman Worldwide by Justice, Cool Patrol by Ninja Sex Party (the first album I ever got on CD), Demon Days by Gorillaz</p>
+            </div>
+
+        </div>
+        
+        <div id="fav-gameost">
+        <h2 class="fav-header">Game OSTs:</h2>
+        
+        <div class="fav-containerL">
+            <img class="lalign-img" src="assets/favs/NSR.jpg" alt="Icon for No Straight Roads">
+            
+            <div class="fav-text">
+                <h3>No Straight Roads</h3>
+                
+                <p class="fav-desc">It's hard to state just how much I love the music from NSR. I was a little take it or leave it on the game itself (has wonderful potential, but isn't quite as good as it could be), but man does this soundtrack rock ass. I'm a sucker for great boss tracks with personality, and this delivers so much on that.</p>
+                
+                <p class="fav-highlight">Highlight: vs. SAYU</p>
+            </div>
+            <hr>
+        </div>
+        
+        <div class="fav-containerR">
+            <div class="fav-text">
+                <h3>Everhood</h3>
+                
+                <p class="fav-desc">On the topic of boss themes that Rock Ass, Everhood. I didn't really know what to expect when I first played this game, but banging tunes and existentialism weren't on that list. I don't know how they managed to jam so many great tracks into this one game. Listening to Euthanasia Rollercoaster &amp; Farewell still makes me tear up.</p>
+                
+                <p class="fav-highlight">Highlight: Frogs are Friends 2</p>
+                
+            </div>
+            
+            <img class="ralign-img" src="assets/favs/everhoodost.jpg" alt="Icon for Everhood">
+            <hr>
+        </div>
+
+        <div class="fav-containerL">
+            <img class="lalign-img" src="assets/favs/DiceyDungoensost.jpg" alt="Icon for Dicey Dungeons">
+            
+            <div class="fav-text">
+                <h3>Dicey Dungeons</h3>
+                
+                <p class="fav-desc">I checked out Dicey Dungeons by virtue of being a Slay the Spire fan, but I think I came out of it more of a fan of it's music than it's gameplay, though they're both spectacular. Chipzel is a musical wizard, and I believe the music for Dicey Dungeons only got better as time went on. I'm super excited to see what she cooks up next.</p>
+                
+                <p class="fav-highlight">Highlight: Halloween Combat 2 (I don't think it's named)</p>
+            </div>
+            <hr>
+        </div>
+
+        <div class="fav-containerR">
+            <div class="fav-text">
+                <h3>Ghost Trick: Phantom Detective</h3>
+                
+                <p class="fav-desc">Just as Ghost Trick's humour, gameplay and writing stand out as excellent, so too does it's music. I'm not exactly fluent in music language, so I couldn't tell you why, so just listen to this track. You'll get it. (maybe turn down the volume a bit first)</p>
+
+                <audio controls>
+                    <source src="assets/favs/ghosttricktheme.mp3" type="audio/mpeg">
+                  The main Ghost Trick theme is supposed to be here, but your browser can't see it for some reason. <a target="_blank" href="https://www.youtube.com/watch?v=QpY_MGEodn8">Here's a link to it on youtube.</a>
+                  </audio>
+                
+                <p class="fav-highlight" style="padding-bottom:20px;">Highlight: Lynne - A Targeted Redhead</p>
+                
+            </div>
+            
+            <img class="ralign-img" src="assets/favs/ghosttrickost.jpg" alt="Icon Ghost Trick's soundtrack">
+            <hr>
+        </div>
+    
+        <div class="fav-containerL">
+            <img class="lalign-img" src="assets/favs/NeonWhiteost.jpg" alt="Icon for the Neon White OST's first disc: 'The Wicked Heart'">
+            
+            <div class="fav-text">
+                <h3>Neon White</h3>
+                
+                <p class="fav-desc">I cannot emphasize how daunting of a task it would be to match Neon White's unique gameplay and presentational style with a soundtrack, but Machine Girl knocked it out of the park and into outer space. The tracks are phenominal.</p>
+                
+                <p class="fav-highlight">Highlight: Glass Ocean</p>
+            </div>
+            <hr>
+        </div>
+
+        <div class="fav-containerR">
+            <div class="fav-text">
+                <h3>Apollo Justice: Ace Attorney</h3>
+                
+                <p class="fav-desc">As well as being my favorite Ace Attorney game of the series, it also gets the favorite soundtrack award. Though once again, it almost loses that title to Ace Attorney Investigations 2 (why does that damned *spoiler* have to have a theme that goes so hard)</p>
+                
+                <p class="fav-highlight">Highlight: All of it's investigation themes, hot damn</p>
+                
+            </div>
+            
+            <img class="ralign-img" src="assets/favs/AJAAOST.jpg" alt="Icon for Apollo Justice: Ace Attorney">
+            <hr>
+        </div>
+
+        <div class="fav-containerL">
+            <img class="lalign-img" src="assets/favs/SonicManiaost.jpg" alt="Icon for Sonic Mania">
+            
+            <div class="fav-text">
+                <h3>Sonic Mania</h3>
+                
+                <p class="fav-desc">I don't think I've ever beaten a Sonic game, but you don't need to have played one to be able to realise how much this soundtrack jams. One day I'll get around to playing them all, but in the mean time I will continue to undulate to these magnificent tunes.</p>
+                
+                <p class="fav-highlight">Highlight: Stardust Speedway</p>
+            </div>
+            <hr>
+        </div>
+
+        <div class="fav-containerR">
+            <div class="fav-text">
+                <h3>Undertale &amp; Deltarune</h3>
+                
+                <p class="fav-desc">I can't belive I've gotten this far down the list without mentioning these musical staples anyone's list of favorite game OSTs is likely to include, and for good reason. I've listened to these songs so many times their metaphorical cassete tape has been worn to dust. 10/10, can't wait for chapters 3 onwards.</p>
+                
+                <p class="fav-highlight">Highlight: THE WORLD REVOLVING</p>
+                
+            </div>
+            
+            <img class="ralign-img" src="assets/favs/UTDRGame.jpg" alt="Icon Undertale and Deltarune Chapters 1 and 2">
+            <hr>
+        </div>
+
+        <div class="fav-containerL">
+            <img class="lalign-img" src="assets/favs/switchforce2ost.jpg" alt="Icon for Mighty Switch Force 2">
+            
+            <div class="fav-text">
+                <h3>Mighty Switch Force! 2</h3>
+                
+                <p class="fav-desc">I think this might be one of the lesser known picks on this list, but it also might be one of my favorites. I feel lucky to have heard this song on a livestream somewhere many years ago, so that I may be blessed with these funky jams. Also I learned while putting my music collection together that the artist for these songs, Jake Kaufman, went on to create the music for Shovel Knight!</p>
+                
+                <p class="fav-highlight">Highlight: The Afterblaze</p>
+            </div>
+            <hr>
+        </div>
+
+        <div class="fav-containerR">
+            <div class="fav-text">
+                <h3>Splatoon 3</h3>
+                
+                <p class="fav-desc">Oddly enough, I purchased Splatoon 3 on launch, only to then sell it after little playtime. Regardless of how bad I am at the game itself, Splatoon 3 is locked in eternal battle with Neon White in my mind for best Soundtrack of 2022.</p>
+                
+                <p class="fav-highlight">Highlight: Till Depth Do Us Part</p>
+                
+            </div>
+            
+            <img class="ralign-img" src="assets/favs/splatoon3.jpg" alt="Icon for Splatoon 3">
+            <hr>
+        </div>
+
+        <div class="honorable-mentions">
+            <h3>Honorable Mentions:</h3>
+            <p class="fav-highlight">Everything else from Ace Attorney, OneShot, Minecraft, Holocure, Pokemon Sw/Sh, Hades, Crash of the Titans, Plants vs. Zombies, Sonic CD, Psychonauts 2, The Binding of Isaac: Antibirth, Yakuza 0, Sonic Frontiers, Rhythm Heaven, Team Fortress 2, Super Mario Odyssey, Crash Bandicoot 4, Kingdom Hearts (series)</p>
+        </div>
+
+        </div>
+        
+        <div id="fav-compalbums">
+            <h2 class="fav-header">Compilation Albums:</h2>
+
+            <p>I wanted to keep these seperate, since they don't exactly feel like soundtracks or regular albums, per se.</p>
+            <br><br>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/LBPK.jpg" alt="Icon for Little Big Planet Karting">
+
+                <div class="fav-text">
+                    <h3>Little Big Planet: Karting</h3>
+
+                    <p class="fav-desc">This may seem like an odd choice, but the LitteBigPlanet games were quite formative to my early gaming experience, as too was it's music. I chose Karting especially, since I really ended up liking a lot more of the tracks here than I expected upon revist.</p>
+
+                    <p class="fav-highlight">Highlight: Fresh</p>
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Just Shapes and Beats</h3>
+
+                    <p class="fav-desc">This had to show up <i>somewhere</i> in this list, since these songs have occupied and fuelled a part of my music taste ever since I saw snippets of that one boss fight compilation video on youtube. They've also served as somewhat of a gateway drug to Monstercat and other adjacent songs, so there's that.</p>
+
+                    <p class="fav-highlight">Highlight: New Game</p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/JSAB.jpg" alt="Icon for Just Shapes and Beats">
+                <hr>
+            </div>
+
+            <div class="fav-containerL">
+                <img class="lalign-img" src="assets/favs/pressstart.jpg" alt="Icon for Ninety9Lives Album 99: Press Start">
+
+                <div class="fav-text">
+                    <h3>Album 99: Press Start</h3>
+
+                    <p class="fav-desc">Back in the high school days, I was a fan of Ninety9Lives, after they were spearheaded by <i title="intentionally not naming here">some minecraft youtube guy</i>. Thusly I have a lot of nostalgia for early 99L, pretty much everything up to Album 89. The nostalgia really hits storngest with this album, and Ascend in particular really gut punches me back...</p>
+
+                    <p class="fav-highlight">Highlights: Ascend, Into the Night</p>
+                </div>
+                <hr>
+            </div>
+
+            <div class="fav-containerR">
+                <div class="fav-text">
+                    <h3>Mouth Moods</h3>
+
+                    <p class="fav-desc">Is this the right place to put this album? I don't even know how to place it. But this album, and the other three Mouth albums, are a real treat to listen to if you haven't before. As someone who isn't very well musically rounded, I heard a lot of songs in these albums for the first time, which made it odd to hear the originals...</p>
+
+                    <p class="fav-highlight">Highlight: Wallspin</p>
+
+
+                </div>
+
+                <img class="ralign-img" src="assets/favs/mouthmoods.jpg" alt="Icon for Mouth Moods">
+                <hr>
+            </div>
+
+        </div>
+        
+        <div id="fav-designstyles">
+            <h2 class="fav-header">AHA! You FOOL! You've Fallen Into My Trap!!</h2>
+            <p class="fav-text">This isn't a list of my favorite design styles at all!! This is an appreciation zone for the one design style to rule them all, the apex asthetic, and that is:</p> <br>
+
+            <div class="fav-design-cont" id="fav-design-headimage">
+                <img src="assets/favs/fruti-aero/fruti-aero-header.jpg" alt="This is a visal design style, so it's kind of hard to describe. Imagine how a swimming pool feels mixed with how a sunny tropical reef would feel, and slap a bunch of fish and water splashes on the image haphazardly.">
+                <p class="fav-design-imgdesc">Image sourced from Asthetics Wiki</p>
+            </div>
+            
+            <br>
+            <p class="fav-text">Frutiger Aero and it's asthetical cousin, the Y2K asthetic, are personal fascinations/nostalgia objects of mine. No wonder, given F.A. being particularly present when I was growing up. Something about the abstract areas, show-offy High Definitions, and illogical futuristic spaces tickle my brain.</p><br>
+
+            <h2><u>Frutiger Aero to tickle your brain:</u></h2>
+            <br>
+
+            <div class="fav-design-cont">
+                <div>
+                    <img src="assets/favs/fruti-aero/fruti-misc.jpg" style="height:200px">
+                    <img src="assets/favs/fruti-aero/fruit-aero.webp" style="height:200px">
+                </div>
+                <p class="fav-design-imgdesc">Images sourced from fruitigeraero.tumblr.com</p>
+            </div>
+
+            <div class="fav-design-cont">
+                <div>
+                    <img src="assets/favs/fruti-aero/fruti-imac.jpg" style="height:200px">
+                    <img src="assets/favs/fruti-aero/fruti-idog.jpg" style="height:200px">
+                </div>
+                <p class="fav-design-imgdesc">We had these growing up!! love that transparent plastic look</p>
+            </div>
+
+            <div class="fav-design-cont">
+                <div>
+                    <img src="assets/favs/fruti-aero/fruti-metro.jpg" style="width:100%">
+                </div>
+                <p class="fav-design-imgdesc">This is from a branch style called "Frutiger Metro", and I mean wow. Love it.
+                    <br>
+                    Sourced from fruitiermetrostation.tumblr.com
+                </p>
+            </div>
+
+        </div>
+
+        
+    </div>
+    </main>
+
+    <div id="contacts">
+        <p class="contact-text">Design by toot crazu</p>
+        <a target="_blank" href="https://www.tumblr.com/tootcrazu"><img src="assets/tumblrlogo.png"></a>
+        <img src="assets/Discordlogo.png" title="I'm tootcrazu on Discord!">
+    </div>
+
+
+    <footer>
+        <img class="footer-img" src="assets/scoutgif.gif" alt="The Scout from Deep Rock Galactic">
+        <img class="footer-img" src="assets/lampjam.gif" alt="Ray, the lamp from Ghost Trick, bouncing up and down jovially">
+        <img class="footer-img" src="assets/edgegif.gif" alt="Miles Edgeworth, from Ace Attorney, rotating in a standing position">
+        <img class="footer-img" src="assets/voiletcrazu.gif" alt="The smiling face icon, made to look like the sun reflecting on water">
+        <img class="footer-img" src="assets/jono.gif" alt="A buch of random 3d models rotating. Trust me, you're not missing out on much here.">
+        <img class="footer-img" src="assets/cloverdance.gif" alt="Clover, the small cowboy child from Undertale Yellow, waving their hands in a rythmic dance">
+        <img class="footer-img" src="assets/spamton.gif" alt="Spamton from Deltarune doing an odd dance">
+        <img class="footer-img" src="assets/fnafwmangle.gif" alt="Mangle from FNAF world bouncing happily in an idle stance">
+    </footer>
+
+</body>
+
+</html>
