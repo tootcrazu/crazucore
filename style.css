@@ -941,6 +941,7 @@ footer{
 
 .music-comptable{
     width:210px;
+    max-height:320px;
     border-top:5px double rgb(255, 255, 255);
     border-left:5px double rgb(255, 255, 255);
     border-right:5px double rgb(255, 255, 255);
