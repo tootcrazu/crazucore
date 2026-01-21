@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>secret entrance?</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicons/secretentrance.png">
+    <meta name="description" content="crazucore">
+    
+</head>
+
+<body id="secret-body">
+    <main id="secret-main">
+        <img id="secret-desk" src="../assets/secretentrance/desk.png">
+        <a href="https://www.crazu.co.nz" id="secret-link" onmouseover="setTimeout(scareCat, 100)"><img id="secret-cat" src="../assets/secretentrance/cattap.gif"></a>
+        <img id="secret-chair" src="../assets/secretentrance/chair.png">
+    </main>
+
+    <script>
+        let secretCat = document.getElementById("secret-cat");
+        const catJump = secretCat.animate([{transform:"translate(-50%, -50%)"}, {transform:"translate(-50%, -55%)"}, {transform:"translate(-50%, -50%)"}], {duration: 100, fill:"forwards"});
+        catJump.pause();
+
+        const catRun = secretCat.animate([{transform:"translate(-50%, -50%)"}, {transform:"translate(4000%, -50%)"}], {duration: 15000, fill:"forwards"});
+        catRun.pause();
+
+
+        function scareCat(){
+            secretCat.src = "../assets/secretentrance/cattapshocked.png";
+            catJump.play();
+            catJump.finish();
+            setTimeout(shooCat, 400);
+        }
+
+        function shooCat(){
+            secretCat.src = "../assets/secretentrance/catrun.gif";
+            catRun.play();
+        }
+        
+    </script>
+
+</body>

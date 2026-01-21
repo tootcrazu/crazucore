@@ -1976,3 +1976,28 @@ footer{
 
     z-index: 16;
 }
+
+
+/* ====== SECRET ENTRANCE ========= */
+/* ====== SECRET ENTRANCE ========= */
+/* ====== SECRET ENTRANCE ========= */
+
+#secret-body{
+    background-color: #000000;
+    overflow:hidden;
+}
+
+#secret-main{
+    position:absolute;
+    left:50%;
+    top:50%;
+}
+
+#secret-main img{
+    position: absolute;
+    transform:translate(-50%, -50%)
+}
+
+#secret-chair{
+    pointer-events: none;
+}
