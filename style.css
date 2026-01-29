@@ -1249,6 +1249,9 @@ footer{
 #links-shelfitems{
     display:flex;
     justify-content: space-around;
+    height:100px;
+
+    position: relative;
 }
 
 #links-shelfitem{
@@ -1273,7 +1276,9 @@ footer{
     background-color: #bc8139;
 }
 
-
+#links-blinker{
+    position:absolute;
+}
 
 
 
