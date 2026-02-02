@@ -1249,6 +1249,7 @@ footer{
 #links-shelfitems{
     display:flex;
     justify-content: space-around;
+    align-items: flex-end;
     height:100px;
 
     position: relative;
@@ -1256,6 +1257,11 @@ footer{
 
 #links-shelfitem{
     height:100px;
+}
+
+#links-shelfblinkie{
+    height:31px;
+    width:88px;
 }
 
 #links-shelfbase{
