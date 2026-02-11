@@ -125,6 +125,7 @@ footer{
     background-image: url(assets/footer/grazumanw.gif);
 }
 
+
 /* ================= HOME ================= */
 
 /* ================= HOME ================= */
@@ -1516,6 +1517,14 @@ footer{
     rotate: -12deg;
 }
 
+#ext-gbook{
+    height:100px;
+
+    bottom: -305px;
+  left: 195px;
+  rotate: 4deg;
+}
+
 #ext-stickynote{
     position:absolute;
     transform:translateX(-50%);
@@ -1614,6 +1623,34 @@ footer{
     margin-left:auto;
     margin-right:auto;
 }
+
+
+/* GUESTBOOK */
+/* GUESTBOOK */
+/* GUESTBOOK */
+
+#guestbook-body{
+    background-image: url(assets/extras/guestbook/background.png);
+}
+
+#guestbook-main{
+    position:absolute;
+    left:50%;
+    top:100px;
+
+    transform: translateX(-50%);
+
+    background-color: white;
+
+    border:5px double black;
+}
+
+#guestbook-iframe{
+    height:600px;
+    width:500px;
+}
+
+
 
 
 /* ! ======= CREDITS =========== */

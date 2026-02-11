@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crazucore</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/home/guestbooklink.gif">
+    <meta name="description" content="crazucore">
+</head>
+
+<body id="guestbook-body">
+
+    <main id="guestbook-main">
+        <div id="guestbook-windowtitle">
+            <p>guestbook.html</p>
+            <div id="guestbook-linescont">
+                <hr>
+                <hr>
+            </div>
+
+            
+        </div>
+         <iframe src="https://crazu.atabook.org/" frameBorder="0" id="guestbook-iframe"></iframe>
+    </main>
+
+
+    <footer>
+        <marquee id="footer-marq" style="color:rgb(255, 255, 255)">Guestbook service provided by atabook.org! Thank you!</marquee>
+
+        <div class="footer-link"><a href="index.html">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
+            <source src="../assets/blog/grooveorgetout.mp3" type="audio/mpeg">
+            There should be a song here, but your browser doesn't like music.
+        </audio>
+
+        <div class="footer-link" id="footer-playpausecont" onclick="toggleFooterMusic()">
+            <a id="footer-playpause">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont" onclick="adjustFooterVolume()">
+            <a id="footer-volchanger">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont" onclick="window.alert('The Song Of This Page Is: Groove or Get Out (rough idea demo) by Rya Ryukami')">
+            <a id="footer-info">( i )</a>
+        </div>
+
+        <div id="footer-grazuman"></div>
+
+        
+    </footer>
+    
+<script src="../scripts/footerscript.js"></script>
+
+<script src="../scripts/blogscript.js"></script>
+
+
+</body>
+
+</html>
