@@ -1650,7 +1650,30 @@ footer{
     width:500px;
 }
 
+#guestbook-windowtitle{
+    height:30px;
 
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+
+    border-bottom: 5px double black;
+}
+
+#guestbook-windowtext{
+    font-weight:bold;
+    font-size: 17px;
+    text-align: center;
+    width:150px;
+}
+
+#guestbook-greyblock{
+    background-color: rgb(173, 173, 173);
+    height:80%;
+    flex-grow:2;
+
+    margin:0px 5px 0px 5px;
+}
 
 
 /* ! ======= CREDITS =========== */
