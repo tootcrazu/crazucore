@@ -790,6 +790,13 @@ footer{
     font-size:1.3em;
 }
 
+#be-bodytext a{
+    text-decoration: underline;
+    background-image: linear-gradient(rgb(255, 146, 248), rgb(121, 121, 253));
+    color: transparent;
+    background-clip: text;
+}
+
 #be-footer{
     display:flex;
     justify-content: space-between;
@@ -1369,6 +1376,10 @@ footer{
     text-shadow: 0 0 4px yellow;
     margin-bottom:20px;
 
+}
+
+#ccomp-text a{
+    color:yellow;
 }
 
 #ccomp-blinker{
