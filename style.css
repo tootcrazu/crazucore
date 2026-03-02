@@ -1686,6 +1686,34 @@ footer{
     margin:0px 5px 0px 5px;
 }
 
+/* Lavnder */
+
+#lavender-body{
+    background-image: url(assets/extras/lavender/lavenback.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#lavender-main{
+    padding:20px;
+}
+
+#lavender-header, #lavender-maintext{
+    color:white;
+
+    filter:drop-shadow(1px 1px black)
+}
+
+#lavender-header{
+    font-weight:bold;
+    font-size:40px;
+}
+
+#lavender-maintext{
+    font-size:20px;
+}
+
+
 
 /* ! ======= CREDITS =========== */
 /* ! ======= CREDITS =========== */
