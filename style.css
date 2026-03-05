@@ -820,6 +820,12 @@ footer{
     display:block;
 }
 
+#be-wrappedimage{
+    width:250px;
+    float:right;
+    margin:5px;
+}
+
 #blog-bottomspinnercont{
     width:100%;
     height:300px;
@@ -1696,6 +1702,8 @@ footer{
 
 #lavender-main{
     padding:20px;
+
+    margin-bottom:50px;
 }
 
 #lavender-header, #lavender-maintext{
