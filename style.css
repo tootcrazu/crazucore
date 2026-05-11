@@ -21,6 +21,10 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
     pointer-events: none;
 }
 
+._hide{
+    display: none;
+}
+
 
 /* =============== FOOTER ============== */
 /* =============== FOOTER ============== */
@@ -897,6 +901,15 @@ footer{
 
 #be-list{
     list-style-position: inside;
+}
+
+#be-rantrevealtext{
+    margin-top:0.2em;
+    font-size:1.4em;
+    text-decoration: underline;
+    background-image: linear-gradient(rgb(255, 146, 248), rgb(121, 121, 253));
+    color: transparent;
+    background-clip: text;
 }
 
 
