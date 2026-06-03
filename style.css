@@ -1583,7 +1583,6 @@ footer{
 
 #ext-bbad{
     height:200px;
-
     bottom: -302px;
     left: 94px;
     rotate: -12deg;
@@ -1591,10 +1590,16 @@ footer{
 
 #ext-gbook{
     height:100px;
-
     bottom: -305px;
-  left: 195px;
-  rotate: 4deg;
+    left: 195px;
+    rotate: 4deg;
+}
+
+#ext-cookiedoor{
+    height:100px;
+    bottom: -305px;
+    left: 295px;
+    rotate: -10deg;
 }
 
 #ext-stickynote{
@@ -1748,6 +1753,8 @@ footer{
 }
 
 /* Lavnder */
+/* Lavnder */
+/* Lavnder */
 
 #lavender-body{
     background-image: url(assets/extras/lavender/lavenback.jpg);
@@ -1775,6 +1782,23 @@ footer{
 #lavender-maintext{
     font-size:20px;
 }
+
+/* COOKIES */
+/* COOKIES */
+/* COOKIES */
+
+.cke-testtext{
+    size:1.2em;
+
+    color:#200569;
+
+    padding:3em;
+}
+
+
+
+
+
 
 
 

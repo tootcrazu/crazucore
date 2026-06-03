@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crazucore</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicons/extras.gif">
+    <meta name="description" content="crazucore">
+</head>
+
+<p class="cke-testtext" onclick="updateCookie('name', 'house', 1)">ADD COOKIE name house</p>
+
+<p class="cke-testtext" onclick="updateCookie('age', 'housette', 2)">ADD COOKIE age housette</p>
+
+<p class="cke-testtext" onclick="updateCookie('age', 'housette 2!!!')">UPDATE COOKIE age housette 2!!!</p>
+
+<p class="cke-testtext" onclick="window.alert(getCookie('age'))">Show Cookie 'age'</p>
+
+<p class="cke-testtext" onclick="window.alert(document.cookie)">SHOW ALL COOKIES</p>
+
+<p class="cke-testtext" onclick="deleteAllCookies()">DELETE ALL COOKIES</p>
+
+<footer>
+        <marquee id="footer-marq" style="color:rgb(106, 255, 101)">cookie testing room</marquee>
+
+        <div class="footer-link"><a href="../index.html">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
+            <source src="../assets/extras/upset.mp3" type="audio/mpeg">
+            There should be a song here, but your browser doesn't like music.
+        </audio>
+
+        <div class="footer-link" id="footer-playpausecont" onclick="toggleFooterMusic()">
+            <a id="footer-playpause">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont" onclick="adjustFooterVolume()">
+            <a id="footer-volchanger">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont" onclick="window.alert('The Song Of This Page Is: upset, by D-CELL SOUND TEAM')">
+            <a id="footer-info">( i )</a>
+        </div>
+
+        <div id="footer-grazuman"></div>
+
+        
+    </footer>
+
+    </body>
+<script src="../scripts/footerscript.js"></script>
+<script src="../scripts/cookiescript.js"></script>
+
+
+</html>
