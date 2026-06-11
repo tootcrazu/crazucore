@@ -1,7 +1,5 @@
 To Do:
 
-index
-
 Blogindex
 - blog other
 - blog 2024

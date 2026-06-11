@@ -9,6 +9,35 @@
     <meta name="description" content="crazucore">
 </head>
 
+<div id="dia-container" class="_hide">
+    <div id="dia-dimmer"></div>
+    <div id="dia-box" onclick="dialogueUpdate()">
+        <div id="dia-portraitbox">
+
+            <div id="dia-portraits">
+                <div class="ccsit-container" id="cc">
+                        <img class="ccsit-body" src="../assets/extras/cookietest/ccbodysitL.png">
+
+                        <div class="ccsit-head">
+                            <p id="ccsit-eyeL">0</p>
+                            <p id="ccsit-eyeR">o</p>
+                            <img class="ccsit-headimg" src="../assets/extras/cookietest/ccheadL.png">
+                        </div>
+                </div>
+
+                <img src="../assets/links/crazulink-neutral.png" id="ob" class="_hide">
+
+                <img src="../assets/footer/grazumandialogue.png" id="gz" class="_hide">
+            </div>
+
+
+
+        </div>
+        <div id="dia-text"></div>
+    </div>
+    
+</div>
+
 <body id="ext-body">
 
     <div id="ext-dressercont">
@@ -73,13 +102,55 @@
             <a id="footer-info">( i )</a>
         </div>
 
-        <div id="footer-grazuman"></div>
+        <div id="footer-grazuman" onclick="meetingGrazuMan()"></div>
+
+        <img id="footer-cc" class="_hide" src="../assets/footer/ccinafooter.png" onclick="roomSpecificDialogue()">
 
         
     </footer>
 
     </body>
+<script src="../scripts/cookiehandler.js"></script>
 <script src="../scripts/footerscript.js"></script>
+<script src="../scripts/dialougehandler.js"></script>
+
+<script>
+    let roomSpecificDialogueCount = 0;
+  
+    let roomSpecificDialogue1 = [
+        new DialougeLine ("cc", '0o', "My room was stuffed in a drawer this whole time???")
+        ,new DialougeLine (0, ['>:','('], "That's rude!!! I'm like the most interesting thing on this whole site!!!")
+        ,new DialougeLine (0, ['>:','('], "And what's with that footer line? It's boring!!!")
+        ,new DialougeLine (0, '**', 'It should say:')
+        ,new DialougeLine (0, '^^', '"This is the second best room in the site, because it has the door to CCs room in it."')
+        ,new DialougeLine (0, '0o', 'At least the door has the common decency to have the same colors as my face.')
+        ]
+
+    if (getCookie('all_vs_roomsvisited').split(',').includes('extras')){
+        document.getElementById('footer-marq').innerHTML = "This is the second best room in the site, because it has the door to CCs room in it.";
+
+        roomSpecificDialogue1 = [
+        new DialougeLine ("cc", '>o', "Clearly, someone's looking out for me!")
+        ,new DialougeLine (0, '^^', "That's what the footer should've said the whole time!!!")
+        ]
+    };
+
+    
+
+    function roomSpecificDialogue(){
+
+        if (roomSpecificDialogueCount == 0){
+        dialogueUpdate(roomSpecificDialogue1, ['roomvisit', 'extras'])
+        }else{
+            dialogueUpdate([
+            new DialougeLine (0, '0o', "Not sure what a 'Breaking Bad' is, though...")
+        ])
+        }
+
+        roomSpecificDialogueCount += 1;
+    }
+
+</script>
 
 
 </html>

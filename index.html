@@ -281,15 +281,16 @@
 
         if (roomSpecificDialogueCount == 0){
         dialogueUpdate([
-        new DialougeLine ("cc", '0o', "Oh, a record of everyone who's been here before!!!")
-        ,new DialougeLine (0, '0o', "(or, anyone who cared to put their name down I suppose)")
-        ,new DialougeLine (0, '--', "What does that say???")
-        ,new DialougeLine (0, '**', '\"jonkler fat feet stinking up the room\"')
-        ,new DialougeLine (0, '--', "I don't think I want to be here anymore...")
-        ], ['roomvisit', 'guestbook'])
+        new DialougeLine ("cc", '0o', "So this is kind of like the hub area?")
+        ,new DialougeLine (0, '0o', "I like these spinny colorful ball things...")
+        ,new DialougeLine (0, 'cc', "Hmmmmmm...")
+        ,new DialougeLine (0, '^^', 'If you connect the three colors that make up my face, you get a perfect triangle!')
+        ,new DialougeLine (0, '0o', 'I wonder if making another triangle with purple, light blue and orange would create some kind of Anti-CC...')
+        ,new DialougeLine (0, '0o', 'Ah, but that leaves out green and purple...')
+        ], ['roomvisit', 'index'])
         }else{
             dialogueUpdate([
-            new DialougeLine (0, '--', "I don't want to be here anymore...")
+            ,new DialougeLine (0, 'oo', "Much to consider...")
         ])
         }
 
