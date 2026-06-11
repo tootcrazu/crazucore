@@ -126,6 +126,10 @@
         ,new DialougeLine (0, '0o', 'At least the door has the common decency to have the same colors as my face.')
         ]
 
+    let roomSpecificDialogue2 = [
+            new DialougeLine (0, '0o', "Not sure what a 'Breaking Bad' is, though...")
+        ]
+
     if (getCookie('all_vs_roomsvisited').split(',').includes('extras')){
         document.getElementById('footer-marq').innerHTML = "This is the second best room in the site, because it has the door to CCs room in it.";
 
@@ -134,17 +138,20 @@
         ,new DialougeLine (0, '^^', "That's what the footer should've said the whole time!!!")
         ]
     };
+    // update these lines if the requisite conditions have been met.
+    if (getCookie('all_vs_roomsvisited').split(',').includes('breakingbad')){
 
-    
+        roomSpecificDialogue2 = [
+            new DialougeLine (0, '0o', "If the one on the right is the sad middle-aged man, does that make the one on the left the pink man???")
+        ]
+    };
 
     function roomSpecificDialogue(){
 
         if (roomSpecificDialogueCount == 0){
         dialogueUpdate(roomSpecificDialogue1, ['roomvisit', 'extras'])
         }else{
-            dialogueUpdate([
-            new DialougeLine (0, '0o', "Not sure what a 'Breaking Bad' is, though...")
-        ])
+            dialogueUpdate(roomSpecificDialogue2)
         }
 
         roomSpecificDialogueCount += 1;

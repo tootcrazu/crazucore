@@ -9,6 +9,36 @@
     <meta name="description" content="crazucore">
 </head>
 
+<div id="dia-container" class="_hide">
+    <div id="dia-dimmer"></div>
+    <div id="dia-box" onclick="dialogueUpdate()">
+        <div id="dia-portraitbox">
+
+            <div id="dia-portraits">
+                <div class="ccsit-container" id="cc">
+                        <img class="ccsit-body" src="../assets/extras/cookietest/ccbodysitL.png">
+
+                        <div class="ccsit-head">
+                            <p id="ccsit-eyeL">0</p>
+                            <p id="ccsit-eyeR">o</p>
+                            <img class="ccsit-headimg" src="../assets/extras/cookietest/ccheadL.png">
+                        </div>
+                </div>
+
+                <img src="../assets/links/crazulink-neutral.png" id="ob" class="_hide">
+
+                <img src="../assets/footer/grazumandialogue.png" id="gz" class="_hide">
+            </div>
+
+
+
+        </div>
+        <div id="dia-text"></div>
+    </div>
+    
+</div>
+
+
 <body id="lavender-body">
 
     <main id="lavender-main">
@@ -72,17 +102,38 @@
 
         <div id="footer-grazuman"></div>
 
+        <img id="footer-cc" class="_hide" src="../assets/footer/ccinafooter.png" onclick="roomSpecificDialogue()">
+
         
     </footer>
     
+<script src="../scripts/cookiehandler.js"></script>
 <script src="../scripts/footerscript.js"></script>
-
-<script src="../scripts/blogscript.js"></script>
+<script src="../scripts/dialougehandler.js"></script>
 
 <script>
+    let roomSpecificDialogueCount = 0;
     window.alert('Hello.. How did you get here? Just so you know...');
-    window.alert('These are my raw-ish vents on a personal page.')
+    window.alert('These are my raw-ish vents on a personal page.');
+
+    function roomSpecificDialogue(){
+
+        if (roomSpecificDialogueCount == 0){
+        dialogueUpdate([
+        new DialougeLine ("cc", 'oo', "Did you see those popups?")
+        ,new DialougeLine (0, 'oo', "I'm not sure if we should be here...")
+        ], ['roomvisit', 'lavender'])
+        }else{
+            dialogueUpdate([
+            new DialougeLine ('cc', '--', "...")
+        ])
+        }
+
+        roomSpecificDialogueCount += 1;
+    }
+
 </script>
+    
 </body>
 
 </html>

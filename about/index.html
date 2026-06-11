@@ -9,7 +9,34 @@
     <meta name="description" content="crazucore">
 </head>
 
+<div id="dia-container" class="_hide">
+    <div id="dia-dimmer"></div>
+    <div id="dia-box" onclick="dialogueUpdate()">
+        <div id="dia-portraitbox">
 
+            <div id="dia-portraits">
+                <div class="ccsit-container" id="cc">
+                        <img class="ccsit-body" src="../assets/extras/cookietest/ccbodysitL.png">
+
+                        <div class="ccsit-head">
+                            <p id="ccsit-eyeL">0</p>
+                            <p id="ccsit-eyeR">o</p>
+                            <img class="ccsit-headimg" src="../assets/extras/cookietest/ccheadL.png">
+                        </div>
+                </div>
+
+                <img src="../assets/links/crazulink-neutral.png" id="ob" class="_hide">
+
+                <img src="../assets/footer/grazumandialogue.png" id="gz" class="_hide">
+            </div>
+
+
+
+        </div>
+        <div id="dia-text"></div>
+    </div>
+    
+</div>
 
     <body id="about-body">
         <main id="about-main">
@@ -182,7 +209,33 @@
     </footer>
 
     </body>
+<script src="../scripts/cookiehandler.js"></script>
 <script src="../scripts/footerscript.js"></script>
+<script src="../scripts/dialougehandler.js"></script>
+
+<script>
+    let roomSpecificDialogueCount = 0;
+
+    function roomSpecificDialogue(){
+
+        if (roomSpecificDialogueCount == 0){
+        dialogueUpdate([
+        new DialougeLine ("cc", '>o', "Well this is all a bit serious.")
+        ,new DialougeLine (0, '0o', 'Wait, does that say "Department Of Whatever The Hell"')
+        ,new DialougeLine (0, '**', "Maybe not so serious after all...")
+        ,new DialougeLine (0, '..', 'Hold on.')
+        ,new DialougeLine (0, '0o', 'Is that...')
+        ], ['roomvisit', 'about'])
+        }else{
+            dialogueUpdate([
+            new DialougeLine ('cc', '0o', "I wonder...")
+        ])
+        }
+
+        roomSpecificDialogueCount += 1;
+    }
+
+</script>
 
 
 </html>

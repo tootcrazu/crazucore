@@ -9,6 +9,35 @@
     <meta name="description" content="crazucore">
 </head>
 
+<div id="dia-container" class="_hide">
+    <div id="dia-dimmer"></div>
+    <div id="dia-box" onclick="dialogueUpdate()">
+        <div id="dia-portraitbox">
+
+            <div id="dia-portraits">
+                <div class="ccsit-container" id="cc">
+                        <img class="ccsit-body" src="../assets/extras/cookietest/ccbodysitL.png">
+
+                        <div class="ccsit-head">
+                            <p id="ccsit-eyeL">0</p>
+                            <p id="ccsit-eyeR">o</p>
+                            <img class="ccsit-headimg" src="../assets/extras/cookietest/ccheadL.png">
+                        </div>
+                </div>
+
+                <img src="../assets/links/crazulink-neutral.png" id="ob" class="_hide">
+
+                <img src="../assets/footer/grazumandialogue.png" id="gz" class="_hide">
+            </div>
+
+
+
+        </div>
+        <div id="dia-text"></div>
+    </div>
+    
+</div>
+
     <body id="bbad-body">
 
         <main id="bbad-main">
@@ -699,12 +728,46 @@ I don't know what kind of Meth Magic Mind tricks Jesse uses to get that guy to d
             <a id="footer-info">( i )</a>
         </div>
 
-        <div id="footer-grazuman"></div>
+        <div id="footer-grazuman" onclick="meetingGrazuMan()"></div>
+
+        <img id="footer-cc" class="_hide" src="../assets/footer/ccinafooter.png" onclick="roomSpecificDialogue()">
 
         
     </footer>
 
-    </body>
+    </body> 
+<script src="../scripts/cookiehandler.js"></script>
 <script src="../scripts/footerscript.js"></script>
+<script src="../scripts/dialougehandler.js"></script>
+
+<script>
+    let roomSpecificDialogueCount = 0;
+
+    function roomSpecificDialogue(){
+
+        if (roomSpecificDialogueCount == 0){
+        dialogueUpdate([
+        new DialougeLine ("cc", '0o', "What's this???")
+        ,new DialougeLine (0, '??', "Is a Breaking Bad a TV show of some kind?")
+        ,new DialougeLine (0, '**', "Let me have a read here...")
+        ,new DialougeLine (0, '--', 'ᵒᵏ....')
+        ,new DialougeLine (0, '--', 'ʰᵐᵐᵐ....')
+        ,new DialougeLine (0, '0o', 'ᴱʷʷʷ, ᴵ ˢᵉᵉ')
+        ,new DialougeLine (0, '0o', 'From my research, I have determined:')
+        ,new DialougeLine (0, '0o', 'Breaking Bad is a show where a sad middle-aged man uses his family as an excuse to be a master criminal.')
+        ,new DialougeLine (0, 'o0', 'There is also a funny lawyer named Saul and a cool lady called Skyler.')
+        ,new DialougeLine (0, '0o', 'A pink man named Jesse is present, who plays at least two video games.')
+        ,new DialougeLine (0, '0o', 'Does that about sum it up?')
+        ], ['roomvisit', 'breakingbad'])
+        }else{
+            dialogueUpdate([
+            new DialougeLine (0, '0o', "I haven't read to the last part yet, I hope the pink man and the cool wife are ok in the end...")
+        ])
+        }
+
+        roomSpecificDialogueCount += 1;
+    }
+
+</script>
 
 </html>

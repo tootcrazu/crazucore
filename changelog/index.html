@@ -9,12 +9,46 @@
     <meta name="description" content="crazucore">
 </head>
 
+<div id="dia-container" class="_hide">
+    <div id="dia-dimmer"></div>
+    <div id="dia-box" onclick="dialogueUpdate()">
+        <div id="dia-portraitbox">
+
+            <div id="dia-portraits">
+                <div class="ccsit-container" id="cc">
+                        <img class="ccsit-body" src="../assets/extras/cookietest/ccbodysitL.png">
+
+                        <div class="ccsit-head">
+                            <p id="ccsit-eyeL">0</p>
+                            <p id="ccsit-eyeR">o</p>
+                            <img class="ccsit-headimg" src="../assets/extras/cookietest/ccheadL.png">
+                        </div>
+                </div>
+
+                <img src="../assets/links/crazulink-neutral.png" id="ob" class="_hide">
+
+                <img src="../assets/footer/grazumandialogue.png" id="gz" class="_hide">
+            </div>
+
+
+
+        </div>
+        <div id="dia-text"></div>
+    </div>
+    
+</div>
+
+
 <body id="ccomp-body">
     <main id="ccomp-cont">
 
         <div id="ccomp-monitor">
             <div id="ccomp-screen">
                 <p id="ccomp-text"> > <bc id="ccomp-blinker">▂</b></p>
+
+                <!-- <p id="ccomp-text">
+                > 2026-06-XX: Added what is perhaps the most complex and interesting part of the website to date.           
+                </p> -->
 
                 <p id="ccomp-text">
                 > 2026-06-03: cookie_test_1             
@@ -268,12 +302,40 @@
             <a id="footer-info">( i )</a>
         </div>
 
-        <div id="footer-grazuman"></div>
+        <div id="footer-grazuman" onclick="meetingGrazuMan()"></div>
+
+        <img id="footer-cc" class="_hide" src="../assets/footer/ccinafooter.png" onclick="roomSpecificDialogue()">
 
         
     </footer>
 
     </body>
+
+<script src="../scripts/cookiehandler.js"></script>
 <script src="../scripts/footerscript.js"></script>
+<script src="../scripts/dialougehandler.js"></script>
+
+<script>
+    let roomSpecificDialogueCount = 0;
+
+    function roomSpecificDialogue(){
+
+        if (roomSpecificDialogueCount == 0){
+        dialogueUpdate([
+        new DialougeLine ("cc", '0o', "This thing goes back quite a long way...")
+        ,new DialougeLine (0, ['0','0'], "Look there!!!")
+        ,new DialougeLine (0, '0o', "I'm 'perhaps the most complex and interesting thing on this site'")
+        ,new DialougeLine (0, '0o', "Isn't that thoughtful...")
+        ], ['roomvisit', 'changelog'])
+        }else{
+            dialogueUpdate([
+            new DialougeLine (0, '0o', "Are 'complex and interesting' really the best descriptors???")
+        ])
+        }
+
+        roomSpecificDialogueCount += 1;
+    }
+
+</script>
 
 </html>

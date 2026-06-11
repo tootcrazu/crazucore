@@ -9,6 +9,35 @@
     <meta name="description" content="crazucore">
 </head>
 
+<div id="dia-container" class="_hide">
+    <div id="dia-dimmer"></div>
+    <div id="dia-box" onclick="dialogueUpdate()">
+        <div id="dia-portraitbox">
+
+            <div id="dia-portraits">
+                <div class="ccsit-container" id="cc">
+                        <img class="ccsit-body" src="../assets/extras/cookietest/ccbodysitL.png">
+
+                        <div class="ccsit-head">
+                            <p id="ccsit-eyeL">0</p>
+                            <p id="ccsit-eyeR">o</p>
+                            <img class="ccsit-headimg" src="../assets/extras/cookietest/ccheadL.png">
+                        </div>
+                </div>
+
+                <img src="../assets/links/crazulink-neutral.png" id="ob" class="_hide">
+
+                <img src="../assets/footer/grazumandialogue.png" id="gz" class="_hide">
+            </div>
+
+
+
+        </div>
+        <div id="dia-text"></div>
+    </div>
+    
+</div>
+
     <body id="history-body">
         
         <main id="history-main">
@@ -19,7 +48,7 @@
                     <br><br>
                     It's clear that this site was mostly made with half remembered knowledge from high school and university courses. It's very old web in a way I quite like. I hadn't yet decided to completely break web development standards, so I had a persistent Nav, Header, and footer throughout the site. Still especially fond of the 'vibe' here. It's very playful and fun. What I imagine neocities sites look like (I haven't seen any.)
                     <br><br>
-                    This one also included a small music player that I never re-introdced (yet). It wasn't made by me, as something like that was (and still is) far beyond my skill level.
+                    This one also included a small music player that I never re-introdced (yet). It wasn't made by me, as something like that was (and still is) far beyond my skill level. (OR SO I THOUGHT! That's what I get for finishing this page before the footer I guess.)
                     <br><br>
                     <a href="history/oldsites/oldsiteportal/oldsite/oldsite/index.html">You can browse this version of the site here.</a>
                 </p>
@@ -110,11 +139,36 @@
             <a id="footer-info">( i )</a>
         </div>
 
-        <div id="footer-grazuman"></div>
+        <div id="footer-grazuman" onclick="meetingGrazuMan()"></div>
+
+        <img id="footer-cc" class="_hide" src="../assets/footer/ccinafooter.png" onclick="roomSpecificDialogue()">
 
         
     </footer>
 
     </body>
+<script src="../scripts/cookiehandler.js"></script>
 <script src="../scripts/footerscript.js"></script>
+<script src="../scripts/dialougehandler.js"></script>
+
+<script>
+    let roomSpecificDialogueCount = 0;
+
+    function roomSpecificDialogue(){
+
+        if (roomSpecificDialogueCount == 0){
+        dialogueUpdate([
+        new DialougeLine ("cc", '0o', "These websites... They kind of suck.")
+        ,new DialougeLine (0, '0o', "I'm glad I live in the cool one, and not the weird sparkly one or the dark garbage one.")
+        ], ['roomvisit', 'history'])
+        }else{
+            dialogueUpdate([
+            new DialougeLine ('cc', '0o', "And so much grey! Why all the grey???")
+        ])
+        }
+
+        roomSpecificDialogueCount += 1;
+    }
+
+</script>
 </html>
