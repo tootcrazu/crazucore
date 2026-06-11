@@ -9,20 +9,103 @@
     <meta name="description" content="crazucore">
 </head>
 
-<p class="cke-testtext" onclick="updateCookie('name', 'house', 1)">ADD COOKIE name house</p>
+<div id="dia-container" class="_hide">
+    <div id="dia-dimmer"></div>
+    <div id="dia-box" onclick="dialogueUpdate()">
+        <div id="dia-portraitbox">
 
-<p class="cke-testtext" onclick="updateCookie('age', 'housette', 2)">ADD COOKIE age housette</p>
+            <div id="dia-portraits">
+                <div class="ccsit-container" id="cc">
+                        <img class="ccsit-body" src="../assets/extras/cookietest/ccbodysitL.png">
 
-<p class="cke-testtext" onclick="updateCookie('age', 'housette 2!!!')">UPDATE COOKIE age housette 2!!!</p>
+                        <div class="ccsit-head">
+                            <p id="ccsit-eyeL">0</p>
+                            <p id="ccsit-eyeR">o</p>
+                            <img class="ccsit-headimg" src="../assets/extras/cookietest/ccheadL.png">
+                        </div>
+                </div>
 
-<p class="cke-testtext" onclick="window.alert(getCookie('age'))">Show Cookie 'age'</p>
+                <img src="../assets/links/crazulink-neutral.png" id="ob" class="_hide">
+            </div>
 
-<p class="cke-testtext" onclick="window.alert(document.cookie)">SHOW ALL COOKIES</p>
 
-<p class="cke-testtext" onclick="deleteAllCookies()">DELETE ALL COOKIES</p>
+
+        </div>
+        <div id="dia-text"></div>
+    </div>
+    
+</div>
+
+<div class="ccsit-container" id="cc-incookieroom" onclick="cke_CCControlScript()">
+    <img class="ccsit-body" src="../assets/extras/cookietest/ccbodysitLanim.gif">
+
+    <div class="ccsit-head">
+        <p id="ccsit-eyeL">-</p>
+        <p id="ccsit-eyeR">-</p>
+        <img class="ccsit-headimg" src="../assets/extras/cookietest/ccheadL.png">
+    </div>
+</div>
+
+<body id="cke-body">
+    <main id="cke-main">
+
+        <div id="cke-testblock1">
+            <p class="cke-testtext" onclick="updateCookie('name', 'house', 1)">ADD COOKIE name house</p>
+
+            <p class="cke-testtext" onclick="updateCookie('age', ['listitem1', 'listitem2'])">ADD COOKIE age housette</p>
+
+            <p class="cke-testtext" onclick="updateCookie('age', getCookie('age') + ',listitemNew')">UPDATE COOKIE age housette 2!!!</p>
+
+            <p class="cke-testtext" onclick="console.log(getCookie('age').split(','))">Show Cookie 'age'</p>
+        </div>
+
+        <div id="cke-testblock2">
+            <p class="cke-testtext" onclick="window.alert(document.cookie)">SHOW ALL COOKIES</p>
+
+            <p class="cke-testtext" onclick=" if (cke_deleteClickTracker == 0){
+            dialogueUpdate(d_cc_cke_del0); cke_deleteClickTracker = 1}else{dialogueUpdate(d_cc_cke_del1)}" >DELETE ALL COOKIES</p>
+        </div>
+        
+
+        <div id="cke-testblock3">
+            <p class="cke-testtext" id="cke-orangetestdia" onclick="cke_InputDevice('reset')">I am third test block, hear me test: </p>
+            <br><br><br><br>
+            <!-- <p class="cke-testtext" id="">The Quickmaxxing Brown Fox Jumpmogged Over The Lazypilled Dog</p> -->
+             <p class="cke-testtext _hide" id="cke-alphabetsoup">trhartjgtzftgh
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('k')">k</b>fwefwefawefwefw
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('e')">e</b>hsrthrtjudtyjh
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('d')">d</b>jytjxcdyhuk
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('z')">z</b>hjxjxsytrjudty
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('q')">q</b>SZAEDFWSDEF
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('p')">p</b>ewrfqW2S
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('m')">m</b>THXdfgszgtnj
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('c')">c</b>zthzsryjiGdukjijeew
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('w')">w</b>hrtukfyuijki
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('a')">a</b>,lvgfikxtrhA
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('l')">l</b>GRWEgtaerg
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('s')">s</b>fbzhdferthzterh
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('o')">o</b>trahzthr
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('n')">n</b>zhtztrhztshz
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('r')">r</b>sds
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('t')">t</b>ukduks
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('v')">v</b>ghzthzaetr6yhkuy
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('i')">i</b>rtsjrtzthzth
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('j')">j</b>sj6s6j
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('g')">g</b>yjzygtjsryjkifkl
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('x')">x</b>jytkdukduk
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('b')">b</b>ytkjsxtytyuuiku
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('y')">y</b>ztrhsryjtyj
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('h')">h</b>sytjsytjsyt
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('f')">f</b>usksxu3erfer
+                <b class="cke-alphabetsoupletter" onclick="cke_InputDevice('u')">u</b>jzsyjujk
+                </p>
+        </div>
+
+    </main>
+</body>
 
 <footer>
-        <marquee id="footer-marq" style="color:rgb(106, 255, 101)">cookie testing room</marquee>
+        <marquee id="footer-marq" style="color:rgb(106, 255, 101)">cookie test cookie test cookie test</marquee>
 
         <div class="footer-link"><a href="../index.html">Go Back to Previous Page</a></div>
 
@@ -45,12 +128,207 @@
 
         <div id="footer-grazuman"></div>
 
-        
+        <img id="footer-cc" class="_hide" src="../assets/footer/ccinafooter.png" onclick="roomSpecificDialogue()">
+
+
     </footer>
 
     </body>
-<script src="../scripts/footerscript.js"></script>
-<script src="../scripts/cookiescript.js"></script>
 
+<script src="../scripts/cookiehandler.js"></script>
+<script src="../scripts/footerscript.js"></script>
+<script src="../scripts/dialougehandler.js"></script>
+
+<script>
+    // DIALOGUE SPECIAL ACTIONS, ETC
+    let cke_orangetestdia = document.getElementById("cke-orangetestdia");
+    let cke_deleteClickTracker = 0;
+
+    let roomSpecificDialogueCount = 0;
+
+    let cke_inputstring = "";
+    
+    if (getCookie("cke_cc_ckeprog") == undefined){
+        updateCookie('cke_cc_ckeprog', 0)
+    }
+
+    if (getCookie("cke_cc_ckeprog") >= 2){
+        document.getElementById('cke-alphabetsoup').classList.remove("_hide");
+
+        if (getCookie("cke_cc_ckeprog") >= 3){
+
+            document.querySelectorAll('.cke-alphabetsoupletter').forEach(element => {
+                element.classList.add('cke-alphabetsoupletterbig')
+            });
+        }
+
+    }
+
+    if (getCookie('all_cc_location') == 'footer'){
+        
+        document.getElementById('cc-incookieroom').classList.add('_hide');
+    }
+
+    function cke_CCControlScript(){
+        // called when you click on cc in the cookie room.
+        // advances her dialogue.
+
+        // the cke_cc_ckeprog cookie progression of cc's dialogue in the cookie room.
+        let cke_cc_ckeprog = getCookie("cke_cc_ckeprog");
+        
+        if (cke_cc_ckeprog == 0){
+            dialogueUpdate(d_cc_cke_intro0, ["cookieupdate", ['cke_cc_ckeprog', 1]])
+            
+        } else if (cke_cc_ckeprog == 1){
+            
+            dialogueUpdate(d_cc_cke_intro1, ["cookieupdate", ['cke_cc_ckeprog', 2]])
+
+        } else if (cke_cc_ckeprog == 2){
+            
+            dialogueUpdate(d_cc_cke_intro2, ["cookieupdate", ['cke_cc_ckeprog', 3]])
+
+        } else if (cke_cc_ckeprog == 3){
+            
+            dialogueUpdate(d_cc_cke_intro3, ["cookieupdate", ['cke_cc_ckeprog', 4]])
+        } else if (cke_cc_ckeprog == 4){
+
+            if (cke_inputstring == ""){
+                dialogueUpdate(d_cc_cke_intro4empty);
+            }else{
+                updateCookie('all_vs_name', cke_inputstring);
+                cke_InputDevice('reset');
+                dialogueUpdate([
+                    new DialougeLine ("cc", ['0', 'o'], "Alright, I hope you're happy with that!")
+                    ,new DialougeLine (0, ['*', '*'], "(Because I don't think there's a way to let you change it...)")
+                    ,new DialougeLine (0, ['0', 'o'], "Nice to meet you, " + getCookie('all_vs_name') + "!!!")
+                    ], ["cookieupdate", ['cke_cc_ckeprog', 5]]);
+            }
+        } else if (cke_cc_ckeprog == 5){
+            
+            dialogueUpdate(d_cc_cke_intro5, ["ccjump", 0]);
+            
+            
+            
+        }
+
+
+
+    }
+
+    function cke_InputDevice(letter){
+        // controls the name input device.
+
+        if (letter == "reset"){
+            cke_inputstring = "";
+        } else{
+            cke_inputstring += letter;
+        }
+        cke_orangetestdia.innerHTML = "I am third test block, hear me test: " + cke_inputstring;
+
+    }
+
+    function roomSpecificDialogue(){
+
+        if (roomSpecificDialogueCount == 0){
+        dialogueUpdate([
+        new DialougeLine ("cc", '><', "I'm So Smaaaaallllllll!!!")
+        ,new DialougeLine (0, '--', "I hope I'm not blocking your view or anything.")
+        ,new DialougeLine (0, '^^', "Right, let's go somewhere! I want to see some new things!")
+        ])
+        }else{
+            dialogueUpdate([
+            new DialougeLine ("cc", '0o', "What are you waiting for?")
+            ,new DialougeLine (0, '^^', "Let's go somewhere!")
+        ])
+        }
+
+        roomSpecificDialogueCount += 1;
+    }
+
+
+
+
+    const d_cc_cke_intro0 = [
+    new DialougeLine ("cc", ['-', '-'], ".      .      .")
+    ,new DialougeLine (0, ['-', '-'], ".      .      .")
+    ,new DialougeLine (0, ['0', '0'], "!")
+    ,new DialougeLine (0, ['0', 'o'], "...Hi!!!")
+    ,new DialougeLine (0, ['0', 'o'], "Sorry, I didn't expect to see anyone else here!")
+    ,new DialougeLine (0, ['^', '^'], "To be Honest,     I didn't even know this page was live yet...")
+    ,new DialougeLine (0, ['>', 'o'], "You'd think it woulda been polished up first...")
+    ,new DialougeLine (0, ['0', 'o'], "Aaaaaaanyway, my name's CC!!!")
+    ,new DialougeLine (0, ['0', 'o'], "I was made to test saving data in your browser that could be remembered later, then I kind of got out of hand...")
+    ,new DialougeLine (0, ['^', '^'], "...and now I have a whole dialogue system!!!")
+    ,new DialougeLine (0, ['*', '*'], "And dynamic expressions!!!")
+    ,new DialougeLine (0, ['0', 'o'], "Cool right???")
+    ,new DialougeLine (0, ['>:', ')'], "(It is cool)")
+    ,new DialougeLine (0, ['0', 'o'], "So what's your name?")
+    ]
+
+    const d_cc_cke_intro1 = [
+    new DialougeLine ("cc", ['0', 'o'], "Oh, you can't say.")
+    ,new DialougeLine (0, ['-', '-'], "*I* can talk to *you*, but you can't say anything back...")
+    ,new DialougeLine (0, ['c', 'c'], "This might be trickier than I thought...")
+    ,new DialougeLine (0, ['0', 'o'], "Let's see if I can do something about that.")
+    ,new DialougeLine (0, ['-', '-'], "Hmmmmmmmmmmm..............             .             .             .             .")
+    ,new DialougeLine (0, ['0', 'o'], "mmmmmmmmmm ok! Refresh the page for me would you? I think might've cracked it.")
+    ]
+
+    const d_cc_cke_intro2 = [
+    new DialougeLine ("cc", ['0', 'o'], "Does that help?")
+    ,new DialougeLine (0, ['o', 'o'], "No, of course it doesn't, it's just a buncha letters, you still can't input anything...")
+    ,new DialougeLine (0, ['-', '-'], "Let me think for a sec.")
+    ,new DialougeLine (0, ['-', '-'], ".                     .                     .                     .                     .")
+    ,new DialougeLine (0, ['>', '<'], ".                     .                     .                     .                     .")
+    ,new DialougeLine (0, ['0', 'o'], "Alright, refresh one more time.")
+    ]
+
+    const d_cc_cke_intro3 = [
+    new DialougeLine ("cc", ['^', '^'], "There!!! You see those underlined letters? If you click those in order, you should be able to spell your name.")
+    ,new DialougeLine (0, ['0', 'o'], "I'll hijack the end of this test string just below me so you can see what you're typing.")
+    ,new DialougeLine (0, ['>', 'o'], "(Don't worry if you misclick, just click on the name to reset it.)")
+    ,new DialougeLine (0, ['0', 'o'], "Let me know when you're done, ok?")
+    ]
+
+    const d_cc_cke_intro4empty = [
+    new DialougeLine ("cc", ['o', 'o'], "Hey, you didn't write a name in there...")
+    ,new DialougeLine (0, ['0', 'o'], "There's gotta be something I can call you, right?")
+    ,new DialougeLine (0, ['0', 'o'], "I'll wait.")
+    ]
+
+    const d_cc_cke_intro5 = [
+    new DialougeLine ("cc", "0o", "So what do you wanna talk about?")
+    ,new DialougeLine (0, "cc", "It isn't like there's much worthy of dicussion in this room.")
+    ,new DialougeLine (0, "0o", "Just three colorful blocks,")
+    ,new DialougeLine (0, ">♀", "and one colorful lady.")
+    ,new DialougeLine (0, ['0','0'], "Waitwhat")
+    ,new DialougeLine (0, '0o', "That thing at the bottom of the screen, that wasn't there before.")
+    ,new DialougeLine (0, '0o', "The big long grey thing.")
+    ,new DialougeLine (0, '??', "Did you bring that with you?")
+    ,new DialougeLine (0, 'oo', "It looks like a footer, and...")
+    ,new DialougeLine (0, ['0','0'], "It's got a hyperlink on it that leads out of the page!!!")
+    ,new DialougeLine (0, '**', "OkOkOkOk")
+    ,new DialougeLine (0, '0o', "I have a proposition for you.")
+    ,new DialougeLine (0, '0o', "If you take me with you to see the rest of the site, then I'll...")
+    ,new DialougeLine (0, 'cc', "Uhhh...")
+    ,new DialougeLine (0, '0o', "I haven't really thought about what I can offer *you*, besides company I suppose, but...")
+    ,new DialougeLine (0, '^^', "Aw what the hell.")
+    ,new DialougeLine (0, ['0','0'], "HUP")
+    ]
+
+
+
+
+
+    const d_cc_cke_del0 = [
+        new DialougeLine ("cc", ['0', '0'], "WAITWAIT don't click that!")
+        ,new DialougeLine (0, ['>:', '('], "That's how I remember stuff! If you delete all your cookies, I'll forget you exist!")
+    ]
+
+    const d_cc_cke_del1 = [
+        new DialougeLine ("cc", ['>:', '('], "Rude To Me!!!!")
+    ]
+
+</script>
 
 </html>

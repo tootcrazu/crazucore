@@ -120,14 +120,14 @@
     </footer>
 
 <script>
-    const dialougeBox = document.getElementById("links-dialouge");
+    const dialougeBoxL = document.getElementById("links-dialouge");
     const vendorImage = document.getElementById("links-vendor");
     const goThereButton = document.getElementById("links-gothere");
     const goThereLink = document.getElementById("links-gotherelink");
     const blinkieCopyCode = "<a href='https://crazu.co.nz'><img src='https://www.crazu.co.nz/assets/links/crazublinkie.gif' alt='visit crazucore... if you want...'></a>"
-    let indexTracker = 0;
+    let indexTrackerL = 0;
     let currentLine = "";
-    const textSpeed = 15;
+    const textspeedL = 15;
 
     const updateCat = document.getElementById("links-catonecameo");
     const updateCatShowHide = updateCat.animate([{transform:"translateY(0px)"}, {transform:"translateY(-175px)"}], {duration: 8000, fill:"forwards"});
@@ -138,25 +138,25 @@
     
     function dialougeUpdate(newLine){
 
-        if (indexTracker == 0){
-            dialougeBox.innerHTML = ("");
+        if (indexTrackerL == 0){
+            dialougeBoxL.innerHTML = ("");
             currentLine = newLine;
-            textAdd();
+            textaddL();
         }
     }
 
-    function textAdd(){
-        setTimeout(addNewChar, textSpeed);
-        function addNewChar(){
+    function textaddL(){
+        setTimeout(addNewCharL, textspeedL);
+        function addNewCharL(){
             vendorImage.setAttribute('src', '../assets/links/crazulink-talking.png')
-            dialougeBox.innerHTML += currentLine[indexTracker];
-            indexTracker += 1;
-            if (indexTracker < currentLine.length){
-                setTimeout(addNewChar, textSpeed);
+            dialougeBoxL.innerHTML += currentLine[indexTrackerL];
+            indexTrackerL += 1;
+            if (indexTrackerL < currentLine.length){
+                setTimeout(addNewCharL, textspeedL);
             }
             else {
                 vendorImage.setAttribute('src', '../assets/links/crazulink-neutral.png')
-                indexTracker = 0;
+                indexTrackerL = 0;
             }
         }
     }

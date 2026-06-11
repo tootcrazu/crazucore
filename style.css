@@ -1,3 +1,11 @@
+/* 
+Z INDEX GUIDE:
+cc in the cookie room: 60
+Footer: 70
+
+Dialouge Box: 90
+*/
+
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
     /* Cancel out some differences between browser defaults */
@@ -35,7 +43,7 @@ footer{
     width:100%;
     height:35px;
 
-    z-index: 99;
+    z-index: 70;
     bottom:0;
 
     background-color: #c0c0c0;;
@@ -129,10 +137,19 @@ footer{
     filter:invert(100%) opacity(25%);
 }
 
+
+
 #footer-grazuman:hover{
     background-image: url(assets/footer/grazumanw.gif);
 }
 
+#footer-cc{
+    height:100px;
+  
+    position:fixed;
+    bottom:0px;
+    right:30dvw;
+}
 
 /* ================= HOME ================= */
 
@@ -1787,20 +1804,194 @@ footer{
 /* COOKIES */
 /* COOKIES */
 
+#cke-body{
+    background-color: white;
+}
+
+#cke-main{
+    margin-left:auto;
+    margin-right:auto;
+    width:1000px;
+    height:100dvh;
+
+    background-color: white;
+}
+
 .cke-testtext{
-    size:1.2em;
+    font-size:1.5em;
 
-    color:#200569;
+    color:#ffffff;
 
-    padding:3em;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#cke-testblock1, #cke-testblock2{
+    width:300px;
+    height:50%;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+#cke-testblock1{
+    background-color: #00FF00;
+}
+
+#cke-testblock2{
+    background-color: #FF00FF;
+}
+
+#cke-testblock3{
+    background-color: #ff5100;
+
+    position:absolute;
+    top:350px;
+    right:10dvw;
+    width:600px;
+    height:400px;
+}
+
+.cke-alphabetsoupletterbig{
+    font-size:1.3em;
+
+    text-decoration: underline;
 }
 
 
 
+/* CC */
+
+#cc-incookieroom{
+    z-index: 60;
+    position:absolute;
+
+    top:259px;
+
+    right: calc(10dvw + 590px);
+}
+
+.ccsit-body{
+    height:200px;
+    z-index: 61;
+
+    position:absolute;
+}
+
+.ccsit-head{
+    top:-79px;
+    left:42px;
+    position:absolute;
+    z-index: 64;
+}
+
+.ccsit-headimg{
+    width:110px;
+}
+
+#ccsit-eyeL, #ccsit-eyeR{
+    z-index: 65;
+    position:absolute;
+
+    color:white;
+    font-weight: bold;
+    font-size:3em;
+}
+
+#ccsit-eyeL{
+    top:25px;
+    left:16px;
+
+    text-align: right;
+}
+
+#ccsit-eyeR{
+    top:17px;
+    left:55px;
+}
 
 
+/* ==================================================== Dialouge Style =========================== */
 
+#dia-container{
+    position:absolute;
+}
 
+#dia-dimmer{
+    position:fixed;
+    bottom:0;
+    z-index: 90;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+
+    opacity:90%;
+}
+
+#dia-box{
+    position:fixed;
+    z-index: 95;
+    left:50dvw;
+    bottom: 80px;
+    transform:translatex(-50%);
+
+    max-width:1000px;
+    width:80dvw;
+    height:220px;
+
+    display:flex;
+
+    background-color:rgba(0, 0, 0, 0.5);
+    border: 10px solid white;
+}
+
+#dia-text{
+    width:588px;
+    padding:10px;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:white;
+    font-size:1.6em;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#dia-portraitbox{
+    width:200px;
+    border-right: 10px solid white;
+
+}
+
+#dia-portraits{
+    position: absolute;
+    top:0px;
+}
+
+#cc{
+    position:relative;
+
+    bottom:100px;
+    left:10px;
+}
+
+#ob{
+    position:relative;
+    width:210px;
+    top:23px;
+    left:-10px;
+}
+
+#gz{
+    position:relative;
+    width:200px;
+    top:83px;
+    left:0px;
+}
 
 /* ! ======= CREDITS =========== */
 /* ! ======= CREDITS =========== */

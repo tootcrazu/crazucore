@@ -1,11 +1,11 @@
 
 //  What is a cookie?
 //  A "Cookie" is 
-//  A "Stringy Cookie" is "[cookiename], [cookiedata], [junk], [cookieexpiry]"
+//  A "Stringy Cookie" is "[cookiename], [cookiedata]"
 
 
-function updateCookie(id, content, exhours = 14400){
-    // Takes an id and content for a cookie (and an expiry date in hours. if not, 600 days will be set.) and adds it or updates it.
+function updateCookie(id, content, exhours = 28800){
+    // Takes an id and content for a cookie (and an expiry date in hours. if not, 1200 days will be set.) and adds it or updates it.
 
 
     let d = new Date();
@@ -15,9 +15,9 @@ function updateCookie(id, content, exhours = 14400){
     let expiredate = d.toUTCString();
 
 
-    let combinedcookie = id + "=" + content + "; expires=" + expiredate;
+    let combinedcookie = id + "=" + content + "; expires=" + expiredate + "; domain=crazu.co.nz";
 
-    console.log("Updated new cookie:" + combinedcookie);
+    console.log("Updated cookie:" + combinedcookie);
 
     document.cookie = combinedcookie;
 };
@@ -34,25 +34,25 @@ function stringifyCookie(cookie){
 }
 
 function getCookie(targetid){
-    // takes a cookie id, returns a 'stringy cookie'
-    let targetcookie
+    // takes a cookie id, returns that cookie's value
+    let targetcookie = [undefined, undefined]
     let cookielist = document.cookie.split(';');
 
     cookielist.forEach((cookie) => {
         let stringifiedcookie = stringifyCookie(cookie)
         if (stringifiedcookie[0] == targetid){
-
-            targetcookie = stringifiedcookie
-            return
+            
+            targetcookie = stringifiedcookie;
         };
+        return;
     })
-
-    return targetcookie;
+    
+    return targetcookie[1];
 }
+
 
 function deleteAllCookies(){
     let cookielist = document.cookie.split(';');
-    console.log(cookielist);
 
     cookielist.forEach((cookie) => {
         cookie = cookie.trim()

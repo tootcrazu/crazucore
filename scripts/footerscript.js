@@ -31,3 +31,7 @@ function adjustFooterVolume(){
     console.log(footerAudio.volume)
     footerVolumeAdjustButt.innerHTML = footerVolDisplayList[footerVolIndex];
 }
+
+if (getCookie('all_cc_location') == 'footer'){
+    document.getElementById('footer-cc').classList.remove('_hide');
+}
