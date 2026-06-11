@@ -15,7 +15,7 @@ function updateCookie(id, content, exhours = 28800){
     let expiredate = d.toUTCString();
 
 
-    let combinedcookie = id + "=" + content + "; expires=" + expiredate + "; domain=.crazu.co.nz";
+    let combinedcookie = id + "=" + content + "; domain=.crazu.co.nz; path=/; expires=" + expiredate;
 
     console.log("Updated cookie:" + combinedcookie);
 
