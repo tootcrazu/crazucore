@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <img id="links-catonefood" alt="on the desk counter rests a pet bowl filled with guacamole. It's inscribed with question marks, as the cat one hasn't picked a name yet" class="links-interactable" src="../assets/links/catonesfood.png" onclick="dialougeUpdate('oh that? that\'s my friend\'s food. they should be around here somewhere. (don\'t know why they insist on eating their guac from a pet bowl. like, they don\'t have opposable thumbs, but you can still hold a corn chip with paws, right?)')" onmouseover="updateCatShowHide.reverse()" onmouseleave="updateCatShowHide.reverse()">
+        <img id="links-catonefood" alt="on the desk counter rests a pet bowl filled with guacamole. It's inscribed with question marks, since obie didn't know it's name when he got it." class="links-interactable" src="../assets/links/catonesfood.png" onclick="dialougeUpdate('oh that? that\'s my friend\'s food. it should be around here somewhere. (don\'t know why it insists on eating its guac from a pet bowl. like, it doesn\'t have opposable thumbs, but you can still hold a corn chip with paws, right?)')" onmouseover="updateCatShowHide.reverse()" onmouseleave="updateCatShowHide.reverse()">
 
         <img id="links-catonecameo" alt="hidden behind the counter, only popping out for their food, the cat one sits." src="../assets/links/catone.png" onclick="littleQdialogue()">
 
@@ -237,7 +237,7 @@
     function obHandler(){
         // handles OB's interactions now that he can say multiple different things
 
-        if (getCookie('all_cc_position') == 'footer'){
+        if (getCookie('all_cc_location') == 'footer'){
 
             if (getCookie('all_vs_roomsvisited').split(',').includes('links') != true){
                 dialogueUpdate([
