@@ -163,7 +163,7 @@
     const goThereLink = document.getElementById("links-gotherelink");
     const blinkieCopyCode = "<a href='https://crazu.co.nz'><img src='https://www.crazu.co.nz/assets/links/crazublinkie.gif' alt='visit crazucore... if you want...'></a>"
     let indexTrackerL = 0;
-    let currentLine = "";
+    let currentLineL = "";
     const textspeedL = 15;
 
     const updateCat = document.getElementById("links-catonecameo");
@@ -186,9 +186,9 @@
         setTimeout(addNewCharL, textspeedL);
         function addNewCharL(){
             vendorImage.setAttribute('src', '../assets/links/crazulink-talking.png')
-            dialougeBoxL.innerHTML += currentLine[indexTrackerL];
+            dialougeBoxL.innerHTML += currentLineL[indexTrackerL];
             indexTrackerL += 1;
-            if (indexTrackerL < currentLine.length){
+            if (indexTrackerL < currentLineL.length){
                 setTimeout(addNewCharL, textspeedL);
             }
             else {

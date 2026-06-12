@@ -1922,6 +1922,7 @@ footer{
 #dia-dimmer{
     position:fixed;
     bottom:0;
+    left:0px;
     z-index: 90;
 
     width:100%;
