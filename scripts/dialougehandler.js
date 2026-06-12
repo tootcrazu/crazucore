@@ -215,7 +215,7 @@ function meetingGrazuMan(){
     // extra little thing for meeting the grazu creature bc I didn't know where else to put it
     if (getCookie("all_cc_location") == 'footer'){
         if (getCookie("all_cc_metgrazu") == undefined){
-            updateCookie("all_cc_metgrazu", 'yes');
+            updateCookie("all_cc_metgrazu", 'true');
 
             dialogueUpdate([
             new DialougeLine ("cc", ['0','0'], "Woah!!! I didn't see you!")

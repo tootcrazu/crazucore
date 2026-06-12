@@ -9,11 +9,42 @@
     <meta name="description" content="crazucore">
 </head>
 
+<div id="dia-container" class="_hide">
+    <div id="dia-dimmer"></div>
+    <div id="dia-box" onclick="dialogueUpdate()">
+        <div id="dia-portraitbox">
+
+            <div id="dia-portraits">
+                <div class="ccsit-container" id="cc">
+                        <img class="ccsit-body" src="../assets/extras/cookietest/ccbodysitL.png">
+
+                        <div class="ccsit-head">
+                            <p id="ccsit-eyeL">0</p>
+                            <p id="ccsit-eyeR">o</p>
+                            <img class="ccsit-headimg" src="../assets/extras/cookietest/ccheadL.png">
+                        </div>
+                </div>
+
+                <img src="../assets/links/crazulink-neutral.png" id="ob" class="_hide">
+
+                <img src="../assets/footer/grazumandialogue.png" id="gz" class="_hide">
+
+                <img src="../assets/links/littleqdialoue.png" id="lq" class="_hide">
+            </div>
+
+
+
+        </div>
+        <div id="dia-text"></div>
+    </div>
+    
+</div>
+
 <body id="links-body">
     
     <main id="links-main">
 
-        <img id="links-vendor" class="links-interactable" alt="leaning on the desk is a bone-white figure in a purple and gold jacket, with large green eyes. They look very bored." src="../assets/links/crazulink-neutral.png" onclick="dialougeUpdate('this body? pretty crude, right? you\'d think it was drawn in paint. as far as having any form at all goes, i suppose it\'s not so bad. at least i have a little bit of shading. (does having a black inner glow filter count as shading?)')">
+        <img id="links-vendor" class="links-interactable" alt="leaning on the desk is a bone-white figure in a purple and gold jacket, with large green eyes. They look very bored." src="../assets/links/crazulink-neutral.png" onclick="obHandler()">
 
         <div id="links-countertop">
             <div id="links-textbox">
@@ -26,7 +57,7 @@
 
         <img id="links-catonefood" alt="on the desk counter rests a pet bowl filled with guacamole. It's inscribed with question marks, as the cat one hasn't picked a name yet" class="links-interactable" src="../assets/links/catonesfood.png" onclick="dialougeUpdate('oh that? that\'s my friend\'s food. they should be around here somewhere. (don\'t know why they insist on eating their guac from a pet bowl. like, they don\'t have opposable thumbs, but you can still hold a corn chip with paws, right?)')" onmouseover="updateCatShowHide.reverse()" onmouseleave="updateCatShowHide.reverse()">
 
-        <img id="links-catonecameo" alt="hidden behind the counter, only popping out for their food, the cat one sits." src="../assets/links/catone.png">
+        <img id="links-catonecameo" alt="hidden behind the counter, only popping out for their food, the cat one sits." src="../assets/links/catone.png" onclick="littleQdialogue()">
 
         <!-- Top Left Shelf -->
         <div id="links-shelf" style="width:200px; left:70px; top: 30px;">
@@ -51,11 +82,11 @@
         <!-- Top Right Shelf -->
         <div id="links-shelf" style="width:400px; right:30px; top: 30px;">
             <div id="links-shelfitems">
-                <img class="links-interactable" alt="on the shelf rests a clear glass jar with a blue butterfly resting on a branch inside. This link goes to my Bluesky page." id="links-shelfitem" src="../assets/links/bskyicon.png" onclick="dialougeUpdate('oh, this one\'s bluesky! it\'s pretty barren even by his other social media standards, but the handle is crazu.bsky.social if you\'re interested.');goThereUpdate('https://bsky.app/profile/crazu.bsky.social')">
+                <img class="links-interactable" alt="on the shelf rests a clear glass jar with a blue butterfly resting on a branch inside. This link goes to my Bluesky page." id="links-shelfitem" src="../assets/links/bskyicon.png" onclick="dialougeUpdate('oh, this one\'s bluesky! it\'s pretty barren even by their other social media standards, but the handle is crazu.bsky.social if you\'re interested.');goThereUpdate('https://bsky.app/profile/crazu.bsky.social')">
 
                 <img class="links-interactable" alt="on the shelf rests a small blue and green model house. This link leads to my friend's website, Bacon's Web House" id="links-shelfitem" src="../assets/links/webhouseicon.png" onclick="dialougeUpdate('bacon\'s web house! all time classic. please go there, it\'s awesome. very inspiring.');goThereUpdate('https://baconswebhouse.vercel.app')">
 
-                <img class="links-interactable" alt="on the shelf rests a large, block letter 'T'. This link leads to my tumblr page." id="links-shelfitem" src="../assets/links/tumblricon.png" onclick="dialougeUpdate('ahh, tumblr. this is like, *the* social media, though he stil doesn\'t post on there at all. just kind of sits and reblogs funny stuff sometimes. he likes the vibe, i think.'); goThereUpdate('https://www.tumblr.com/tootcrazu')">
+                <img class="links-interactable" alt="on the shelf rests a large, block letter 'T'. This link leads to my tumblr page." id="links-shelfitem" src="../assets/links/tumblricon.png" onclick="dialougeUpdate('ahh, tumblr. this is like, *the* social media, though they stil don\'t usually post on there at all. just kind of sits and reblogs funny stuff sometimes. likes the vibe, i think.'); goThereUpdate('https://www.tumblr.com/tootcrazu')">
             </div>
 
             <div id="links-shelfbase"></div>
@@ -69,7 +100,7 @@
         <!-- Bottom Right Shelf -->
         <div id="links-shelf" style="width:400px; right:30px; top: 230px;">
             <div id="links-shelfitems">
-                <img class="links-interactable" alt="on the shelf rests a trophy-like object with the discord logo on top of it. I call it the discord logo because I still don't know how to describe what the discord logo looks like. My discord handle is tootcrazu" id="links-shelfitem" src="../assets/links/discordicon.png" onclick="dialougeUpdate('discord. got a feeling this one might be the first of these to go. that\'s not based on anything in particlar, just.. the vibes are getting weird as far as the platform goes. his discord handle is * tootcrazu *. (side note, what the hell is the discord logo supposed to be? a game controller? binoculars? a pervert looking through a window?)'); goThereUpdate(0)">
+                <img class="links-interactable" alt="on the shelf rests a trophy-like object with the discord logo on top of it. I call it the discord logo because I still don't know how to describe what the discord logo looks like. My discord handle is tootcrazu" id="links-shelfitem" src="../assets/links/discordicon.png" onclick="dialougeUpdate('discord. got a feeling this one might be the first of these to go. that\'s not based on anything in particlar, just.. the vibes are getting weird as far as the platform goes. the discord handle is * tootcrazu *. (side note, what the hell is the discord logo supposed to be? a game controller? binoculars? a pervert looking through a window?)'); goThereUpdate(0)">
 
                 <img class="links-interactable" alt="on the shelf rests a large spherical bottle of bubbling green liquid. I'm not even sure how it got here." id="links-shelfitem" src="../assets/links/potionicon.png" onclick="dialougeUpdate('..why is there a potion here? it doesn\'t even link to anything??'); goThereUpdate(0)">
 
@@ -116,9 +147,15 @@
 
         <div id="footer-grazuman" class="links-interactable" onclick="dialougeUpdate('love that guy')"></div>
 
+        <img id="footer-cc" class="_hide" src="../assets/footer/ccinafooter.png" onclick="roomSpecificDialogue()">
+
         
     </footer>
 
+
+<script src="../scripts/cookiehandler.js"></script>
+<script src="../scripts/footerscript.js"></script>
+<script src="../scripts/dialougehandler.js"></script>
 <script>
     const dialougeBoxL = document.getElementById("links-dialouge");
     const vendorImage = document.getElementById("links-vendor");
@@ -174,11 +211,107 @@
     }
 
 
+    if (getCookie("all_cc_position") == 'footer'){
+        dialougeUpdate("oh, hello down there..");
+        }else{
+        dialougeUpdate("hey.. there isn't much here, but you can take a look around if you want.");
+    }
 
-    dialougeUpdate("hey.. there isn't much here, but you can take a look around if you want.");
+    // And so ends the links dialogue, crying rivers with it's tears
+    // this code is really stupid, because I misspelled the word 'dialogue' when I wrote it
+    // so now when the original links call for a dialogue update it calls 'dialougeUpdate() and my new cool dialogue ststem calls dialougeUpdate())'
+
+    function littleQdialogue(){
+            dialogueUpdate([
+            new DialougeLine ("cc", '0o', "Hi Little Q!")
+            ,new DialougeLine ('lq', 0, "�� �� ��� ��������� �� ���� ����")
+            ,new DialougeLine ("cc", '**', "Oh!")
+            ,new DialougeLine ('ob', 0, "yeah i can't understand what it says either.")
+            ,new DialougeLine ("cc", '0o', "I see. How do you know it's name then?")
+            ,new DialougeLine ('ob', 0, "oh it can still point to stuff. that's how i found out that it likes eating guacamole.")
+            ,new DialougeLine ('ob', 0, "it's great at games too. you should see it play one of those motion-control sports games.")
+            ,new DialougeLine ('ob', 0, "unstoppable.")
+            ], ['cookieupdate', ['all_cc_metlittleq', 'true']])
+    }
+
+    function obHandler(){
+        // handles OB's interactions now that he can say multiple different things
+
+        if (getCookie('all_cc_position') == 'footer'){
+
+            if (getCookie('all_vs_roomsvisited').split(',').includes('links') != true){
+                dialogueUpdate([
+                new DialougeLine ("cc", '0o', "Hi there!")
+                ,new DialougeLine ('ob', 0, "uh... hi?")
+                ,new DialougeLine ('cc', '0o', "I'm CC. I'm kind of new, but " + getCookie('all_vs_name') + " is showing me around!")
+                ,new DialougeLine ('ob', 0, "fascinating. (i didn't know the people who visited this site had names...)")
+                ,new DialougeLine ('ob', 0, "you came from another page on the site?")
+                ,new DialougeLine ('cc', '0o', "Yeah, but it was super boring. So I'm getting taken around to see the sights. Want to come?")
+                ,new DialougeLine ('ob', 0, "me? nah. i prefer it here.")
+                ,new DialougeLine ('ob', 0, "it's comfortable")
+                ,new DialougeLine ("cc", '0o', "Ok... Is it just you here? Can't say I've met too many other people around.")
+                ,new DialougeLine ('ob', 0, "me, and little q.")
+                ,new DialougeLine ("cc", '0o', "Little Q?")
+                ,new DialougeLine ('ob', 0, "yeah, my buddy. shake the food bowl over there a little bit, it'll probably come out and say hi to ya.")
+                ], ['roomvisit', 'links'])
+            }else if(getCookie('all_vs_roomsvisited').split(',').includes('about')){
+                dialogueUpdate([
+                new DialougeLine ("cc", '0o', "You know, I noticed something on the 'about' page.")
+                ,new DialougeLine ('ob', 0, "?")
+                ,new DialougeLine ('cc', '0o', "There's ID cards there. One for you, and one for Little Q")
+                ,new DialougeLine ('ob', 0, "really?")
+                ,new DialougeLine ('cc', '0o', "Yeah, with photos and everything.")
+                ,new DialougeLine ('cc', '0o', "Signatures, too.")
+                ,new DialougeLine ('ob', 0, "did they have anything else on them?")
+                ,new DialougeLine ("cc", '0o', "Not really. Neither of them had a surname or an age listed, and the sex on both was listed as 'undefined'.")
+                ,new DialougeLine ('ob', 0, "heh, yeah that sounds about right.")
+                ,new DialougeLine ("cc", '0o', "There was a third card there too, though. A weird one.")
+                ,new DialougeLine ("cc", '0o', "I haven't quite figured out who it belongs to yet, though.")
+                ,new DialougeLine ('ob', 0, "let me know if you figure it out, i guess.")
+                ])
+            }else{
+                dialogueUpdate([
+                new DialougeLine ("cc", '0o', "So you and Little Q just hang out here all the time?")
+                ,new DialougeLine ('ob', 0, "that's about the size of it, yeah.")
+                ,new DialougeLine ('cc', '0o', "You don't get bored at all?")
+                ,new DialougeLine ('ob', 0, "oh we play like, games and stuff. when there's no one around.")
+                ,new DialougeLine ('ob', 0, "(never try to beat little q at mario party. seriously, you'd think it's all luck but we've played hundreds of times and it's literally never lost once.)")
+                ])
+            }
+
+
+        }else{
+            dialougeUpdate('this body? pretty crude, right? you\'d think it was drawn in paint. as far as having any form at all goes, i suppose it\'s not so bad. at least i have a little bit of shading. (does having a black inner glow filter count as shading?)')
+        }
+
+    }
+
+    function roomSpecificDialogue(){
+
+        if (getCookie('all_vs_roomsvisited').split(',').includes('links') != true){
+            dialogueUpdate([
+            new DialougeLine ("cc", 'cc', "psst, " + getCookie('all_vs_name') + '!!!')
+            ,new DialougeLine (0, 'oo', "There's someone else here!")
+            ,new DialougeLine (0, '0o', "Think we can say hi?")
+            ])
+        }else{
+            dialogueUpdate([
+            new DialougeLine ("cc", '0o', "There's certainly a lot of stuff here.")
+            ,new DialougeLine ('ob', 0, "and all of it is important for something.")
+            ,new DialougeLine ('ob', 0, "which is why they had to get someone to watch over it.")
+            ,new DialougeLine ("cc", '0o', "I see. So what's that potion for?")
+            ,new DialougeLine ('ob', 0, "beats me, i just work here.")
+            ,new DialougeLine ("cc", 'cc', "...")
+            ])
+        }
+
+
+
+
+
+    }
 
 </script>
-<script src="../scripts/footerscript.js"></script>
 
 
 </body>
