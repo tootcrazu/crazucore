@@ -89,7 +89,7 @@
 
         </a>
 
-        <a href="extras" class="home-orbcontainer" id="home-orb0600">
+        <a href="extras" class="home-orbcontainer _ballglow" id="home-orb0600">
             
             <img src="assets/home/home-extras.gif" class="home-orbimage">
             <div class="home-orbback" style="background-image: url(assets/home/home-roughback0600.png);"></div>
@@ -275,6 +275,12 @@
 <script src="scripts/dialougehandler.js"></script>
 
 <script>
+
+    if (getCookie('all_cc_location') != 'footer'){
+        document.getElementById('home-orb0600').classList.remove('_ballglow');
+    }
+
+
     let roomSpecificDialogueCount = 0;
 
     function roomSpecificDialogue(){
