@@ -25,7 +25,7 @@
                         </div>
                 </div>
 
-                <img src="../assets/links/crazulink-neutral.png" id="ob" class="_hide">
+                <img src="../assets/about/crazuidphoto.png" id="cz" class="_hide">
 
                 <img src="../assets/footer/grazumandialogue.png" id="gz" class="_hide">
             </div>
@@ -38,10 +38,17 @@
     
 </div>
 
+<div id="about-ccroomchoicer" class="_hide">
+    <img class="about-ccchoice" src="../assets/about/ccschoice_cityscape.png" onclick="ccRoomChoice('city')">
+    <img class="about-ccchoice" src="../assets/about/ccschoice_sunset.png" onclick="ccRoomChoice('sunset')">
+</div>
+
+</div>
+
     <body id="about-body">
         <main id="about-main">
         <div class="about-idcard" id="about-crazucard">
-            <img class="about-idimage" src="../assets/about/crazuidphoto.png" alt="the id photo on this card shows a photo of a person. Their face is blotted out and a purple spiral is drawn on top.">
+            <img class="about-idimage" src="../assets/about/crazuidphoto.png" onclick="talkToCrazu()" alt="the id photo on this card shows a photo of a person. Their face is mostly in shadow, and in very low quality. It's clear they're wearing round, reflective glasses.">
 
             <div class="about-idcardtopr">
                 <div class="about-identry">
@@ -235,6 +242,102 @@
         }
 
         roomSpecificDialogueCount += 1;
+    }
+
+    function talkToCrazu(){
+        if (getCookie('all_cc_questline') == 'talktocrazu'){
+
+            dialogueUpdate([
+            new DialougeLine ('cc', 'oo', 'Ummm, excuse me sir...')
+            ,new DialougeLine ('cz', 0, "CC? That's really... formal of you. you don't gotta do that :). What do you need?")
+            ,new DialougeLine ('cc', '0o', 'Oh...')
+            ,new DialougeLine ('cc', '0o', 'Well I was kind of hoping that...')
+            ,new DialougeLine ('cc', '0o', "You might update my page? It's kind of ugly, and-")
+            ,new DialougeLine ('cz', 0, "Oh the cookie room you mean? yeah I kind of didn't finish that")
+            ,new DialougeLine ('cz', 0, "...or make it look good at all")
+            ,new DialougeLine ('cz', 0, "lol")
+            ,new DialougeLine ('cc', '0o', getcookie('all_vs_name') + " showed me around all the other pages, and (most of them) look way better!")
+            ,new DialougeLine ('cz', 0, "hey!")
+            ,new DialougeLine ('cz', 0, "(warranted)")
+            ,new DialougeLine ('cz', 0, "k I'll tell you what. I'll do something even better than update the page.")
+            ,new DialougeLine ('cz', 0, "(and honestly maybe a little easier too ;)")
+            ,new DialougeLine ('cz', 0, "How would you like a brand new page, all to yourself?")
+            ,new DialougeLine (0, ['0','0'], "You'd do that?")
+            ,new DialougeLine ('cz', 0, "Sure! easier than retrofitting the corpse of the cookie room i think.")
+            ,new DialougeLine ('cz', 0, "And you get your own space!")
+            ,new DialougeLine ('cz', 0, "(love it when you get your own space)")
+            ,new DialougeLine ('cz', 0, "What do you want it to look like?")
+            ,new DialougeLine ('cc', '0o', "Gosh, I don't know...")
+            ,new DialougeLine ('cc', '0o', "It should have my colors, and...")
+            ,new DialougeLine ('cc', '><', "Gahh I can't decide!!!")
+            ,new DialougeLine ('cc', '>?', getcookie('all_vs_name') + ", can you decide for me???")
+            ,new DialougeLine ('cz', 0, ":)")
+            ,new DialougeLine ('cz', 0, "I'll give you a couple options.")
+            ], ['deciderooms', 0])
+
+        }else if (getCookie('all_cc_questline') == 'roomchosen'){
+                dialogueUpdate([
+            new DialougeLine ('cz', 0, 'I hope you enjoy!')
+            ,new DialougeLine ('cz', 0, 'both of you ;)')
+            ])
+
+        }else if (getCookie('all_cc_questline') == 'roomseen'){
+
+            dialogueUpdate([
+            new DialougeLine ('cz', 0, 'hello again :)')
+            ,new DialougeLine ('cz', 0, 'what can i do for you?')
+            ,new DialougeLine ('cc', '0o', "Well...")
+            ,new DialougeLine ('cc', '0o', "I don't mean to sound ungreatful...")
+            ,new DialougeLine ('cc', '0o', "And not to say that " + getcookie('all_vs_name') + " didn't make a good choice...")
+            ,new DialougeLine ('cc', 'cc', "But if I ever wanted to change my room up...")
+            ,new DialougeLine ('cz', 0, 'oh the other one? Sure! (I actually made them both ;)')
+            ,new DialougeLine ('cz', 0, 'here, I\'ll even bring up the choices again.')
+            ,new DialougeLine ('cc', '^^', "Thanks!")
+            ], ['deciderooms', 0])
+        }
+    }
+
+    function ccRoomChoice(choice){
+
+        updateCookie('ccr_cc_roomtheme', choice);
+
+        document.getElementById('about-ccroomchoicer').classList.add('_hide');
+
+        if (getCookie('all_cc_questline' == 'talktocrazu')){
+
+            if (choice == 'city'){
+
+                dialogueUpdate([
+                new DialougeLine ('cc', '^^', 'Wonderful! Exactly what I would\'ve picked!')
+                ,new DialougeLine ('cz', 0, "It's set then ;). I'll start work right now.")
+                ,new DialougeLine ('cc', '0o', 'My own whole page... Wow...')
+                ,new DialougeLine ('cc', '0o', 'I wonder what music it\'ll have...')
+                ,new DialougeLine ('cc', '0o', 'And those lights... they looked like they were in my colors!')
+                ,new DialougeLine ('cz', 0, "...and we're done.")
+                ,new DialougeLine ('cc', ['0','0'], 'Already?!?')
+                ,new DialougeLine ('cz', 0, "Yep :)")
+                ,new DialougeLine ('cz', 0, "It's in with the other extras pages.")
+                ,new DialougeLine ('cc', '^^', 'Sweet! Let\'s go right now!!!')
+                ], ['cookieupdate', ['all_cc_questline', 'roomchosen']])
+
+            }else{
+                
+                dialogueUpdate([
+                new DialougeLine ('cc', '^^', 'Awesome!!! It looks so cool!!!')
+                ,new DialougeLine ('cz', 0, "Then I'll start work right now :)")
+                ,new DialougeLine ('cc', '0o', 'My own whole page... Wow...')
+                ,new DialougeLine ('cc', '0o', 'I wonder what music it\'ll have...')
+                ,new DialougeLine ('cc', '0o', 'And that sky was in my colors too...')
+                ,new DialougeLine ('cz', 0, "...and we're done.")
+                ,new DialougeLine ('cc', ['0','0'], 'Already?!?')
+                ,new DialougeLine ('cz', 0, "Yep :)")
+                ,new DialougeLine ('cz', 0, "It's in with the other extras pages.")
+                ,new DialougeLine ('cc', '^^', 'Sweet! Let\'s go right now!!!')
+                ], ['cookieupdate', ['all_cc_questline', 'roomchosen']])
+            }
+        
+        }
+
     }
 
 </script>

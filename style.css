@@ -30,7 +30,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, f
 }
 
 ._hide{
-    display: none;
+    display: none !important;
 }
 
 ._ballglow{
@@ -1889,6 +1889,9 @@ footer{
     left:42px;
     position:absolute;
     z-index: 64;
+
+    color:white;
+    font-weight: bold;
 }
 
 .ccsit-headimg{
@@ -1899,8 +1902,7 @@ footer{
     z-index: 65;
     position:absolute;
 
-    color:white;
-    font-weight: bold;
+    
     font-size:3em;
 }
 
@@ -2003,6 +2005,128 @@ footer{
     width:200px;
     top:83px;
     left:0px;
+}
+
+#cz{
+    position:relative;
+    width:200px;
+    top:83px;
+    left:0px;
+}
+
+
+
+/* CC's ROOM FOR REALS */
+/* CC's ROOM FOR REALS */
+/* CC's ROOM FOR REALS */
+
+
+/* 
+ z guide:
+
+51 background
+52 midground
+54 foreground objects
+55 foreground
+
+*/
+
+.ccroom-bodyC{
+    background-image: url(assets/extras/ccrooms/starback.gif);
+}
+
+.ccroom-bodyS{
+    background-image: url(assets/extras/ccrooms/sunset-backimage.png);
+    background-repeat: no-repeat;
+    background-size:100dvw 100dvh;
+}
+
+#ccroom-background, #ccroom-midground, #ccroom-foreground{
+    position:absolute;
+    
+    width:100dvw;
+    background-repeat:repeat-x;
+    
+}
+
+#ccroom-background{
+    z-index: 51;
+}
+
+.ccroom-backgroundC{
+    background-image: url(assets/extras/ccrooms/citybackground.png);
+    height:600px;
+    background-size: 1550px;
+    bottom:40px;
+}
+
+.ccroom-backgroundS{
+    background-image: url(assets/extras/ccrooms/sunset-background.gif);
+    top:0px;
+    height:250px;
+    filter:opacity(60%);
+
+    background-size: auto 100%;
+}
+
+#ccroom-midground{
+    z-index: 52;
+}
+
+.ccroom-midgroundC{
+    background-image: url(assets/extras/ccrooms/citymidground.png);
+    height:600px;
+    background-size: 1550px;
+    bottom:40px;
+}
+
+.ccroom-midgroundS{
+    background-image: url(assets/extras/ccrooms/sunset-midground.gif);
+    top:0px;
+    height:180px;
+    filter:opacity(60%);
+    background-size: auto 100%;
+}
+
+#ccroom-foreground{
+    
+    z-index: 55;
+
+}
+
+.ccroom-foregroundC{
+    background-image: url(assets/extras/ccrooms/cityforeground.png);
+    height:150px;
+    bottom:25px;
+    background-size: 1700px;
+}
+
+.ccroom-foregroundS{
+    background-image: url(assets/extras/ccrooms/sunsetforeground.png);
+    bottom:34px;
+    height:100px;
+}
+
+#ccroom-foregroundobject{
+    position: absolute;
+    right:0px;
+    height: 500px;
+    width:250px;
+
+    background-image: url(assets/extras/ccrooms/citywatertower.png);
+    z-index: 54;
+    
+    bottom:20px;
+    background-repeat:no-repeat;
+    background-size:100%;
+    
+}
+
+#cc-inaccroom{
+    z-index: 55;
+    position:absolute;
+    bottom:546px;
+    right:221px;
 }
 
 /* ! ======= CREDITS =========== */
@@ -2377,6 +2501,37 @@ footer{
     z-index: 16;
 }
 
+#about-ccroomchoicer{
+    width:1000px;
+    height:500px;
+
+    position: absolute;
+    top:calc(50dvh - 250px);
+    left:calc(50dvw - 500px);
+
+    z-index:20;
+
+    background-color: rgb(0, 0, 0, 0.5);
+    border:10px solid rgb(255, 255, 255, 0.8);
+
+
+    display:flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-ccchoice{
+    border:10px ridge lightgrey;
+
+    filter:drop-shadow(10px 10px 10px black);
+}
+
+.about-ccchoice:hover{
+    filter:saturate(200%) drop-shadow(10px 10px 10px black);
+    
+}
 
 /* ====== SECRET ENTRANCE ========= */
 /* ====== SECRET ENTRANCE ========= */

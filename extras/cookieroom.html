@@ -165,7 +165,6 @@
     }
 
     if (getCookie('all_cc_location') == 'footer'){
-        
         document.getElementById('cc-incookieroom').classList.add('_hide');
     }
 
@@ -229,20 +228,44 @@
 
     function roomSpecificDialogue(){
 
-        if (roomSpecificDialogueCount == 0){
-        dialogueUpdate([
-        new DialougeLine ("cc", '><', "I'm So Smaaaaallllllll!!!")
-        ,new DialougeLine (0, '--', "I hope I'm not blocking your view or anything.")
-        ,new DialougeLine (0, '^^', "Right, let's go somewhere! I want to see some new things!")
-        ])
-        }else{
-            dialogueUpdate([
-            new DialougeLine ("cc", '0o', "What are you waiting for?")
-            ,new DialougeLine (0, '^^', "Let's go somewhere!")
-        ])
-        }
+        if (getCookie('all_cc_explorequest' == undefined)){
+            if (roomSpecificDialogueCount == 0){
+                dialogueUpdate([
+                new DialougeLine ("cc", '><', "I'm So Smaaaaallllllll!!!")
+                ,new DialougeLine (0, '--', "I hope I'm not blocking your view or anything.")
+                ,new DialougeLine (0, '^^', "Right, let's go somewhere! I want to see some new things!")
+                ])
+                }else{
+                    dialogueUpdate([
+                    new DialougeLine ("cc", '0o', "What are you waiting for?")
+                    ,new DialougeLine (0, '^^', "Let's go somewhere!")
+                ])
+            }
 
-        roomSpecificDialogueCount += 1;
+            roomSpecificDialogueCount += 1;
+
+        }else{
+            if (roomSpecificDialogueCount == 0){
+                dialogueUpdate([
+                new DialougeLine ("cc", '0o', "So I was thinking something as we were going through all of those pages...")
+                ,new DialougeLine (0, '0o', "And what it really boils down to is....")
+                ,new DialougeLine (0, ['>:','('], "WHY IS MY PAGE SO UGLY COMPARED TO THE REST OF THE SITE?")
+                ,new DialougeLine (0, '0o', "Like, seriously! Not a lick of polish in here!!!")
+                ,new DialougeLine (0, '0o', "So I was thinking about who I could complain to, right...")
+                ,new DialougeLine (0, '--', "And that's when I realized...")
+                ,new DialougeLine (0, '--', "That weird ID card on the About page that I couldn't place...")
+                ,new DialougeLine (0, ['0','0'], "That's the person who makes this site!")
+                ,new DialougeLine (0, '0o', "So, if you'd let me ask you one last favour...")
+                ,new DialougeLine (0, '0o', "Could you take me back there so that I can plead my case?")
+                ], ['cookieupdate', ['all_cc_questline','talktocrazu']])
+                }else{
+                    dialogueUpdate([
+                    new DialougeLine ("cc", '0o', "Thanks, " + getCookie('all_vs_name') + '.')
+                ])
+            }
+
+            roomSpecificDialogueCount += 1;
+        }
     }
 
 

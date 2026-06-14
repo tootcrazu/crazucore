@@ -137,9 +137,25 @@ function dialogueSpecialAction(){
         if (getCookie('all_vs_roomsvisited') == undefined){
             updateCookie('all_vs_roomsvisited', '')
         };
-        console.log(getCookie('all_vs_roomsvisited'))
-        if (getCookie('all_vs_roomsvisited').split(',').includes(currentSpecialAction[1]) != true){
-            updateCookie('all_vs_roomsvisited', getCookie('all_vs_roomsvisited') + ',' + currentSpecialAction[1])
+        console.log(getCookie('all_vs_roomsvisited'));
+
+        let roomslist = getCookie('all_vs_roomsvisited').split(',');
+
+        if (roomslist.includes(currentSpecialAction[1]) != true){
+
+            updateCookie('all_vs_roomsvisited', getCookie('all_vs_roomsvisited') + ',' + currentSpecialAction[1]);
+
+            // add the target room to the visted list.
+            // and if the requisites have been met for completing the cc explore quest,
+            // let her prompt you to go back to the cookie room.
+
+            if (roomslist.length >= 10 && roomslist.includes('about') && roomslist.includes('links')){
+                dialogueUpdate([
+            new DialougeLine ("cc", 'cc', "(Psst, " + getCookie('all_vs_name') + '...)')
+            ,new DialougeLine ("cc", 'cc', "(Once we're done, come back to the cookie room.)")
+            ,new DialougeLine ("cc", 'cc', "(I've got something to ask...)")
+            ], ['cookieupdate', ['all_cc_questline','backtocookieroom']])
+            }
         };
 
     }else if (currentSpecialAction[0] == "ccjump"){
@@ -148,6 +164,10 @@ function dialogueSpecialAction(){
         document.getElementById('cc-incookieroom').classList.add('_hide');
         document.getElementById('footer-cc').classList.remove('_hide');
         updateCookie('all_cc_location', 'footer');
+    }else if (currentSpecialAction[0] == "deciderooms"){
+        // the visitor decides which room cc should get.
+
+        document.getElementById('about-ccroomchoicer').classList.remove('_hide');
     }
 }
 

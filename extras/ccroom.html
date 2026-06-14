@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crazucore</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicons/extras.gif">
+    <meta name="description" content="crazucore">
+</head>
+
+<div id="dia-container" class="_hide">
+    <div id="dia-dimmer"></div>
+    <div id="dia-box" onclick="dialogueUpdate()">
+        <div id="dia-portraitbox">
+
+            <div id="dia-portraits">
+                <div class="ccsit-container" id="cc">
+                        <img class="ccsit-body" src="../assets/extras/cookietest/ccbodysitL.png">
+
+                        <div class="ccsit-head">
+                            <p id="ccsit-eyeL">0</p>
+                            <p id="ccsit-eyeR">o</p>
+                            <img class="ccsit-headimg" src="../assets/extras/cookietest/ccheadL.png">
+                        </div>
+                </div>
+
+                <img src="../assets/links/crazulink-neutral.png" id="ob" class="_hide">
+            </div>
+
+
+
+        </div>
+        <div id="dia-text"></div>
+    </div>
+    
+</div>
+
+
+
+
+<main>
+<body id="ccroom-body" class="ccroom-bodyC">
+
+<div class="ccsit-container" id="cc-inaccroom"  onclick="roomSpecificDialogue()">
+    <img class="ccsit-body" src="../assets/extras/cookietest/ccbodysitLanim.gif">
+
+    <div class="ccsit-head" style="color:rgb(185, 185, 185)">
+        <p id="ccsit-eyeL">0</p>
+        <p id="ccsit-eyeR">o</p>
+        <img class="ccsit-headimg" src="../assets/extras/cookietest/ccheadL_lit.png">
+    </div>
+</div>
+<div id="ccroom-background" class="ccroom-backgroundC"></div>
+<div id="ccroom-midground" class="ccroom-midgroundC"></div>
+<div id="ccroom-foregroundobject"></div>
+<div id="ccroom-foreground" class="ccroom-foregroundC"></div>
+
+
+
+</main>
+</body>
+
+<footer>
+        <marquee id="footer-marq" style="color:rgb(255, 225, 0)">CC in the City! What will she do?</marquee>
+
+        <div class="footer-link"><a href="../index.html">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
+            <source src="../assets/extras/devastating.mp3" type="audio/mpeg">
+            There should be a song here, but your browser doesn't like music.
+        </audio>
+
+        <div class="footer-link" id="footer-playpausecont" onclick="toggleFooterMusic()">
+            <a id="footer-playpause">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont" onclick="adjustFooterVolume()">
+            <a id="footer-volchanger">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont" onclick="window.alert('The Song Of This Page Is: devastating, by greenhouse a.k.a Halley Labs / Em Essex')">
+            <a id="footer-info">( i )</a>
+        </div>
+
+        <div id="footer-grazuman"></div>
+
+
+    </footer>
+
+    </body>
+
+<script src="../scripts/cookiehandler.js"></script>
+<script src="../scripts/footerscript.js"></script>
+<script src="../scripts/dialougehandler.js"></script>
+
+<script>
+    // DIALOGUE SPECIAL ACTIONS, ETC
+    let roomChoiceLetter = "C";
+    let roomSpecificDialogueCount = 0;
+
+    if (getCookie('ccr_cc_roomtheme') == 'sunset'){
+        let roomChoiceLetter = "S";
+        document.getElementById('footer-marq').innerHTML("CC you're facing away from the sunset! You're missing it!")
+    }
+
+    document.getElementById('ccroom-body').classList.add("ccroom-body" + roomChoiceLetter)
+    document.getElementById('ccroom-background').classList.add("ccroom-background" + roomChoiceLetter)
+    document.getElementById('ccroom-midground').classList.add("ccroom-midground" + roomChoiceLetter)
+    document.getElementById('ccroom-foreground').classList.add("ccroom-foreground" + roomChoiceLetter)
+
+
+
+    if (getCookie('all_cc_questline') == 'roomchosen'){
+
+        if (getCookie('ccr_cc_roomtheme') == 'sunset'){
+            dialogueUpdate(cc_introd_sunset, ['cookieupdate', ['all_cc_questline', 'complete']])
+        }else{
+            dialogueUpdate(cc_introd_city, ['cookieupdate', ['all_cc_questline', 'complete']])
+        }
+
+    }
+
+
+    function roomSpecificDialogue(){
+
+        if (roomSpecificDialogueCount == 0){
+        dialogueUpdate([
+            new DialougeLine ('cc', '0o', "Thanks again, " + GetCookie('all_vs_name') + '.')
+        ])
+        }else{
+            dialogueUpdate([
+            new DialougeLine ('cc', ':)', "...")
+        ])
+        }
+
+        roomSpecificDialogueCount += 1;
+    }
+
+    let cc_introd_city = [
+            new DialougeLine ('cc', '0o', 'I love it here!!!')
+            ,new DialougeLine (0, '0o', 'Compared to where you found me before, it\'s...')
+            ,new DialougeLine (0, '0o', "Well I'd say it's night and day, but it *is* night, here.")
+            ,new DialougeLine (0, '--', "This place, it...")
+            ,new DialougeLine (0, '0o', "It feels like potential.")
+            ,new DialougeLine (0, '0o', "Like there's a million things out there to do,")
+            ,new DialougeLine (0, '^^', "and I could do every single one of them!!!")
+            ,new DialougeLine (0, ':)', "...")
+            ,new DialougeLine (0, '0o', "Ah, but that would take a lot of effort...")
+            ,new DialougeLine (0, '0o', "I think I'm just going to hang out here a while.")
+            ,new DialougeLine (0, '0o', "I'll still hang out whenever you want to explore the site.")
+            ,new DialougeLine (0, '>o', "(But if anything changes around here, I want to be the first to know!!!)")
+            ,new DialougeLine (0, '0o', "Until then, I'll be seeing you around, I guess...")
+            ,new DialougeLine (0, '0o', "Thanks again, " + GetCookie('all_vs_name') + '.')
+            ]
+        
+    let cc_introd_sunset = [
+            new DialougeLine ('cc', '0o', 'I love it here!!!')
+            ,new DialougeLine (0, '0o', 'Compared to where you found me before, it\'s...')
+            ,new DialougeLine (0, '0o', "Well it's a whole lot more serene.")
+            ,new DialougeLine (0, '--', "This place, it...")
+            ,new DialougeLine (0, '0o', "It feels like new beginnings.")
+            ,new DialougeLine (0, '0o', "Like after that sun goes down,")
+            ,new DialougeLine (0, '^^', "I could reinvent myself in the darkness, and become whatever I could imagine!!!")
+            ,new DialougeLine (0, ':)', "...")
+            ,new DialougeLine (0, '0o', "Ah, but that would take a lot of effort...")
+            ,new DialougeLine (0, '0o', "I think I'm just going to hang out here a while.")
+            ,new DialougeLine (0, '0o', "I'll still hang out whenever you want to explore the site.")
+            ,new DialougeLine (0, '>o', "(But if anything changes around here, I want to be the first to know!!!)")
+            ,new DialougeLine (0, '0o', "Until then, I'll be seeing you around, I guess...")
+            ,new DialougeLine (0, '0o', "Thanks again, " + GetCookie('all_vs_name') + '.')
+            ]
+
+</script>
+
+</html>
