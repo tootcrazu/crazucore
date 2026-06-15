@@ -228,7 +228,7 @@
 
     function roomSpecificDialogue(){
 
-        if (getCookie('all_cc_explorequest' == undefined)){
+        if (getCookie('all_cc_questline') == undefined){
             if (roomSpecificDialogueCount == 0){
                 dialogueUpdate([
                 new DialougeLine ("cc", '><', "I'm So Smaaaaallllllll!!!")
@@ -278,7 +278,7 @@
     ,new DialougeLine (0, ['0', 'o'], "...Hi!!!")
     ,new DialougeLine (0, ['0', 'o'], "Sorry, I didn't expect to see anyone else here!")
     ,new DialougeLine (0, ['^', '^'], "To be Honest,     I didn't even know this page was live yet...")
-    ,new DialougeLine (0, ['>', 'o'], "You'd think it woulda been polished up first...")
+    ,new DialougeLine (0, ['>', 'o'], "(You'd think it woulda been polished up a little first...)")
     ,new DialougeLine (0, ['0', 'o'], "Aaaaaaanyway, my name's CC!!!")
     ,new DialougeLine (0, ['0', 'o'], "I was made to test saving data in your browser that could be remembered later, then I kind of got out of hand...")
     ,new DialougeLine (0, ['^', '^'], "...and now I have a whole dialogue system!!!")
