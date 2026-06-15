@@ -133,8 +133,9 @@
 
 
     if (getCookie('ccr_cc_roomtheme') == 'sunset'){
-        let roomChoiceLetter = "S";
-        document.getElementById('footer-marq').innerHTML("CC you're facing away from the sunset! You're missing it!")
+        roomChoiceLetter = "S";
+        console.log('wemadeit')
+        document.getElementById('footer-marq').innerHTML() = "CC you're facing away from the sunset! You're missing it!"
     }
 
     document.getElementById('ccroom-body').classList.add("ccroom-body" + roomChoiceLetter)
@@ -147,6 +148,7 @@
     if (getCookie('all_cc_questline') == 'roomchosen'){
 
         if (getCookie('ccr_cc_roomtheme') == 'sunset'){
+            console.log('runsunsetdialogue')
             dialogueUpdate(cc_introd_sunset, ['cookieupdate', ['all_cc_questline', 'complete']])
         }else{
             dialogueUpdate(cc_introd_city, ['cookieupdate', ['all_cc_questline', 'complete']])

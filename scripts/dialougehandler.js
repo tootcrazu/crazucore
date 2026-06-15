@@ -172,7 +172,6 @@ function dialogueSpecialAction(){
     }
 }
 
-
 function writeCurrentLineToBox(){
     // writes the 'currentLine' of dialogue to the box
     
