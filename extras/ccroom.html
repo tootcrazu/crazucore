@@ -98,6 +98,39 @@
     // DIALOGUE SPECIAL ACTIONS, ETC
     let roomChoiceLetter = "C";
     let roomSpecificDialogueCount = 0;
+    let cc_introd_city = [
+            new DialougeLine ('cc', '0o', 'I love it here!!!')
+            ,new DialougeLine (0, '0o', 'Compared to where you found me before, it\'s...')
+            ,new DialougeLine (0, '0o', "Well I'd say it's night and day, but it *is* night, here.")
+            ,new DialougeLine (0, '--', "This place, it...")
+            ,new DialougeLine (0, '0o', "It feels like potential.")
+            ,new DialougeLine (0, '0o', "Like there's a million things out there to do,")
+            ,new DialougeLine (0, '^^', "and I could do every single one of them!!!")
+            ,new DialougeLine (0, ':)', "...")
+            ,new DialougeLine (0, '0o', "Ah, but that would take a lot of effort...")
+            ,new DialougeLine (0, '0o', "I think I'm just going to hang out here a while.")
+            ,new DialougeLine (0, '0o', "I'll still hang out whenever you want to explore the site.")
+            ,new DialougeLine (0, '>o', "(But if anything changes around here, I want to be the first to know!!!)")
+            ,new DialougeLine (0, '0o', "Until then, I'll be seeing you around, I guess...")
+            ,new DialougeLine (0, '0o', "Thanks again, " + GetCookie('all_vs_name') + '.')
+            ];
+    let cc_introd_sunset = [
+            new DialougeLine ('cc', '0o', 'I love it here!!!')
+            ,new DialougeLine (0, '0o', 'Compared to where you found me before, it\'s...')
+            ,new DialougeLine (0, '0o', "Well it's a whole lot more serene.")
+            ,new DialougeLine (0, '--', "This place, it...")
+            ,new DialougeLine (0, '0o', "It feels like new beginnings.")
+            ,new DialougeLine (0, '0o', "Like after that sun goes down,")
+            ,new DialougeLine (0, '^^', "I could reinvent myself in the darkness, and become whatever I could imagine!!!")
+            ,new DialougeLine (0, ':)', "...")
+            ,new DialougeLine (0, '0o', "Ah, but that would take a lot of effort...")
+            ,new DialougeLine (0, '0o', "I think I'm just going to hang out here a while.")
+            ,new DialougeLine (0, '0o', "I'll still hang out whenever you want to explore the site.")
+            ,new DialougeLine (0, '>o', "(But if anything changes around here, I want to be the first to know!!!)")
+            ,new DialougeLine (0, '0o', "Until then, I'll be seeing you around, I guess...")
+            ,new DialougeLine (0, '0o', "Thanks again, " + getCookie('all_vs_name') + '.')
+            ];
+
 
     if (getCookie('ccr_cc_roomtheme') == 'sunset'){
         let roomChoiceLetter = "S";
@@ -126,7 +159,7 @@
 
         if (roomSpecificDialogueCount == 0){
         dialogueUpdate([
-            new DialougeLine ('cc', '0o', "Thanks again, " + GetCookie('all_vs_name') + '.')
+            new DialougeLine ('cc', '0o', "Thanks again, " + getCookie('all_vs_name') + '.')
         ])
         }else{
             dialogueUpdate([
@@ -136,40 +169,6 @@
 
         roomSpecificDialogueCount += 1;
     }
-
-    let cc_introd_city = [
-            new DialougeLine ('cc', '0o', 'I love it here!!!')
-            ,new DialougeLine (0, '0o', 'Compared to where you found me before, it\'s...')
-            ,new DialougeLine (0, '0o', "Well I'd say it's night and day, but it *is* night, here.")
-            ,new DialougeLine (0, '--', "This place, it...")
-            ,new DialougeLine (0, '0o', "It feels like potential.")
-            ,new DialougeLine (0, '0o', "Like there's a million things out there to do,")
-            ,new DialougeLine (0, '^^', "and I could do every single one of them!!!")
-            ,new DialougeLine (0, ':)', "...")
-            ,new DialougeLine (0, '0o', "Ah, but that would take a lot of effort...")
-            ,new DialougeLine (0, '0o', "I think I'm just going to hang out here a while.")
-            ,new DialougeLine (0, '0o', "I'll still hang out whenever you want to explore the site.")
-            ,new DialougeLine (0, '>o', "(But if anything changes around here, I want to be the first to know!!!)")
-            ,new DialougeLine (0, '0o', "Until then, I'll be seeing you around, I guess...")
-            ,new DialougeLine (0, '0o', "Thanks again, " + GetCookie('all_vs_name') + '.')
-            ]
-        
-    let cc_introd_sunset = [
-            new DialougeLine ('cc', '0o', 'I love it here!!!')
-            ,new DialougeLine (0, '0o', 'Compared to where you found me before, it\'s...')
-            ,new DialougeLine (0, '0o', "Well it's a whole lot more serene.")
-            ,new DialougeLine (0, '--', "This place, it...")
-            ,new DialougeLine (0, '0o', "It feels like new beginnings.")
-            ,new DialougeLine (0, '0o', "Like after that sun goes down,")
-            ,new DialougeLine (0, '^^', "I could reinvent myself in the darkness, and become whatever I could imagine!!!")
-            ,new DialougeLine (0, ':)', "...")
-            ,new DialougeLine (0, '0o', "Ah, but that would take a lot of effort...")
-            ,new DialougeLine (0, '0o', "I think I'm just going to hang out here a while.")
-            ,new DialougeLine (0, '0o', "I'll still hang out whenever you want to explore the site.")
-            ,new DialougeLine (0, '>o', "(But if anything changes around here, I want to be the first to know!!!)")
-            ,new DialougeLine (0, '0o', "Until then, I'll be seeing you around, I guess...")
-            ,new DialougeLine (0, '0o', "Thanks again, " + GetCookie('all_vs_name') + '.')
-            ]
 
 </script>
 
