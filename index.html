@@ -280,6 +280,14 @@
         document.getElementById('home-orb0600').classList.remove('_ballglow');
     }
 
+    if (getCookie('all_cc_questline') == 'backtocookieroomhint'){
+        dialogueUpdate([
+            new DialougeLine ("cc", 'cc', "(Psst, " + getCookie('all_vs_name') + '...)')
+            ,new DialougeLine ("cc", 'cc', "(Once we're done, come back to the cookie room.)")
+            ,new DialougeLine ("cc", 'cc', "(I've got something to ask...)")
+            ], ['cookieupdate', ['all_cc_questline','backtocookieroom']])
+    }
+
 
     let roomSpecificDialogueCount = 0;
 

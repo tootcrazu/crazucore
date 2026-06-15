@@ -150,12 +150,7 @@ function dialogueSpecialAction(){
             // let her prompt you to go back to the cookie room.
 
             if (roomslist.length > 10 && roomslist.includes('about') && roomslist.includes('links')){
-                console.log('WE GOT HERER')
-                dialogueUpdate([
-            new DialougeLine ("cc", 'cc', "(Psst, " + getCookie('all_vs_name') + '...)')
-            ,new DialougeLine ("cc", 'cc', "(Once we're done, come back to the cookie room.)")
-            ,new DialougeLine ("cc", 'cc', "(I've got something to ask...)")
-            ], ['cookieupdate', ['all_cc_questline','backtocookieroom']])
+                updateCookie('all_cc_questline','backtocookieroomhint')
             }
         };
 
