@@ -96,9 +96,9 @@
 
 <script>
     // DIALOGUE SPECIAL ACTIONS, ETC
-    let roomChoiceLetter = "C";
+    let roomChoiceLetter = "";
     let roomSpecificDialogueCount = 0;
-    let cc_introd_city = [
+    let cc_introd = [
             new DialougeLine ('cc', '0o', 'I love it here!!!')
             ,new DialougeLine (0, '0o', 'Compared to where you found me before, it\'s...')
             ,new DialougeLine (0, '0o', "Well I'd say it's night and day, but it *is* night, here.")
@@ -114,7 +114,13 @@
             ,new DialougeLine (0, '0o', "Until then, I'll be seeing you around, I guess...")
             ,new DialougeLine (0, '0o', "Thanks again, " + getCookie('all_vs_name') + '.')
             ];
-    let cc_introd_sunset = [
+
+
+    if (getCookie('ccr_cc_roomtheme') == 'sunset'){
+        roomChoiceLetter = "S";
+        console.log('wemadeit');
+        document.getElementById('footer-marq').innerHTML = "CC you're facing away from the sunset! You're missing it!";
+        cc_introd = [
             new DialougeLine ('cc', '0o', 'I love it here!!!')
             ,new DialougeLine (0, '0o', 'Compared to where you found me before, it\'s...')
             ,new DialougeLine (0, '0o', "Well it's a whole lot more serene.")
@@ -130,12 +136,6 @@
             ,new DialougeLine (0, '0o', "Until then, I'll be seeing you around, I guess...")
             ,new DialougeLine (0, '0o', "Thanks again, " + getCookie('all_vs_name') + '.')
             ];
-
-
-    if (getCookie('ccr_cc_roomtheme') == 'sunset'){
-        roomChoiceLetter = "S";
-        console.log('wemadeit')
-        document.getElementById('footer-marq').innerHTML() = "CC you're facing away from the sunset! You're missing it!"
     }
 
     document.getElementById('ccroom-body').classList.add("ccroom-body" + roomChoiceLetter)
@@ -147,14 +147,9 @@
 
     if (getCookie('all_cc_questline') == 'roomchosen'){
 
-        if (getCookie('ccr_cc_roomtheme') == 'sunset'){
-            console.log('runsunsetdialogue')
-            dialogueUpdate(cc_introd_sunset, ['cookieupdate', ['all_cc_questline', 'complete']])
-        }else{
-            dialogueUpdate(cc_introd_city, ['cookieupdate', ['all_cc_questline', 'complete']])
-        }
+        dialogueUpdate(cc_introd, ['cookieupdate', ['all_cc_questline', 'complete']])
 
-    }
+        }
 
 
     function roomSpecificDialogue(){
