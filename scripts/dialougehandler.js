@@ -148,11 +148,16 @@ function dialogueSpecialAction(){
             // add the target room to the visted list.
             // and if the requisites have been met for completing the cc explore quest,
             // let her prompt you to go back to the cookie room.
-
-            if (roomslist.length > 10 && roomslist.includes('about') && roomslist.includes('links')){
-                updateCookie('all_cc_questline','backtocookieroomhint')
-            }
         };
+
+        if (roomslist.length > 10 && roomslist.includes('about') && roomslist.includes('links') && (getCookie('all_cc_questline') == undefined || getCookie('all_cc_questline') == 'backtocookieroomhint') ){
+                updateCookie('all_cc_questline','backtocookieroomhint');
+                dialogueUpdate([
+            new DialougeLine ("cc", 'cc', "(Psst, " + getCookie('all_vs_name') + '...)')
+            ,new DialougeLine ("cc", 'cc', "(Once we're done, come back to the cookie room.)")
+            ,new DialougeLine ("cc", 'cc', "(I've got something to ask...)")
+            ], ['cookieupdate', ['all_cc_questline','backtocookieroom']]);
+            }
 
     }else if (currentSpecialAction[0] == "ccjump"){
         // cc hopping from the top of the orange testbox to the footer
