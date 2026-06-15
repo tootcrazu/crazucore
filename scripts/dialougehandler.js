@@ -57,8 +57,8 @@ function dialogueUpdate(sequence, special = 0){
 
 
             if (dialogueSeqFinished == true){ //If we just finished a sequence, clear that variable.
-                dialogueSpecialAction();
                 dialogueSeqFinished = false;
+                dialogueSpecialAction();
             }else{ // if we're just getting started, add all the lines to the buffer (and let the console know)
                 
                 dialogueLineBuffer = structuredClone(sequence);
