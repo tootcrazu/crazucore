@@ -33,5 +33,8 @@ function adjustFooterVolume(){
 }
 
 if (getCookie('all_cc_location') == 'footer'){
+
+    if (document.getElementById('footer-cc') != null){
     document.getElementById('footer-cc').classList.remove('_hide');
+    }
 }
