@@ -1623,6 +1623,14 @@ footer{
     rotate: -10deg;
 }
 
+#ext-ccdoor{
+    height:100px;
+    bottom: -155px;
+    left: -77px;
+    rotate: 5deg;
+}
+
+
 #ext-stickynote{
     position:absolute;
     transform:translateX(-50%);

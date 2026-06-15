@@ -51,9 +51,11 @@
 
                     <a href="extras/breakingbad.html"><img src="../assets/extras/bbadboxset.jpg" class="ext-draweritem" id="ext-bbad" alt="A blu-ray box set of Breaking Bad. sits inside of an open drawer."></a>
 
-                    <a href="extras/guestbook.html"><img src="../assets/extras/guestbooklink.gif" class="ext-draweritem" id="ext-gbook" alt="A tiny model computer blinks, the display reads 'guest book'"></a>
+                    <a href="extras/guestbook.html"><img src="../assets/extras/guestbooklink.gif" class="ext-draweritem" id="ext-gbook" alt="Inside the drawer, a tiny model computer blinks, the display reads 'guest book'"></a>
 
-                    <!-- <a href="extras/cookieroom.html"><img src="../assets/extras/cookiedoor.png" class="ext-draweritem" id="ext-cookiedoor" alt="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"></a> -->
+                    <a href="extras/cookieroom.html"><img src="../assets/extras/cookiedoor.png" class="ext-draweritem" id="ext-cookiedoor" alt="A garish red and yellow door that looks like it was drawn in two seconds sits inside the drawer."></a>
+
+                    <a href="extras/ccroom.html"><img src="../assets/extras/ccdoor.png" class="ext-draweritem" id="ext-ccdoor" alt="A cool grey door sits in the open drawer. It has a red, yellow and blue 'symbol' on it."></a>
 
 
 
@@ -129,6 +131,10 @@
     let roomSpecificDialogue2 = [
             new DialougeLine (0, '0o', "Not sure what a 'Breaking Bad' is, though...")
         ]
+
+    if (getCookie('ccr_cc_roomtheme') != undefined){
+        document.getElementById('ext-ccdoor').classList.remove('_hide');
+    }
 
     if (getCookie('all_vs_roomsvisited').split(',').includes('extras')){
         document.getElementById('footer-marq').innerHTML = "This is the second best room in the site, because it has the door to CCs room in it.";
