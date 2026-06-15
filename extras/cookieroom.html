@@ -242,13 +242,14 @@
                 ])
             }
 
-            roomSpecificDialogueCount += 1;
+            
 
-        }else{
+        }else if (getCookie('ccr_cc_roomtheme') == undefined){
+            // this is the dialogue for 'go to crazu'
             if (roomSpecificDialogueCount == 0){
                 dialogueUpdate([
                 new DialougeLine ("cc", '0o', "So I was thinking something as we were going through all of those pages...")
-                ,new DialougeLine (0, '0o', "And what it really boils down to is....")
+                ,new DialougeLine (0, '0o', "And what it really boils down to is...")
                 ,new DialougeLine (0, ['>:','('], "WHY IS MY PAGE SO UGLY COMPARED TO THE REST OF THE SITE?")
                 ,new DialougeLine (0, '0o', "Like, seriously! Not a lick of polish in here!!!")
                 ,new DialougeLine (0, '0o', "So I was thinking about who I could complain to, right...")
@@ -263,9 +264,23 @@
                     new DialougeLine ("cc", '0o', "Thanks, " + getCookie('all_vs_name') + '.')
                 ])
             }
+            
+        }if (roomSpecificDialogueCount == 0){
+            // after a room theme has been selected, she can have some banter about it.
 
-            roomSpecificDialogueCount += 1;
-        }
+                dialogueUpdate([
+                new DialougeLine ("cc", '0o', "I wonder what'll happen to this room now.")
+                ,new DialougeLine (0, 'cc', "I don't really like it, but...")
+                ,new DialougeLine (0, '^^', "seems like almost a waste to throw away a perfectly good text input system!")
+                ])
+                }else{
+                    dialogueUpdate([
+                    new DialougeLine ("cc", '??', "I wonder why it was coded here in the first place...")
+                ])
+            }
+
+        roomSpecificDialogueCount += 1;
+        
     }
 
 
