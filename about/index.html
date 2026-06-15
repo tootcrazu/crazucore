@@ -256,13 +256,13 @@
             ,new DialougeLine ('cz', 0, "Oh the cookie room you mean? yeah I kind of didn't finish that")
             ,new DialougeLine ('cz', 0, "...or make it look good at all")
             ,new DialougeLine ('cz', 0, "lol")
-            ,new DialougeLine ('cc', '0o', getCookie('all_vs_name') + " showed me around all the other pages, and (most of them) look way better!")
+            ,new DialougeLine ('cc', '0o', getCookie('all_vs_name') + " showed me around all the other pages, all of *them* look way better!")
             ,new DialougeLine ('cz', 0, "hey!")
             ,new DialougeLine ('cz', 0, "(warranted)")
             ,new DialougeLine ('cz', 0, "k I'll tell you what. I'll do something even better than update the page.")
             ,new DialougeLine ('cz', 0, "(and honestly maybe a little easier too ;)")
             ,new DialougeLine ('cz', 0, "How would you like a brand new page, all to yourself?")
-            ,new DialougeLine (0, ['0','0'], "You'd do that?")
+            ,new DialougeLine ('cc', ['0','0'], "You'd do that?")
             ,new DialougeLine ('cz', 0, "Sure! easier than retrofitting the corpse of the cookie room i think.")
             ,new DialougeLine ('cz', 0, "And you get your own space!")
             ,new DialougeLine ('cz', 0, "(love it when you get your own space)")
@@ -303,10 +303,10 @@
 
         document.getElementById('about-ccroomchoicer').classList.add('_hide');
 
-        if (getCookie('all_cc_questline' == 'talktocrazu')){
+        if (getCookie('all_cc_questline') == 'talktocrazu'){
 
             if (choice == 'city'){
-
+                console.log("SITY")
                 dialogueUpdate([
                 new DialougeLine ('cc', '^^', 'Wonderful! Exactly what I would\'ve picked!')
                 ,new DialougeLine ('cz', 0, "It's set then ;). I'll start work right now.")
@@ -321,7 +321,7 @@
                 ], ['cookieupdate', ['all_cc_questline', 'roomchosen']])
 
             }else{
-                
+                console.log("SUNSET")
                 dialogueUpdate([
                 new DialougeLine ('cc', '^^', 'Awesome!!! It looks so cool!!!')
                 ,new DialougeLine ('cz', 0, "Then I'll start work right now :)")
