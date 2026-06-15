@@ -137,9 +137,9 @@ function dialogueSpecialAction(){
         if (getCookie('all_vs_roomsvisited') == undefined){
             updateCookie('all_vs_roomsvisited', '')
         };
-        console.log(getCookie('all_vs_roomsvisited'));
 
         let roomslist = getCookie('all_vs_roomsvisited').split(',');
+        console.log(roomslist);
 
         if (roomslist.includes(currentSpecialAction[1]) != true){
 
@@ -149,7 +149,8 @@ function dialogueSpecialAction(){
             // and if the requisites have been met for completing the cc explore quest,
             // let her prompt you to go back to the cookie room.
 
-            if (roomslist.length >= 10 && roomslist.includes('about') && roomslist.includes('links')){
+            if (roomslist.length > 10 && roomslist.includes('about') && roomslist.includes('links')){
+                console.log('WE GOT HERER')
                 dialogueUpdate([
             new DialougeLine ("cc", 'cc', "(Psst, " + getCookie('all_vs_name') + '...)')
             ,new DialougeLine ("cc", 'cc', "(Once we're done, come back to the cookie room.)")
