@@ -1731,6 +1731,56 @@ footer{
 }
 
 
+.bcsaul-entry{
+    font-family: 'Courier New', Courier, monospace;
+
+    background-color:rgb(255, 249, 212);
+
+    padding:10px;
+
+    filter:drop-shadow(4px 5px 5px black);
+
+    margin-bottom:40px;
+}
+
+.bcsaul-header{
+    display:flex;
+    align-items: start;
+    justify-content:space-between;
+}
+
+.bcsaul-h2{
+    font-weight: bold;
+
+    background-image: url(assets/about/textcliptest.png);
+    background-clip:text;
+    background-size: 100px;
+    color:transparent;
+}
+
+.bcsaul-h3{
+    font-size: 1.6em;
+    font-weight: bold;
+
+    background-image: url(assets/about/textcliptest.png);
+    background-clip:text;
+    background-size: 1000px;
+    color:transparent;
+
+    margin-bottom:10px;
+}
+
+.bcsaul-maintext{
+
+    font-size:1.15em;
+    background-image: url(assets/about/textcliptest.png);
+    background-clip:text;
+    background-size: 1000px;
+    color:transparent;
+}
+
+
+
 /* GUESTBOOK */
 /* GUESTBOOK */
 /* GUESTBOOK */
