@@ -222,6 +222,8 @@
     // so now when the original links call for a dialogue update it calls 'dialougeUpdate() and my new cool dialogue ststem calls dialougeUpdate())'
 
     function littleQdialogue(){
+
+        if (getCookie('ll_cc_location') == 'footer'){
             dialogueUpdate([
             new DialougeLine ("cc", '0o', "Hi Little Q!")
             ,new DialougeLine ('lq', 0, "�� �� ��� ��������� �� ���� ����")
@@ -234,6 +236,7 @@
             ,new DialougeLine ('ob', 0, "it's great at games too. you should see it play one of those rhythm games where you hit the drums.")
             ,new DialougeLine ('ob', 0, "unstoppable.")
             ], ['cookieupdate', ['all_cc_metlittleq', 'true']])
+        }
     }
 
     function obHandler(){
