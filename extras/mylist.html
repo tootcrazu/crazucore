@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crazucore</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicons/extras.gif">
+    <meta name="description" content="crazucore">
+</head>
+
+<div id="dia-container" class="_hide">
+    <div id="dia-dimmer"></div>
+    <div id="dia-box" onclick="dialogueUpdate()">
+        <div id="dia-portraitbox">
+
+            <div id="dia-portraits">
+                <div class="ccsit-container" id="cc">
+                        <img class="ccsit-body" src="../assets/extras/cookietest/ccbodysitL.png">
+
+                        <div class="ccsit-head">
+                            <p id="ccsit-eyeL">0</p>
+                            <p id="ccsit-eyeR">o</p>
+                            <img class="ccsit-headimg" src="../assets/extras/cookietest/ccheadL.png">
+                        </div>
+                </div>
+
+                <img src="../assets/links/crazulink-neutral.png" id="ob" class="_hide">
+
+                <img src="../assets/footer/grazumandialogue.png" id="gz" class="_hide">
+            </div>
+
+
+
+        </div>
+        <div id="dia-text"></div>
+    </div>
+    
+</div>
+
+
+<body id="mylist-body">
+
+    <div id="mylist-sidel"></div>
+
+    <main id="mylist-main">
+
+        <h1 class="mylist-h1">My List</h1>
+
+        <hr>
+        
+        <p id="mylist-p">
+            Hello! This is intended to be a list of the things I intend to play/watch/eat, etc. If you see something you think should be higher on the list, or something you think I'd like that isn't on the list, then plase yell at me about it!
+            <br><br>
+            I've sorted things into categories (not unlike an internet-friendly tier list) based on how much I'm looking forward to things / how quickly I'm gonna get to them, and color coded them based on whether they're games, movies/tv, music, or other things. <u title="Good job hovering! Now go get em, tiger!">Hover on each one to learn a little more!</u>
+            <br>
+            Note - It's not really finished yet. I'll try and add more things to this later. Last updated 21/07/26
+        </p>
+
+        <hr>
+
+        <div id="mylist-tier">
+            <div id="mylist-tierlabel" style="background-color: rgb(203, 203, 203);">
+                : D
+            </div>
+
+            <p id="mylist-p">
+                <u class="mylist-moviestv" title="I've watched maybe a third this year, but I'd like to finish it! Do they kiss?">Revolutionary Girl Utenna</u>
+                <u class="mylist-moviestv" title="You can probably see on the extras page how much of this I've seen so far. I'll like it, just haven't finished it yet.">Better Call Saul</u>
+            </p>
+        </div>
+
+        <div id="mylist-tier">
+            <div id="mylist-tierlabel" style="background-color: rgb(138, 138, 138);">
+                : )
+            </div>
+
+            <p id="mylist-p">
+                <u class="mylist-game" title="Seems neat! Rhythm Heaven-Like!">Melatonin</u>
+                <u class="mylist-game" title="I love the music from the first few games, and it looks super neat!">The Katamari Series</u>
+            </p>
+        </div>
+
+        <div id="mylist-tier">
+            <div id="mylist-tierlabel" style="background-color: rgb(63, 63, 63);">
+                : )
+            </div>
+
+            <p id="mylist-p">
+                <u class="mylist-game" title="Crusty old PS2 game from my childhood that we never beat. Someday!">Wallace and Gromit: Project Zoo</u> <u class="mylist-game" title="hear me out. I don't think the games are good, and i'd probably hat them. but I might have fun, you know? Like a so-bad-it's-good kind of thing. At the very least, I'd like to hear the music.">Danganrompa Series</u>
+            </p>
+        </div>
+        
+
+    </main>
+
+    <div id="mylist-sider"></div>
+
+    <footer>
+        <marquee id="footer-marq" style="color:rgb(255, 255, 255)">I'm not sure if I'll be able to keep this updated...</marquee>
+
+        <div class="footer-link"><a href="../extras">Go Back to Previous Page</a></div>
+
+        <audio id="footer-audio" hidden loop>
+            <source src="../assets/extras/clouds.mp3" type="audio/mpeg">
+            There should be a song here, but your browser doesn't like music.
+        </audio>
+
+        <div class="footer-link" id="footer-playpausecont" onclick="toggleFooterMusic()">
+            <a id="footer-playpause">PLAY</a>
+        </div>
+
+        <div class="footer-link" id="footer-volchangercont" onclick="adjustFooterVolume()">
+            <a id="footer-volchanger">Volume: ● ● ○ ○</a>
+        </div>
+
+        <div class="footer-link" id="footer-infocont" onclick="window.alert('The Song Of This Page Is: Clouds, by Kirk Osamayo')">
+            <a id="footer-info">( i )</a>
+        </div>
+
+        <div id="footer-grazuman" onclick="meetingGrazuMan()"></div>
+
+        <img id="footer-cc" class="_hide" src="../assets/footer/ccinafooter.png" onclick="roomSpecificDialogue()">
+        
+    </footer>
+    
+<script src="../scripts/cookiehandler.js"></script>
+<script src="../scripts/footerscript.js"></script>
+<script src="../scripts/dialougehandler.js"></script>
+
+<script>
+    let roomSpecificDialogueCount = 0;
+
+    function roomSpecificDialogue(){
+
+        if (roomSpecificDialogueCount == 0){
+        dialogueUpdate([
+        new DialougeLine ("cc", '0o', "Do you keep lists of things you want to do???")
+        ,new DialougeLine (0, '^^', "I do!")
+        ,new DialougeLine (0, '0o', "Exploring somewhere I'd never been before was the first thing on my list!")
+        ,new DialougeLine (0, '0o', "Most of the things after that are food related...")
+        ], ['roomvisit', 'mylist'])
+        }else{
+            dialogueUpdate([
+            new DialougeLine (0, '--', "There isn't an all-you-can-eat pizza restaurant in this website, is there?")
+        ])
+        }
+
+        roomSpecificDialogueCount += 1;
+    }
+
+</script>
+
+</body>
+
+</html>

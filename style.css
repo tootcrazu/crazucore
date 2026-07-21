@@ -2187,6 +2187,92 @@ footer{
     right:221px;
 }
 
+
+/*  --- MYLIST --- */
+
+#mylist-body{
+    background-color: black;
+
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+
+    
+
+    
+}
+
+#mylist-main{
+    background-color: white;
+    min-height: 100dvh;
+    width:700px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#mylist-sidel{
+    width:50px;
+    background-image: url(assets/extras/mylist/mainsidel.png);
+    background-size: 50px;
+    background-repeat: repeat-y;
+}
+
+#mylist-sider{
+    width:50px;
+    background-image: url(assets/extras/mylist/mainsider.png);
+    background-size: 50px;
+    background-repeat: repeat-y;
+}
+
+
+.mylist-h1{
+    font-size:60px;
+    font-weight: bold;
+    margin-top:20px;
+
+    text-align: center;
+}
+
+#mylist-tier{
+    display: flex;
+}
+
+#mylist-tierlabel{
+    min-height:100px;
+    width:100px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right:10px;
+    margin-bottom: 20px;
+}
+
+.mylist-game{
+    font-weight: bold;
+
+    color:#e6a4ff;
+}
+
+.mylist-moviestv{
+    font-weight: bold;
+    color:#0fd27d;
+}
+
+.mylist-music{
+    font-weight: bold;
+    color:#a4ebff;
+}
+
+.mylist-other{
+    font-weight: bold;
+    color:#fff5a4;
+}
+
 /* ! ======= CREDITS =========== */
 /* ! ======= CREDITS =========== */
 /* ! ======= CREDITS =========== */
