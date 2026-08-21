@@ -1630,6 +1630,12 @@ footer{
     rotate: 5deg;
 }
 
+#ext-mylist{
+    height: 100px;
+    bottom: -148px;
+    left: 329px;
+    rotate: -49deg;
+}
 
 #ext-stickynote{
     position:absolute;
@@ -2250,6 +2256,7 @@ footer{
 
     margin-right:10px;
     margin-bottom: 20px;
+    flex-shrink: 0;
 }
 
 .mylist-game{

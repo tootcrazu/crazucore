@@ -1,5 +1,7 @@
 // Hey. If you're looking at this code (and you are) and thinking "wow, why did they do it that way. That looks so so so stupid and inefficient!" that's because this is (quite literally) my first time writing any javascript from scratch. All things considered it's a miracle it functions at all.
 
+// hey me from like 6 months ago; was it really that hard to learn to use booleans? Did you have to track these with 0 and 1?
+
 
     let chronoSort = 0;
     let hideGames = 0;
